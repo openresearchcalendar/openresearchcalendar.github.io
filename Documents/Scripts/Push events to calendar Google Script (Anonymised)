@@ -1,3 +1,4 @@
+```
 //push new events to calendar
 function pushToCalendar() {
   
@@ -135,3 +136,4 @@ function onOpen() {
 Notes: 
          To trigger an alert use Browser.msgBox(); 
 */
+```
