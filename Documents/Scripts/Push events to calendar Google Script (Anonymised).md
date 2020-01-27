@@ -1,4 +1,4 @@
-```
+```javascript
 //push new events to calendar
 function pushToCalendar() {
   
