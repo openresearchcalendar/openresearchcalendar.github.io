@@ -1,4 +1,4 @@
-<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://github.com/openresearchcalendar/Open-Research-Calendar/blob/master/Documents/Images/logo_wide.png?raw=true" alt="" width="574" height="300" /></p>  
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="/Documents/Images/logo_wide.png" alt="logo" width="448" height="234" /></p>  
 
 <h1 style="text-align: center;">Overview</h1>
 
