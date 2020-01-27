@@ -8,10 +8,11 @@ The tool was created to serve the open research community in collating worldwide
 As a community tool, we request that the events added are community policed. In that, if anything is seen to be wrong/duplicated/offensive/inappropriate, we expect the community to report the event (using the [report link](http://tinyurl.com/rcu66l8) in our Twitter bio). A small team of administrators will then review the event details. As the admins volunteer for this, the response time may be long.
 
 **Creators (A-Z):**
-Alexandra Lautarescu ([@AleLautarescu](https://twitter.com/AleLautarescu))
-Bradley Kennedy ([@bradpsych](https://twitter.com/bradpsych))
-Cassandra Gould van Praag ([@cassgvp](https://twitter.com/cassgvp))
-Esther Plomp ([@PhDToothFAIRy](https://twitter.com/PhDToothFAIRy))
+
+Alexandra Lautarescu ([@AleLautarescu](https://twitter.com/AleLautarescu))  
+Bradley Kennedy ([@bradpsych](https://twitter.com/bradpsych))  
+Cassandra Gould van Praag ([@cassgvp](https://twitter.com/cassgvp))  
+Esther Plomp ([@PhDToothFAIRy](https://twitter.com/PhDToothFAIRy))  
 
 <h1 style="text-align: center;"><strong>Data Use</strong></h1>
 
