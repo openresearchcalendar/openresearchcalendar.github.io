@@ -6,6 +6,8 @@ The tool was created to serve the open research community in collating worldwide
 
 As a community tool, we trust the community to use it appropriately. However, all operations of this tool are automated to expedite communication and this makes the tool vulnerable to spam or predatory events. We request that the events added are community policed. In that, if anything is seen to be wrong/ duplicated/ offensive/ inappropriate, we expect the community to report the event (using the [report link](http://tinyurl.com/rcu66l8) in our Twitter bio). A small team of administrators will then review the event details. As the admins volunteer for this, the response time may be delayed.
 
+Bug Reports and Feature Requests can be made [here](https://github.com/openresearchcalendar/Open-Research-Calendar/issues/new/choose)  
+
 <p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://github.com/openresearchcalendar/Open-Research-Calendar/blob/master/Documents/Images/logo_wide-cropped.png?raw=true" alt="" width="370" height="110" /></p>
 
 **Creators (A-Z):**
