@@ -10,7 +10,7 @@ The tool was created to serve the open research community in collating worldwide
 
 :warning: We ultimately take no responsibility for the content or administration of any events which appear in the calendar.
 
-**Creators (A-Z):**
+<h2><strong>Creators (A-Z):</strong></h2>  
 
 Alexandra Lautarescu ([@AleLautarescu](https://twitter.com/AleLautarescu))  
 Bradley Kennedy ([@bradpsych](https://twitter.com/bradpsych))  
