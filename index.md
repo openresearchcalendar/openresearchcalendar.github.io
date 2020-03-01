@@ -33,7 +33,7 @@ Please note that the admins volunteer their time for this tool and as such, the 
 
 The data collected as part of this tool is stored securely in a Google Drive. *No personally identifiable information is collected.*
 
-*Privacy policy for the relevant services:*  
+Privacy policy for the relevant services:  
 
 Google: <https://policies.google.com/privacy>  
 
