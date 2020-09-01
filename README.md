@@ -34,7 +34,7 @@ We are a small team or researchers who met at [Advanced Methods in Reproducible 
 
 The developers and maintainers of this tool are (alphabetically):
 - [Cassandra Gould van Praag](https://ox.ukrn.org/people/#CassandraGouldvanPraag)
-- Bradley Kennedy
+- [Bradley Kennedy](https://bradleykennedy.co.uk)
 - Alexandra Lautarescu
 - Esther Plomp
 
