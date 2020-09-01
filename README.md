@@ -1,11 +1,5 @@
 # Open Research Calendar
 
-
-
-View the 'Documents' folder for all resources
-
-Page hosted on: https://openresearchcalendar.github.io/Open-Research-Calendar/
-
 <!-- Note from mkdocs: "If both an index.md and a README.md are in the same directorfy, mkdocs will render the index file" and the README will still be rendered on github (https://www.mkdocs.org/user-guide/writing-your-docs/). Adding frontmatter to README breaks it." -->
 
 Thank you for visiting the Open Research Calendar project repository.
