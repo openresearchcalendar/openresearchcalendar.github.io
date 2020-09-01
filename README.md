@@ -29,7 +29,7 @@ It exists as a community managed tool, where anyone is free to submit an event, 
 
 The tool incorporates freely available resources to receive event information via a goole form, publish it to a google calendar and tweet about it to followers of [@openresearchcal](https://twitter.com/OpenResearchCal).
 
-<p><img style="display: block; margin-left: auto; margin-right: auto;" src="./Documents/Images/schematic-logos.png" alt="" width="360" height="110" /></p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="./Documents/Images/schematic-logos.png" alt="" width="600" /></p>
 
 Further details of the processes and code used to run this tool are available in the [Documents](./Documents) directory.
 
@@ -70,4 +70,4 @@ We'd love for you to re-use this tool for your own community! We are sharing our
 
 We are grateful for acknowledgement using the reference below:
 
-<mark>Add zenodo integration - CGVP</mark> 
+<mark>Add zenodo integration - CGVP</mark>
