@@ -62,12 +62,12 @@ Contact us via a tweet or direct message on twitter [@OpenResearchCal](https://t
 
 Email us at [openresearchcalendar@gmail.com](mailto:openresearchcalendar@gmail.com).
 
-Comment on this repository via github issues](https://github.com/openresearchcalendar/Open-Research-Calendar/issues)
+Comment on this repository via [github issues](https://github.com/openresearchcalendar/Open-Research-Calendar/issues)
 
-# Re-use and licensing
+## Re-use and licensing
 
 We'd love for you to re-use this tool for your own community! We are sharing our code and resources under the [GNU Public License](LICENSE.md).
 
 We are grateful for acknowledgement using the reference below:
 
-<mark>Add zenodo integration - CGVP</mark>
+To Do: Add zenodo integration - CGVP
