@@ -29,7 +29,7 @@ It exists as a community managed tool, where anyone is free to submit an event, 
 
 The tool incorporates freely available resources to receive event information via a goole form, publish it to a google calendar and tweet about it to followers of [@openresearchcal](https://twitter.com/OpenResearchCal).
 
-<p><img style="display: block; margin-left: auto; margin-right: auto;" src="./Documents/Images/schematic-logos.png" alt="" width="600" /></p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="./Documents/Images/schematic-logos.png" alt="" width="800" /></p>
 
 Further details of the processes and code used to run this tool are available in the [Documents](./Documents) directory.
 
