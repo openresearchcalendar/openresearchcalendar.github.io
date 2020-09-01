@@ -60,7 +60,7 @@ Comment on this repository via [github issues](https://github.com/openresearchca
 
 ## Re-use and licensing
 
-We'd love for you to re-use this tool for your own community! We are sharing our code and resources under the [GNU Public License](LICENSE.md).
+We'd love for you to re-use this tool for your own community! We are sharing our code and resources under the [GNU Public License](LICENSE.txt).
 
 We are grateful for acknowledgement using the reference below:
 
