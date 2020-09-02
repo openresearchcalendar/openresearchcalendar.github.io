@@ -7,3 +7,8 @@ plugins:
   - jemoji
   - jekyll-sitemap
   - jekyll-redirect-from
+defaults:
+  - scope:
+      path: Documents/*
+    values:
+      sitemap: false 
