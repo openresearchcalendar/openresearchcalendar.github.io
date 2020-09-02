@@ -3,3 +3,5 @@ title: Open Research Calendar
 description: A community tool to gather all Open Research events in one place
 plugins:
   - jemoji
+  - jekyll-sitemap
+  - jekyll-redirect-from
