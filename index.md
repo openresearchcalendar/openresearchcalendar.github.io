@@ -1,8 +1,6 @@
 ---
 redirect_from: "/Open-Research-Calendar/"
 ---
-<head> <meta name="google-site-verification" content="SK-ecbv89UqucKZNAHFJb7vf7_mGu6vpUgzL3WLaB2M" /> </head>
-
 Hi there! :wave: Welcome to the information page of Open Research Calendar. Below you can read a bit more about our automated :robot: open-source community tool. :calendar:  
 
 <p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://github.com/openresearchcalendar/Open-Research-Calendar/blob/master/Documents/Images/logo_wide-cropped.png?raw=true" alt="" width="360" height="110" /></p>
