@@ -35,8 +35,8 @@ We are a small team or researchers who met at [Advanced Methods in Reproducible 
 The developers and maintainers of this tool are (alphabetically):
 - [Cassandra Gould van Praag](https://ox.ukrn.org/people/#CassandraGouldvanPraag)
 - [Bradley Kennedy](https://bradleykennedy.co.uk)
-- Alexandra Lautarescu
-- Esther Plomp
+- [Alexandra Lautarescu](https://www.alautarescu.com)
+- [Esther Plomp](https://twitter.com/PhDToothFAIRy)
 
 We have recently received support from the [UK Reproducibility Network (UKRN)](https://www.ukrn.org) to elevate the infrastructure, support development, and raise awareness of this resource within our community.  
 
