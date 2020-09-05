@@ -3,7 +3,7 @@ redirect_from: "/Open-Research-Calendar/"
 ---
 Hi there! :wave: Welcome to the information page of Open Research Calendar. Below you can read a bit more about our automated :robot: open-source community tool. :calendar:  
 
-<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://github.com/openresearchcalendar/Open-Research-Calendar/blob/master/Documents/Images/logo_wide-cropped.png?raw=true" alt="" width="360" height="110" /></p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/openresearchcalendar/openresearchcalendar.github.io/master/Documents/Images/logo_wide-cropped.png" alt="" width="360" height="110" /></p>
 
 <hr />
 
@@ -38,8 +38,8 @@ The data collected as part of this tool is stored securely in a Google Drive. *N
 
 Privacy policy for the relevant services:  
 
-Google: <https://policies.google.com/privacy>  
+[Google](https://policies.google.com/privacy)  
 
-Twitter: <https://twitter.com/en/privacy>  
+[Twitter](https://twitter.com/en/privacy)  
 
-Integromat: <https://support.integromat.com/hc/en-us/articles/360001988174>  
+[Integromat](https://support.integromat.com/hc/en-us/articles/360001988174)  
