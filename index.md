@@ -43,3 +43,7 @@ Privacy policy for the relevant services:
 [Twitter](https://twitter.com/en/privacy)  
 
 [Integromat](https://support.integromat.com/hc/en-us/articles/360001988174)  
+
+<h1 style="text-align: center;"><strong>The Calendar!</strong></h1>
+
+<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FLondon&amp;src=b3BlbnJlc2VhcmNoY2FsZW5kYXJAZ21haWwuY29t&amp;color=%23039BE5" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
