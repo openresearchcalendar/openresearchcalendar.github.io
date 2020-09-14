@@ -1,0 +1,104 @@
+{
+    "name": "Twitter DM Autoreply",
+    "flow": [
+        {
+            "id": 1,
+            "module": "twitter:watchMessages",
+            "version": 5,
+            "parameters": {
+                "limit": 2,
+                "__IMTCONN__": 111111
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0
+                },
+                "restore": {
+                    "__IMTCONN__": {
+                        "label": "My Twitter connection ()"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account",
+                        "label": "Connection",
+                        "required": true
+                    },
+                    {
+                        "name": "limit",
+                        "type": "uinteger",
+                        "label": "Limit",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "twitter:sendMessage",
+            "version": 5,
+            "parameters": {
+                "__IMTCONN__": 111111
+            },
+            "mapper": {
+                "text": "AUTOREPLY: Hey!👋 Thanks for sending us a message. This tool is fully automated 🤖 and so humans don't monitor the inbox. If you need to report an event, use the report link in the Twitter Bio. You can report bugs and suggest features using Github: https://github.com/openresearchcalendar/Open-Research-Calendar/issues/new/choose ",
+                "recipient_id": "{{1.message_create.sender_id}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                },
+                "restore": {
+                    "__IMTCONN__": {
+                        "label": "My Twitter connection ()"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "recipient_id",
+                        "type": "text",
+                        "label": "User ID",
+                        "required": true
+                    },
+                    {
+                        "name": "text",
+                        "type": "text",
+                        "label": "Message Text",
+                        "required": true,
+                        "validate": {
+                            "max": 10000
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": false,
+            "sequential": false,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu1.integromat.com"
+    }
+}
