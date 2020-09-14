@@ -1,0 +1,750 @@
+{
+    "name": "Tweet new events",
+    "flow": [
+        {
+            "id": 1,
+            "module": "google-sheets:watchRows",
+            "version": 2,
+            "parameters": {
+                "limit": 10,
+                "sheetId": "YOUR SHEET NAME",
+                "__IMTCONN__": 111111,
+                "spreadsheetId": "YOUR SHEET ID HERE",
+                "tableFirstRow": "A1:Z1",
+                "includesHeaders": true,
+                "valueRenderOption": "FORMATTED_VALUE",
+                "dateTimeRenderOption": "FORMATTED_STRING"
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 150,
+                    "name": "Watch for new events"
+                },
+                "restore": {
+                    "sheetId": {
+                        "mode": "chose",
+                        "label": "YOUR SHEET NAME"
+                    },
+                    "__IMTCONN__": {
+                        "label": "My Google connection (YOUR GOOGLE CONNECTION)"
+                    },
+                    "spreadsheetId": {
+                        "mode": "chose",
+                        "label": "YOUR WORKBOOK NAME"
+                    },
+                    "includesHeaders": {
+                        "label": "Yes"
+                    },
+                    "valueRenderOption": {
+                        "mode": "chose",
+                        "label": "Formatted value"
+                    },
+                    "dateTimeRenderOption": {
+                        "mode": "chose",
+                        "label": "Formatted string"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account",
+                        "label": "Connection",
+                        "required": true
+                    },
+                    {
+                        "name": "spreadsheetId",
+                        "type": "select",
+                        "label": "Spreadsheet",
+                        "required": true
+                    },
+                    {
+                        "name": "includesHeaders",
+                        "type": "select",
+                        "label": "Table contains headers",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                true,
+                                false
+                            ]
+                        }
+                    },
+                    {
+                        "name": "valueRenderOption",
+                        "type": "select",
+                        "label": "Value render option",
+                        "validate": {
+                            "enum": [
+                                "FORMATTED_VALUE",
+                                "UNFORMATTED_VALUE",
+                                "FORMULA"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "dateTimeRenderOption",
+                        "type": "select",
+                        "label": "Date and time render option",
+                        "validate": {
+                            "enum": [
+                                "SERIAL_NUMBER",
+                                "FORMATTED_STRING"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "type": "uinteger",
+                        "label": "Limit",
+                        "required": true
+                    },
+                    {
+                        "name": "tableFirstRow",
+                        "type": "text",
+                        "label": "Row with headers",
+                        "required": true
+                    },
+                    {
+                        "name": "sheetId",
+                        "type": "select",
+                        "label": "Sheet",
+                        "required": true
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "__ROW_NUMBER__",
+                        "type": "number",
+                        "label": "Row number"
+                    },
+                    {
+                        "name": "0",
+                        "type": "text",
+                        "label": "Timestamp (A)"
+                    },
+                    {
+                        "name": "1",
+                        "type": "text",
+                        "label": "Event title (B)"
+                    },
+                    {
+                        "name": "2",
+                        "type": "text",
+                        "label": "Location (C)"
+                    },
+                    {
+                        "name": "3",
+                        "type": "text",
+                        "label": "Start Date (D)"
+                    },
+                    {
+                        "name": "4",
+                        "type": "text",
+                        "label": "Start Time (E)"
+                    },
+                    {
+                        "name": "5",
+                        "type": "text",
+                        "label": "End Date (F)"
+                    },
+                    {
+                        "name": "6",
+                        "type": "text",
+                        "label": "End Time (G)"
+                    },
+                    {
+                        "name": "7",
+                        "type": "text",
+                        "label": "URL (H)"
+                    },
+                    {
+                        "name": "8",
+                        "type": "text",
+                        "label": "Description (I)"
+                    },
+                    {
+                        "name": "9",
+                        "type": "text",
+                        "label": "FormattedEventName (J)"
+                    },
+                    {
+                        "name": "10",
+                        "type": "text",
+                        "label": "FormattedStart (K)"
+                    },
+                    {
+                        "name": "11",
+                        "type": "text",
+                        "label": "FormattedEnd (L)"
+                    },
+                    {
+                        "name": "12",
+                        "type": "text",
+                        "label": "Pushed to Calendar (M)"
+                    },
+                    {
+                        "name": "13",
+                        "type": "text",
+                        "label": "CalendarEventCreated(ID) (N)"
+                    },
+                    {
+                        "name": "14",
+                        "type": "text",
+                        "label": "last action (O)"
+                    },
+                    {
+                        "name": "15",
+                        "type": "text",
+                        "label": "Date entry made (P)"
+                    },
+                    {
+                        "name": "16",
+                        "type": "text",
+                        "label": "Formula Copy Down Status (Q)"
+                    },
+                    {
+                        "name": "17",
+                        "type": "text",
+                        "label": "Event ID (R)"
+                    },
+                    {
+                        "name": "18",
+                        "type": "text",
+                        "label": "Twitter ID (S)"
+                    },
+                    {
+                        "name": "19",
+                        "type": "text",
+                        "label": "(T)"
+                    },
+                    {
+                        "name": "20",
+                        "type": "text",
+                        "label": "(U)"
+                    },
+                    {
+                        "name": "21",
+                        "type": "text",
+                        "label": "(V)"
+                    },
+                    {
+                        "name": "22",
+                        "type": "text",
+                        "label": "(W)"
+                    },
+                    {
+                        "name": "23",
+                        "type": "text",
+                        "label": "(X)"
+                    },
+                    {
+                        "name": "24",
+                        "type": "text",
+                        "label": "(Y)"
+                    },
+                    {
+                        "name": "25",
+                        "type": "text",
+                        "label": "(Z)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 7,
+            "module": "bitly:shortenUrl",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 111111
+            },
+            "mapper": {
+                "long_url": "https://www.google.com/calendar/embed?src=YOURCALENDARNAME&mode=day&dates={{formatDate(1.`3`; \"YYYYDDMM\")}}%2F{{formatDate(1.`3`; \"YYYYDDMM\")}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 150
+                },
+                "restore": {
+                    "__IMTCONN__": {
+                        "label": "My Bitly connection ()"
+                    },
+                    "organization_guid": {
+                        "label": ""
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "long_url",
+                        "type": "url",
+                        "label": "Long URL",
+                        "required": true
+                    },
+                    {
+                        "name": "organization_guid",
+                        "type": "select",
+                        "label": "Organization"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "twitter:createTweet",
+            "version": 5,
+            "parameters": {
+                "__IMTCONN__": 111111
+            },
+            "mapper": {
+                "select": "image",
+                "status": "New Open Research Event 🎓📆 - {{1.`1`}} {{if(contains(trim(lower(1.`2`)); \"online\") = true; \"held\"; \"in\")}} {{1.`2`}} from {{1.`3`}} to {{1.`5`}}. View this event in the calendar: {{7.link}}",
+                "possibly_sensitive": false,
+                "display_coordinates": true
+            },
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 150
+                },
+                "restore": {
+                    "select": {
+                        "label": "Image or GIF"
+                    },
+                    "__IMTCONN__": {
+                        "label": "My Twitter connection ()"
+                    },
+                    "attachments": {
+                        "mode": "chose",
+                        "items": []
+                    },
+                    "display_coordinates": {
+                        "mode": "chose"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "status",
+                        "type": "text",
+                        "label": "Status",
+                        "required": true
+                    },
+                    {
+                        "name": "select",
+                        "type": "select",
+                        "label": "Upload",
+                        "validate": {
+                            "enum": [
+                                "image",
+                                "video"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "possibly_sensitive",
+                        "type": "boolean",
+                        "label": "Attached images contain sensitive content (nudity, violence, etc).",
+                        "required": true
+                    },
+                    {
+                        "name": "lat",
+                        "type": "number",
+                        "label": "Geographic Latitude",
+                        "validate": {
+                            "max": 90,
+                            "min": -90
+                        }
+                    },
+                    {
+                        "name": "long",
+                        "type": "number",
+                        "label": "Geographic Longitude",
+                        "validate": {
+                            "max": 180,
+                            "min": -180
+                        }
+                    },
+                    {
+                        "name": "display_coordinates",
+                        "type": "boolean",
+                        "label": "Display tweets coordinates",
+                        "required": true
+                    },
+                    {
+                        "name": "attachments",
+                        "spec": [
+                            {
+                                "name": "filename",
+                                "type": "filename",
+                                "label": "File Name",
+                                "semantic": "file:name"
+                            },
+                            {
+                                "name": "data",
+                                "type": "buffer",
+                                "label": "Data",
+                                "semantic": "file:data"
+                            },
+                            {
+                                "name": "media_category",
+                                "type": "select",
+                                "label": "Media Category",
+                                "options": [
+                                    {
+                                        "label": "Tweet Gif",
+                                        "value": "tweet_gif"
+                                    },
+                                    {
+                                        "label": "Tweet Image",
+                                        "value": "tweet_image"
+                                    }
+                                ]
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Attachments",
+                        "validate": {
+                            "maxItems": 4
+                        }
+                    }
+                ],
+                "advanced": true
+            },
+            "onerror": [
+                {
+                    "id": 5,
+                    "module": "builtin:Break",
+                    "version": 1,
+                    "parameters": {},
+                    "mapper": {
+                        "count": "3",
+                        "retry": true,
+                        "interval": "15"
+                    },
+                    "metadata": {
+                        "designer": {
+                            "x": 900,
+                            "y": 300,
+                            "name": "If error - stop"
+                        },
+                        "restore": {
+                            "retry": {
+                                "mode": "chose"
+                            }
+                        },
+                        "expect": [
+                            {
+                                "name": "retry",
+                                "type": "boolean",
+                                "label": "Automatically complete execution",
+                                "required": true
+                            },
+                            {
+                                "name": "count",
+                                "type": "uinteger",
+                                "label": "Number of attempts",
+                                "required": true
+                            },
+                            {
+                                "name": "interval",
+                                "type": "uinteger",
+                                "label": "Interval between attempts",
+                                "required": true
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "module": "google-sheets:updateRow",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 111111
+            },
+            "mapper": {
+                "mode": "select",
+                "values": {
+                    "18": "{{2.id_str}}"
+                },
+                "sheetId": "YOUR SHEET NAME",
+                "rowNumber": "{{1.`__ROW_NUMBER__`}}",
+                "spreadsheetId": "YOUR SHEET ID",
+                "includesHeaders": true,
+                "valueInputOption": "USER_ENTERED"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 900,
+                    "y": 0,
+                    "name": "Add Tweet ID to Spreadsheet"
+                },
+                "restore": {
+                    "mode": {
+                        "label": "Select spreadsheet and sheet"
+                    },
+                    "sheetId": {
+                        "label": "YOUR SHEET NAME"
+                    },
+                    "__IMTCONN__": {
+                        "label": "My Google connection ()"
+                    },
+                    "spreadsheetId": {
+                        "label": "YOUR WORKBOOK NAME"
+                    },
+                    "includesHeaders": {
+                        "label": "Yes"
+                    },
+                    "valueInputOption": {
+                        "mode": "chose",
+                        "label": "User entered"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "mode",
+                        "type": "select",
+                        "label": "Mode",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "select",
+                                "map"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "valueInputOption",
+                        "type": "select",
+                        "label": "Value input option",
+                        "validate": {
+                            "enum": [
+                                "USER_ENTERED",
+                                "RAW"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "spreadsheetId",
+                        "type": "select",
+                        "label": "Spreadsheet",
+                        "required": true
+                    },
+                    {
+                        "name": "sheetId",
+                        "type": "select",
+                        "label": "Sheet",
+                        "required": true
+                    },
+                    {
+                        "name": "rowNumber",
+                        "type": "uinteger",
+                        "label": "Row number",
+                        "required": true
+                    },
+                    {
+                        "name": "includesHeaders",
+                        "type": "select",
+                        "label": "Table contains headers",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                true,
+                                false
+                            ]
+                        }
+                    },
+                    {
+                        "name": "values",
+                        "spec": [
+                            {
+                                "name": "0",
+                                "type": "text",
+                                "label": "Timestamp (A)"
+                            },
+                            {
+                                "name": "1",
+                                "type": "text",
+                                "label": "Event title (B)"
+                            },
+                            {
+                                "name": "2",
+                                "type": "text",
+                                "label": "Location (C)"
+                            },
+                            {
+                                "name": "3",
+                                "type": "text",
+                                "label": "Start Date (D)"
+                            },
+                            {
+                                "name": "4",
+                                "type": "text",
+                                "label": "Start Time (E)"
+                            },
+                            {
+                                "name": "5",
+                                "type": "text",
+                                "label": "End Date (F)"
+                            },
+                            {
+                                "name": "6",
+                                "type": "text",
+                                "label": "End Time (G)"
+                            },
+                            {
+                                "name": "7",
+                                "type": "text",
+                                "label": "URL (H)"
+                            },
+                            {
+                                "name": "8",
+                                "type": "text",
+                                "label": "Description (I)"
+                            },
+                            {
+                                "name": "9",
+                                "type": "text",
+                                "label": "FormattedEventName (J)"
+                            },
+                            {
+                                "name": "10",
+                                "type": "text",
+                                "label": "FormattedStart (K)"
+                            },
+                            {
+                                "name": "11",
+                                "type": "text",
+                                "label": "FormattedEnd (L)"
+                            },
+                            {
+                                "name": "12",
+                                "type": "text",
+                                "label": "Pushed to Calendar (M)"
+                            },
+                            {
+                                "name": "13",
+                                "type": "text",
+                                "label": "CalendarEventCreated(ID) (N)"
+                            },
+                            {
+                                "name": "14",
+                                "type": "text",
+                                "label": "last action (O)"
+                            },
+                            {
+                                "name": "15",
+                                "type": "text",
+                                "label": "Date entry made (P)"
+                            },
+                            {
+                                "name": "16",
+                                "type": "text",
+                                "label": "Formula Copy Down Status (Q)"
+                            },
+                            {
+                                "name": "17",
+                                "type": "text",
+                                "label": "Event ID (R)"
+                            },
+                            {
+                                "name": "18",
+                                "type": "text",
+                                "label": "Twitter ID (S)"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Values"
+                    }
+                ]
+            },
+            "onerror": [
+                {
+                    "id": 6,
+                    "module": "builtin:Break",
+                    "version": 1,
+                    "parameters": {},
+                    "mapper": {
+                        "count": "3",
+                        "retry": true,
+                        "interval": "20"
+                    },
+                    "metadata": {
+                        "designer": {
+                            "x": 1200,
+                            "y": 0,
+                            "name": "If error - stop"
+                        },
+                        "restore": {
+                            "retry": {
+                                "mode": "chose"
+                            }
+                        },
+                        "expect": [
+                            {
+                                "name": "retry",
+                                "type": "boolean",
+                                "label": "Automatically complete execution",
+                                "required": true
+                            },
+                            {
+                                "name": "count",
+                                "type": "uinteger",
+                                "label": "Number of attempts",
+                                "required": true
+                            },
+                            {
+                                "name": "interval",
+                                "type": "uinteger",
+                                "label": "Interval between attempts",
+                                "required": true
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": false,
+            "sequential": false,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": true
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu1.integromat.com"
+    }
+}
