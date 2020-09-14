@@ -1,7 +1,7 @@
 ---
 redirect_from: "/Open-Research-Calendar/"
 ---
-Hi there! :wave: Welcome to the information page of Open Research Calendar. Below you can read a bit more about our automated :robot: open-source community tool. :calendar:  
+Hi there! :wave: Welcome to the information page of Open Research Calendar. Below you can read a bit more about our automated :robot: open-source community tool.  
 
 <p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/openresearchcalendar/openresearchcalendar.github.io/master/Documents/Images/logo_wide-cropped.png" alt="" width="360" height="110" /></p>
 
