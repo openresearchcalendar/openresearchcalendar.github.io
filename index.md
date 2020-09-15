@@ -34,7 +34,7 @@ Please note that the admins volunteer their time for this tool and as such, the 
 
 <h1 style="text-align: center;"><strong>Data Use</strong></h1>
 
-The data collected as part of this tool is stored securely in a Google Drive. 
+The data collected as part of this tool is stored securely in a Google Drive.  
 *No personally identifiable information is collected.*
 
 Privacy policy for the relevant services:  
