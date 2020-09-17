@@ -6,3 +6,4 @@ title: Open Research Calendar
 <p style="text-align: right;">Want to add <strong>the live calendar</strong> to your own? Click the blue 'plus' above</p>
 <p style="text-align: right;">&nbsp;</p>
 <p style="text-align: left;">Want to add an <strong>individual event&nbsp;</strong>to your own calendar? Click on the event and select 'Copy to my calendar'</p>
+
