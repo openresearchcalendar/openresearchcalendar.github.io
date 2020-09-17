@@ -40,7 +40,3 @@ The data collected as part of this tool is stored securely in a Google Drive.
 Privacy policy for the relevant services:  
 
 [Google](https://policies.google.com/privacy) | [Twitter](https://twitter.com/en/privacy) | [Integromat](https://support.integromat.com/hc/en-us/articles/360001988174)  
-
-<h1 style="text-align: center;"><strong>The Calendar</strong></h1>
-
-<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FLondon&amp;src=b3BlbnJlc2VhcmNoY2FsZW5kYXJAZ21haWwuY29t&amp;color=%23F4511E&amp;showTitle=1&amp;title=Open%20Research%20Calendar&amp;showPrint=0&amp;showCalendars=0&amp;hl=en_GB" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
