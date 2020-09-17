@@ -1,7 +1,9 @@
+---
+title: Open Research Calendar
+---
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-    <title>Open Research Calendar</title>
 <link rel="apple-touch-icon" sizes="180x180" href="/Documents/icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/Documents/icons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/Documents/icons/favicon-16x16.png">
