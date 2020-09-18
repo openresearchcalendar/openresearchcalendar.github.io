@@ -1,4 +1,5 @@
 deploy:
+  language: ruby
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN  
