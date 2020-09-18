@@ -51,9 +51,7 @@ We are particularly interested in extending the tool to for global compatibility
 
 ## Contact us
 
-Contact us via a tweet or direct message on twitter [@OpenResearchCal](https://twitter.com/OpenResearchCal]).
-
-Email us at [openresearchcalendar@gmail.com](mailto:openresearchcalendar@gmail.com).
+Our Twitter and email accounts are fully automated so you cannot contact us through those. However, you can contact the team using the GitHub Repository. 
 
 Comment on this repository via [github issues](https://github.com/openresearchcalendar/Open-Research-Calendar/issues)
 
