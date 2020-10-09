@@ -17,9 +17,9 @@ The tool was created to serve the open research community in collating worldwide
 
 <h2><strong>Creators (A-Z):</strong></h2>  
 
-Alexandra Lautarescu ([@AleLautarescu](https://twitter.com/AleLautarescu))  
-Bradley Kennedy ([@bradpsych](https://twitter.com/bradpsych))  
 Cassandra Gould van Praag ([@cassgvp](https://twitter.com/cassgvp))  
+Bradley Kennedy ([@bradpsych](https://twitter.com/bradpsych))  
+Alexandra Lautarescu ([@AleLautarescu](https://twitter.com/AleLautarescu))  
 Esther Plomp ([@PhDToothFAIRy](https://twitter.com/PhDToothFAIRy))  
 
 <h1 style="text-align: center;"><strong>Reporting Events</strong></h1>
