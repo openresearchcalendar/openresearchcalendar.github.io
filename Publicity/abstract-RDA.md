@@ -1,5 +1,11 @@
 **Title: Open Research Calendar**
 
+*authors:* 
+Cassandra Gould van Praag (@cassgvp), University of Oxford
+Bradley Kennedy (@bradpsych), University of Chester
+Alexandra Lautarescu (@AleLautarescu), King’s College London
+Esther Plomp (@PhDToothFAIRy), Delft University of Technology
+
 In a world affected by the COVID-19 crisis where online workshops, seminars, and conferences are increasingly hosted online and can be attended with the click of a button, keeping track of events is becoming more difficult. 
 A community-powered shared calendar, the Open Research Calendar, can enable interested users to keep track of open research events. 
 This calendar can help researchers find workshops, conferences and seminars on open research without an effortful search, and minimise the need for scattered manual updates via community-powered automated communication. 
