@@ -1,6 +1,7 @@
 **Title: Open Research Calendar**
 
 *authors:* 
+
 Cassandra Gould van Praag (@cassgvp), University of Oxford
 
 Bradley Kennedy (@bradpsych), University of Chester
@@ -21,3 +22,8 @@ The more than 500 followers of the calendar indicate that there is a real need f
 The current aims of the project are to increase awareness and encourage submission of events. 
 The code and documentation for the calendar is open source and shared with a GNU 3.0 licence, so we invite groups to recreate the automation and communication features for their own communities. 
 We welcome contributions to the technical development of the calendar via our public GitHub repository.
+
+Relevance / Link to RDA: *
+The Open Research Calendar contributes to RDA's mission (building social and technical bridges to enable open sharing of data) by increasing the awareness of events that promote open science practises such as the sharing of data. 
+The Open Research Calendar includes events on open research practises accross disciplines and country borders, facilitating multi disciplinary interactions that may address the grand challenges of society. 
+
