@@ -10,6 +10,6 @@ plugins:
   - jekyll-redirect-from
 defaults:
   - scope:
-      path: Documents/*
+      path: "Documents/**" "Publicity/**"
     values:
       sitemap: false 
