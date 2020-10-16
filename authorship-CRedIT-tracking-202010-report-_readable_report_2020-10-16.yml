@@ -1,0 +1,57 @@
+|
+  author:
+    - name: Cassandra D. Gould van Praag
+      affiliation: '1'
+      role:
+        - Conceptualization
+        - Funding Acquisition
+        - Methodology
+        - Project Administration
+        - Resources
+        - Software
+        - Visualization
+        - Writing - Original Draft Preparation
+        - Writing - Review & Editing
+      email: cassandra.gouldvanpraag@psych.ox.ac.uk
+    - name: Bradley J. Kennedy
+      affiliation: '2'
+      role:
+        - Conceptualization
+        - Data Curation
+        - Funding Acquisition
+        - Methodology
+        - Project Administration
+        - Resources
+        - Software
+        - Visualization
+        - Writing - Original Draft Preparation
+        - Writing - Review & Editing
+      email: b.kennedy@chester.ac.uk
+    - name: Alexandra Lautarescu
+      affiliation: '3'
+      role:
+        - Conceptualization
+        - Project Administration
+        - Writing - Review & Editing
+      email: alexandra.lautarescu@kcl.ac.uk
+    - name: Esther Plomp
+      affiliation: '4'
+      role:
+        - Conceptualization
+        - Funding Acquisition
+        - Project Administration
+        - Resources
+        - Visualization
+        - Writing - Original Draft Preparation
+        - Writing - Review & Editing
+      email: e.plomp@tudelft.n
+
+  affiliation:
+    - id: '1'
+      institution: University of Oxford
+    - id: '2'
+      institution: University of Chester
+    - id: '3'
+      institution: King's College London
+    - id: '4'
+      institution: Delft University of Technology

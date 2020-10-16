@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contrib-group>
+  <contrib>
+    <name surname="Gould van Praag" given-names="Cassandra D."/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Conceptualization" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Conceptualization"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Funding Acquisition" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Funding_acquisition"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Methodology" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Methodology"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Project Administration" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Project_administration"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Resources" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Resources"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Software" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Software"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Visualization" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Visualization"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Writing - Original Draft Preparation" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Writing_original_draft"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Writing - Review &amp; Editing" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Writing_review_editing"/>
+  </contrib>
+  <contrib>
+    <name surname="Kennedy" given-names="Bradley J."/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Conceptualization" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Conceptualization"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Data Curation" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Data_curation"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Funding Acquisition" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Funding_acquisition"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Methodology" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Methodology"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Project Administration" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Project_administration"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Resources" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Resources"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Software" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Software"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Visualization" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Visualization"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Writing - Original Draft Preparation" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Writing_original_draft"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Writing - Review &amp; Editing" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Writing_review_editing"/>
+  </contrib>
+  <contrib>
+    <name surname="Lautarescu" given-names="Alexandra"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Conceptualization" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Conceptualization"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Project Administration" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Project_administration"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Writing - Review &amp; Editing" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Writing_review_editing"/>
+  </contrib>
+  <contrib>
+    <name surname="Plomp" given-names="Esther"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Conceptualization" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Conceptualization"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Funding Acquisition" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Funding_acquisition"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Project Administration" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Project_administration"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Resources" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Resources"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Visualization" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Visualization"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Writing - Original Draft Preparation" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Writing_original_draft"/>
+    <role vocab="credit" vocab-identifier="http://dictionary.casrai.org/Contributor_Roles" vocab-term="Writing - Review &amp; Editing" vocab-term-identifier="https://dictionary.casrai.org/Contributor_Roles/Writing_review_editing"/>
+  </contrib>
+</contrib-group>
