@@ -1,0 +1,11 @@
+Order in publication,Firstname,Middle name,Surname,Conceptualization,Data Curation,Formal Analysis,Funding Acquisition,Investigation,Methodology,Project Administration,Resources,Software,Supervision,Validation,Visualization,Writing - Original Draft Preparation,Writing - Review & Editing,Email address,Primary affiliation,Secondary affiliation,Corresponding author?
+1,Cassandra,D,Gould van Praag,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,cassandra.gouldvanpraag@psych.ox.ac.uk,University of Oxford,,FALSE
+2,Bradley,J,Kennedy,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,b.kennedy@chester.ac.uk,University of Chester,,FALSE
+3,Alexandra,,Lautarescu,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,alexandra.lautarescu@kcl.ac.uk,King's College London,,FALSE
+4,Esther,,Plomp,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,e.plomp@tudelft.n,Delft University of Technology,,TRUE
+5,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,FALSE
+6,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,FALSE
+7,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,FALSE
+8,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,FALSE
+9,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,FALSE
+10,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,FALSE

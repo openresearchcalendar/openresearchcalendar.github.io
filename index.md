@@ -15,12 +15,24 @@ The tool was created to serve the open research community in collating worldwide
 
 :warning: We ultimately take no responsibility for the content or administration of any events which appear in the calendar.
 
-<h2><strong>Creators (A-Z):</strong></h2>  
+<h2><strong>Contributors and Contributions by the [CRediT (Contributor Roles Taxonomy)](https://www.elsevier.com/authors/journal-authors/policies-and-ethics/credit-author-statement)</strong></h2>  
 
-Cassandra Gould van Praag ([@cassgvp](https://twitter.com/cassgvp))  
-Bradley Kennedy ([@bradpsych](https://twitter.com/bradpsych))  
+Cassandra D Gould van Praag   ([@cassgvp](https://twitter.com/cassgvp))  
+Bradley J Kennedy ([@bradpsych](https://twitter.com/bradpsych))  
 Alexandra Lautarescu ([@AleLautarescu](https://twitter.com/AleLautarescu))  
 Esther Plomp ([@PhDToothFAIRy](https://twitter.com/PhDToothFAIRy))  
+
+- **Conceptualization**: Cassandra D. Gould van Praag, Bradley J. Kennedy, Alexandra Lautarescu and Esther Plomp.
+- **Data Curation**: Bradley J. Kennedy.
+- **Funding Acquisition**: Cassandra D. Gould van Praag, Bradley J. Kennedy and Esther Plomp.
+- **Methodology**: Cassandra D. Gould van Praag and Bradley J. Kennedy.
+- **Project Administration**: Cassandra D. Gould van Praag, Bradley J. Kennedy, Alexandra Lautarescu and Esther Plomp.
+- **Resources**: Cassandra D. Gould van Praag, Bradley J. Kennedy and Esther Plomp.
+- **Software**: Cassandra D. Gould van Praag and Bradley J. Kennedy.
+- **Visualization**: Cassandra D. Gould van Praag, Bradley J. Kennedy and Esther Plomp.
+- **Writing - Original Draft Preparation**: Cassandra D. Gould van Praag, Bradley J. Kennedy and Esther Plomp.
+- **Writing - Review & Editing**: Cassandra D. Gould van Praag, Bradley J. Kennedy, Alexandra Lautarescu and Esther Plomp.
+
 
 <h1 style="text-align: center;"><strong>Reporting Events</strong></h1>
 
