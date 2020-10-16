@@ -15,12 +15,14 @@ The tool was created to serve the open research community in collating worldwide
 
 :warning: We ultimately take no responsibility for the content or administration of any events which appear in the calendar.
 
-<h2><strong>Contributors and Contributions by the [CRediT (Contributor Roles Taxonomy)](https://www.elsevier.com/authors/journal-authors/policies-and-ethics/credit-author-statement)</strong></h2>  
+<h2><strong>Contributors and Contributions</strong></h2>  
 
-Cassandra D Gould van Praag   ([@cassgvp](https://twitter.com/cassgvp))  
-Bradley J Kennedy ([@bradpsych](https://twitter.com/bradpsych))  
-Alexandra Lautarescu ([@AleLautarescu](https://twitter.com/AleLautarescu))  
-Esther Plomp ([@PhDToothFAIRy](https://twitter.com/PhDToothFAIRy))  
+Follows the [CRediT (Contributor Roles Taxonomy)](https://www.elsevier.com/authors/journal-authors/policies-and-ethics/credit-author-statement)
+
+Cassandra D Gould van Praag ([twitter: @cassgvp](https://twitter.com/cassgvp))  
+Bradley J Kennedy ([twitter: @bradpsych](https://twitter.com/bradpsych))  
+Alexandra Lautarescu ([twitter: @AleLautarescu](https://twitter.com/AleLautarescu))  
+Esther Plomp ([twitter: @PhDToothFAIRy](https://twitter.com/PhDToothFAIRy))  
 
 - **Conceptualization**: Cassandra D. Gould van Praag, Bradley J. Kennedy, Alexandra Lautarescu and Esther Plomp.
 - **Data Curation**: Bradley J. Kennedy.
