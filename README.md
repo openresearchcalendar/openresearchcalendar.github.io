@@ -1,7 +1,8 @@
 # Open Research Calendar
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/openresearchcalendar/openresearchcalendar.github.io)
 ![GitHub](https://img.shields.io/github/license/openresearchcalendar/openresearchcalendar.github.io)
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)  
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+[![DOI](https://zenodo.org/badge/233877825.svg)](https://zenodo.org/badge/latestdoi/233877825)
 > [View Public Webpage](https://openresearchcalendar.github.io/)  
 
 Thank you for visiting the Open Research Calendar project repository.
