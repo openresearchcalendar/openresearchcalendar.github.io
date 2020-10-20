@@ -64,5 +64,4 @@ Comment on this repository via [github issues](https://github.com/openresearchca
 We'd love for you to re-use this tool for your own community! We are sharing our code and resources under the [GNU Public License](LICENSE.txt).
 
 We are grateful for acknowledgement using the reference below:
-
-To Do: Add zenodo integration - CGVP
+` Cassandra D Gould van Praag*, Bradley J Kennedy*, Alexandra Lautarescu*, & Esther Plomp*. (2020, October 20). openresearchcalendar/openresearchcalendar.github.io: for Zenodo (Version v1.2). Zenodo. http://doi.org/10.5281/zenodo.4109950 *All authors contributed equally. See CRediT authorship statement. 
