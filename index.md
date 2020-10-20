@@ -39,9 +39,8 @@ Esther Plomp ([twitter: @PhDToothFAIRy](https://twitter.com/PhDToothFAIRy))
 
 Please cite Open Research calendar as below: 
 
-```
-Cassandra D Gould van Praag, Bradley J Kennedy, Alexandra Lautarescu, & Esther Plomp. (2020, October 20). openresearchcalendar/openresearchcalendar.github.io: for Zenodo (Version v1.2). Zenodo. http://doi.org/10.5281/zenodo.4109950
-```
+> Cassandra D Gould van Praag, Bradley J Kennedy, Alexandra Lautarescu, & Esther Plomp. (2020, October 20). Open Research Calendar (Version v1.2). Zenodo. http://doi.org/10.5281/zenodo.4109950  
+
 
 <h1 style="text-align: center;"><strong>Reporting Events</strong></h1>
 
