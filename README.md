@@ -68,4 +68,4 @@ We'd love for you to re-use this tool for your own community! We are sharing our
 
 We are grateful for acknowledgement using the reference below. Note author order is alphabetical, for more detail see [CRediT statement](http://doi.org/10.5281/zenodo.4109950).
 
-Cassandra D Gould van Praag, Bradley J Kennedy, Alexandra Lautarescu, & Esther Plomp. (2020, October 20). Open Research Calendar (Version v1.2). Zenodo. http://doi.org/10.5281/zenodo.4109950   
+Cassandra D Gould van Praag, Bradley J Kennedy, Alexandra Lautarescu, & Esther Plomp. (2020, October 20). Open Research Calendar. Zenodo. http://doi.org/10.5281/zenodo.4109950   
