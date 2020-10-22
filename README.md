@@ -2,7 +2,7 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/openresearchcalendar/openresearchcalendar.github.io)
 ![GitHub](https://img.shields.io/github/license/openresearchcalendar/openresearchcalendar.github.io)
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-[![DOI](https://zenodo.org/badge/233877825.svg)](https://zenodo.org/badge/latestdoi/233877825)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4116441.svg)](https://doi.org/10.5281/zenodo.4116441)
 > [View Public Webpage](https://openresearchcalendar.github.io/)  
 
 Thank you for visiting the Open Research Calendar project repository.
@@ -66,6 +66,6 @@ We'd love for you to re-use this tool for your own community! We are sharing our
 
 ## How to cite us
 
-We are grateful for acknowledgement using the reference below. Note author order is alphabetical, for more detail see [CRediT statement](http://doi.org/10.5281/zenodo.4109950).
+We are grateful for acknowledgement using the reference below. Note author order is alphabetical, for more detail see [CRediT statement](http://doi.org/10.5281/zenodo.4116441).
 
-Cassandra D Gould van Praag, Bradley J Kennedy, Alexandra Lautarescu, & Esther Plomp. (2020, October 20). Open Research Calendar. Zenodo. http://doi.org/10.5281/zenodo.4109950   
+Cassandra D Gould van Praag, Bradley J Kennedy, Alexandra Lautarescu, & Esther Plomp. (2020, October 20). Open Research Calendar. Zenodo. http://doi.org/10.5281/zenodo.4116441   
