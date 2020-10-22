@@ -35,6 +35,12 @@ Esther Plomp ([twitter: @PhDToothFAIRy](https://twitter.com/PhDToothFAIRy))
 - **Writing - Original Draft Preparation**: Cassandra D. Gould van Praag, Bradley J. Kennedy and Esther Plomp.
 - **Writing - Review & Editing**: Cassandra D. Gould van Praag, Bradley J. Kennedy, Alexandra Lautarescu and Esther Plomp.
 
+<h2><strong>Citation</strong></h2>  
+
+Please cite Open Research Calendar as below. Note author order is alphabetical, for more detail see [CRediT statement](http://doi.org/10.5281/zenodo.4109949).  
+
+> Cassandra D Gould van Praag, Bradley J Kennedy, Alexandra Lautarescu, & Esther Plomp. (2020, October 20). Open Research Calendar. Zenodo. <http://doi.org/10.5281/zenodo.4109949>.  
+
 
 <h1 style="text-align: center;"><strong>Reporting Events</strong></h1>
 

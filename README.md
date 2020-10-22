@@ -1,7 +1,8 @@
 # Open Research Calendar
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/openresearchcalendar/openresearchcalendar.github.io)
 ![GitHub](https://img.shields.io/github/license/openresearchcalendar/openresearchcalendar.github.io)
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)  
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4109949.svg)](https://doi.org/10.5281/zenodo.4109949)
 > [View Public Webpage](https://openresearchcalendar.github.io/)  
 
 Thank you for visiting the Open Research Calendar project repository.
@@ -15,6 +16,7 @@ This page is a hub to give you some information about the tool, what you will fi
 * [What do we need?](#what-do-we-need)
 * [Get in touch](#contact-us)
 * [Re-use and licensing](#re---use-and-licensing)
+* [How to cite us](#how-to-cite-us)
 
 
 ## What are we doing?
@@ -62,6 +64,8 @@ Comment on this repository via [github issues](https://github.com/openresearchca
 
 We'd love for you to re-use this tool for your own community! We are sharing our code and resources under the [GNU Public License](LICENSE.txt).
 
-We are grateful for acknowledgement using the reference below:
+## How to cite us
 
-To Do: Add zenodo integration - CGVP
+We are grateful for acknowledgement using the reference below. Note author order is alphabetical, for more detail see [CRediT statement](http://doi.org/10.5281/zenodo.4109949).
+
+Cassandra D Gould van Praag, Bradley J Kennedy, Alexandra Lautarescu, & Esther Plomp. (2020, October 20). Open Research Calendar. Zenodo. http://doi.org/10.5281/zenodo.4109949   
