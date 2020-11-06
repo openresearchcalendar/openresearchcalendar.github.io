@@ -1,5 +1,7 @@
 User-agent: Googlebot
+Disallow: /Documents
 Disallow: /Documents/
+Disallow: /Publicity
 Disallow: /Publicity/
 
 Sitemap: https://openresearchcalendar.github.io/sitemap.xml
