@@ -14,5 +14,4 @@ defaults:
     values:
       sitemap: false 
 exclude:
-  - Documents/
   - Publicity/
