@@ -15,6 +15,12 @@ The tool was created to serve the open research community in collating worldwide
 
 :warning: We ultimately take no responsibility for the content or administration of any events which appear in the calendar.
 
+<h1 style="text-align: center;"><strong>How to add events</strong></h1>
+
+If you would like to add your own events to the calendar, you can do so using our simple [Add Events Form](https://docs.google.com/forms/d/e/1FAIpQLSdGKfOrxs-bS-CF7ppTzQuVzZs7dzU-zYQ2GHvo1PNEmXmX4Q/viewform).
+
+Events need to be added individually and the start/end times need to be submitted in Europe/London timezone (We are [working towards conversion](https://github.com/openresearchcalendar/openresearchcalendar.github.io/issues/14) from other timezones. Please bare with us and use [this tool](https://www.thetimezoneconverter.com/) for now!).
+
 <h2><strong>Contributors and Contributions</strong></h2>  
 
 Follows the [CRediT (Contributor Roles Taxonomy)](https://www.elsevier.com/authors/journal-authors/policies-and-ethics/credit-author-statement)
