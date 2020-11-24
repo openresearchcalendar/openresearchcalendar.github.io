@@ -1,0 +1,43 @@
+{
+    "description": "<p>Documentation &amp; Code for the community tool: &#39;<a href=\"https://openresearchcalendar.github.io/\">Open Research Calendar</a>&#39;</p>\n\n<p>Authors listed alphabetically. Authorship statement following&nbsp;<a href=\"https://www.elsevier.com/authors/journal-authors/policies-and-ethics/credit-author-statement\">CRediT (Contributor Roles Taxonomy)</a></p>\n\n<ul>\n\t<li>Conceptualization: Cassandra D. Gould van Praag, Bradley J. Kennedy, Alexandra Lautarescu and Esther Plomp.</li>\n\t<li>Data Curation: Bradley J. Kennedy.</li>\n\t<li>Funding Acquisition: Cassandra D. Gould van Praag, Bradley J. Kennedy and Esther Plomp.</li>\n\t<li>Methodology: Cassandra D. Gould van Praag and Bradley J. Kennedy.</li>\n\t<li>Project Administration: Cassandra D. Gould van Praag, Bradley J. Kennedy, Alexandra Lautarescu and Esther Plomp.</li>\n\t<li>Resources: Cassandra D. Gould van Praag, Bradley J. Kennedy and Esther Plomp.</li>\n\t<li>Software: Cassandra D. Gould van Praag and Bradley J. Kennedy.</li>\n\t<li>Visualization: Cassandra D. Gould van Praag, Bradley J. Kennedy and Esther Plomp.</li>\n\t<li>Writing - Original Draft Preparation: Cassandra D. Gould van Praag, Bradley J. Kennedy and Esther Plomp.</li>\n\t<li>Writing - Review &amp; Editing: Cassandra D. Gould van Praag, Bradley J. Kennedy, Alexandra Lautarescu and Esther Plomp.</li>\n</ul>",
+    "license": "other-open",
+    "title": "Open Research Calendar",
+    "version": "v1.3",
+    "upload_type": "software",
+    "publication_date": "2020-10-21",
+    "creators": [
+        {
+            "orcid": "0000-0002-8584-4637",
+            "affiliation": "University of Oxford",
+            "name": "Cassandra D Gould van Praag"
+        },
+        {
+            "orcid": "0000-0003-4636-2210",
+            "affiliation": "University of Chester",
+            "name": "Bradley J Kennedy"
+        },
+        {
+            "orcid": "0000-0001-7680-8936",
+            "affiliation": "King's College London",
+            "name": "Alexandra Lautarescu"
+        },
+        {
+            "orcid": "0000-0003-3625-1357",
+            "affiliation": "Delft University of Technology",
+            "name": "Esther Plomp"
+        }
+    ],
+    "access_right": "open",
+    "related_identifiers": [
+        {
+            "scheme": "url",
+            "identifier": "https://github.com/openresearchcalendar/openresearchcalendar.github.io/tree/v1.3",
+            "relation": "isSupplementTo"
+        },
+        {
+            "scheme": "doi",
+            "identifier": "10.5281/zenodo.4109949",
+            "relation": "isVersionOf"
+        }
+    ]
+}
