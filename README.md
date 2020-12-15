@@ -4,6 +4,50 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4109949.svg)](https://doi.org/10.5281/zenodo.4109949)
 
+<style>
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #ff7700;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+}
+.button:hover {
+    background-color: white;
+    color: #ff7700;
+    border: 2px solid #ff7700;
+}
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.3s;
+}
+.button:hover span {
+  padding-right: 25px;
+}
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
 <a href="https://openresearchcalendar.github.io/" target="_self" class="button"><span>View Public Webpage </span></a>
 
 Thank you for visiting the Open Research Calendar project repository.
