@@ -3,7 +3,8 @@
 ![GitHub](https://img.shields.io/github/license/openresearchcalendar/openresearchcalendar.github.io)
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4109949.svg)](https://doi.org/10.5281/zenodo.4109949)
-> [View Public Webpage](https://openresearchcalendar.github.io/)  
+
+<a href="https://openresearchcalendar.github.io/" target="_self" class="button"><span>View Public Webpage </span></a>
 
 Thank you for visiting the Open Research Calendar project repository.
 
