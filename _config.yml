@@ -1,7 +1,7 @@
 theme: jekyll-theme-cayman
 title: Open Research Calendar
 description: A community tool to gather all Open Research events in one place
-google_analytics: UA-119326789-4
+google_analytics: G-VNGZLTVBTP
 github:
   is_project_page: true
 plugins:
