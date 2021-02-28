@@ -1,6 +1,0 @@
-# check if there is a file named maintenance.html
-# so when you want to disable maintenance mode just remname "mv maintenance.html maintenance.html.disabled"
-RewriteEngine On
-RewriteBase /
-RewriteCond %{REQUEST_URI} !^/maintenance\.html$
-RewriteRule ^(.*)$ https://openresearchcalendar.github.io/maintenance.html [R=307,L]
