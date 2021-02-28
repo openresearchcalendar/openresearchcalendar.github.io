@@ -11,4 +11,4 @@ redirect_from:
 <!--- paste redirect_from in here for future use: redirect_from: 
   - /index
   - /calendar     --->
-<!--- paste redirect_to in here for future use: <meta http-equiv="Refresh" content="0; URL=https://openresearchcalendar.github.io/maintenance.html">     --->
+<!--- paste redirect_to in here for future use: <meta http-equiv="Refresh" content="0; URL=https://openresearchcalendar.github.io/maintenance">     --->
