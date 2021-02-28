@@ -1,0 +1,6 @@
+# check if there is a file named maintenance.html
+# so when you want to disable maintenance mode just remname "mv maintenance.html maintenance.html.disabled"
+RewriteCond %{DOCUMENT_ROOT}/maintenance.html -f
+RewriteCond %{SCRIPT_FILENAME} !maintenance.html
+RewriteRule ^.*$ /maintenance.html [R=503,L]
+ErrorDocument 503 /maintenance.html
