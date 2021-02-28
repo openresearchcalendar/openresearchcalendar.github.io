@@ -4,6 +4,6 @@ title: Maintenance
 redirect_from: 
   - /index
   - /calendar
-  - /add-event
+  - /add-event.html
 ---
 
