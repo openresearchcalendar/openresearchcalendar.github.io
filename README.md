@@ -43,17 +43,15 @@ The developers and maintainers of this tool are (alphabetically):
 - [Alexandra Lautarescu](https://www.alautarescu.com)
 - [Esther Plomp](https://twitter.com/PhDToothFAIRy)
 
-We have recently received support from the [UK Reproducibility Network (UKRN)](https://www.ukrn.org) to elevate the infrastructure, support development, and raise awareness of this resource within our community.  
+We are supported by the [UK Reproducibility Network (UKRN)](https://www.ukrn.org) so that we can elevate our infrastructure, support development, and raise awareness of this resource within our community.  
 
 ## What do we need?
 
 Feedback and contributions!
 
-The tool was designed, developed and launched in under 5 days in January 2020. Since then we have been making minor tweaks to the workflow. We are hopeful that the boost from UKRN will enable us to refine our processes at both the user and administrator end!
+The tool was designed, developed and launched in under 5 days in January 2020. Since then we have been making minor tweaks to the workflow.
 
 We welcome feedback on any aspect of the tool via our [github issues](https://github.com/openresearchcalendar/Open-Research-Calendar/issues).
-
-We are particularly interested in extending the tool to for global compatibility, including the management of timezones and incorporation of alternatives to google.
 
 ## Contact us
 
