@@ -26,11 +26,7 @@ Cassandra D Gould van Praag, Bradley J Kennedy, Alexandra Lautarescu, & Esther P
  
 # Getting in touch
  
-The easiest way to get in touch is via our [github issues](https://github.com/openresearchcalendar/openresearchcalendar.github.io/issues). If you have an idea which is not discussed anywhere, you can open a new issue.
+The easiest way to get in touch is either via our [github discussions](https://github.com/openresearchcalendar/openresearchcalendar.github.io/discussions) or through [github issues](https://github.com/openresearchcalendar/openresearchcalendar.github.io/issues) if you have a file/code correction. If you have an idea which is not discussed anywhere, you can open a new discussion item/issue.
  
 As our Twitter and email accounts are fully automated, please remember that you cannot contact us using these. You are welcome to say hi to the developers and maintainers of this tool via our personal twitter accounts (alphabetically): [Cassandra Gould van Praag](https://twitter.com/cassgvp), [Bradley Kennedy](https://twitter.com/bradpsych), [Alexandra Lautarescu](https://twitter.com/AleLautarescu), [Esther Plomp](https://twitter.com/PhDToothFAIRy).
  
-
-
-
-
