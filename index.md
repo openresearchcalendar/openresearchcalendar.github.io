@@ -18,6 +18,8 @@ The tool was created to serve the open research community in collating worldwide
 
 :warning: We ultimately take no responsibility for the content or administration of any events which appear in the calendar.
 
+:email: Do you want a summary of the submitted events straight to your inbox? :mailbox: We now have an automated newsletter that will send a summary of the following months events on the 1st of each month. Sign up [here](/email-subscribe).  
+
 <div id='add-events'></div>
 <h1 style="text-align: center;"><strong>How to add events</strong></h1>
 
