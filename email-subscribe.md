@@ -2,7 +2,13 @@
 layout: email-minimal
 title: Email Subscribe
 ---
-<div id="tripetto"></div>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+</head>
+<body>
 <script src="https://unpkg.com/tripetto-runner-foundation"></script>
 <script src="https://unpkg.com/tripetto-runner-autoscroll"></script>
 <script src="https://unpkg.com/tripetto-services"></script>
@@ -10,7 +16,7 @@ title: Email Subscribe
 var tripetto = TripettoServices.init({ token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiV1hmTGdnMWpkSkpzMFdZVk5USmRRbEd4WVZLQnFxWlNWUHpZdS9RNU1PQT0iLCJkZWZpbml0aW9uIjoidWUxSTFIZGhXdHJQM3hOZFpPY3lFeEJZeE0yd0pWQlFSVngzNnp0bVJnRT0iLCJ0eXBlIjoiY29sbGVjdCJ9.NtPsncVT0RdVKeLDzoOoRtN8MTyxt-367LbxPOweK-g" });
 
 TripettoAutoscroll.run({
-    element: document.getElementById("tripetto"),
+    element: document.body,
     definition: tripetto.definition,
     styles: tripetto.styles,
     l10n: tripetto.l10n,
@@ -20,3 +26,5 @@ TripettoAutoscroll.run({
     onSubmit: tripetto.onSubmit
 });
 </script>
+</body>
+</html>
