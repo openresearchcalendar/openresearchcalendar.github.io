@@ -2,9 +2,21 @@
 layout: email-minimal
 title: Email Subscribe
 ---
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-</head>
-<p>Are you on mobile? If you cannot see the form, try <a href="https://cdn.forms-content.sg-form.com/2cd53912-85bc-11eb-967d-eedeb3b27ba8" target="_blank" rel="noopener">opening in a seperate page.</a></p>
-<p style="text-align: center;"><iframe style="border-width: 0;" src="https://cdn.forms-content.sg-form.com/2cd53912-85bc-11eb-967d-eedeb3b27ba8" width="600" height="800" frameborder="0" scrolling="no"></iframe></p>
+<div id="tripetto"></div>
+<script src="https://unpkg.com/tripetto-runner-foundation"></script>
+<script src="https://unpkg.com/tripetto-runner-autoscroll"></script>
+<script src="https://unpkg.com/tripetto-services"></script>
+<script>
+var tripetto = TripettoServices.init({ token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiV1hmTGdnMWpkSkpzMFdZVk5USmRRbEd4WVZLQnFxWlNWUHpZdS9RNU1PQT0iLCJkZWZpbml0aW9uIjoidWUxSTFIZGhXdHJQM3hOZFpPY3lFeEJZeE0yd0pWQlFSVngzNnp0bVJnRT0iLCJ0eXBlIjoiY29sbGVjdCJ9.NtPsncVT0RdVKeLDzoOoRtN8MTyxt-367LbxPOweK-g" });
+
+TripettoAutoscroll.run({
+    element: document.getElementById("tripetto"),
+    definition: tripetto.definition,
+    styles: tripetto.styles,
+    l10n: tripetto.l10n,
+    locale: tripetto.locale,
+    translations: tripetto.translations,
+    attachments: tripetto.attachments,
+    onSubmit: tripetto.onSubmit
+});
+</script>
