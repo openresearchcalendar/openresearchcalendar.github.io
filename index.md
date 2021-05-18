@@ -65,8 +65,8 @@ Please note that the admins volunteer their time for this tool and as such, the 
 
 :bug: Bug Reports and :bulb: Feature Requests can be made on GitHub.
 
-If you have an account, click [here](https://github.com/openresearchcalendar/Open-Research-Calendar/issues/new/choose)  
-If you do not have an account, click [here](https://gitreports.com/issue/openresearchcalendar/openresearchcalendar.github.io)  
+If you have a GitHub account, click [here](https://github.com/openresearchcalendar/Open-Research-Calendar/issues/new/choose)  
+If you do not have a GitHub account, click [here](https://gitreports.com/issue/openresearchcalendar/openresearchcalendar.github.io)  
 
 <div id='data-use'></div>
 <h1 style="text-align: center;"><strong>Data Use</strong></h1>
