@@ -15,7 +15,7 @@ layout: default
         return (file) => {
           const filePath = file.path;
           const fileName = file.path.replace('email-newsletter/archive/', '').replace('.html', '').toLowerCase().replace(/-/g, ' ').replace(/_/g, " ");
-          const fileName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
+          const fileName1 = fileName.charAt(0).toUpperCase() + fileName.slice(1);
           const isHTML = (/.html$/).test(filePath);
           const isNotIndex = filePath !== 'index.html';
           return isHTML && isNotIndex;
@@ -26,8 +26,9 @@ layout: default
         let htmlString = '<ul>';
         for (let file of data.filter(filterFiles(filter))) {
           const filePath = file.path.replace('.html', '');
-          const fileName = file.path.replace('.html', '').toLowerCase().replace(/-/g, ' ');
-          htmlString += `<li><a href="https://openresearchcalendar.org/${filePath}">${fileName}</a></li>`;
+          const fileName = file.path.replace('email-newsletter/archive/', '').replace('.html', '').toLowerCase().replace(/-/g, ' ').replace(/_/g, " ");
+          const fileName1 = fileName.charAt(0).toUpperCase() + fileName.slice(1);
+          htmlString += `<li><a href="https://openresearchcalendar.org/${filePath}">${fileName1}</a></li>`;
         }
       htmlString += '</ul>';
         document.getElementById('list').innerHTML = htmlString;
