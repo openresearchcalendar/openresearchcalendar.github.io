@@ -14,9 +14,11 @@ layout: default
         filter = filter.toLowerCase()
         return (file) => {
           const filePath = file.path;
-          const fileName = file.path.replace('.html', '').toLowerCase().replace(/-/g, ' ');
+          const fileName = file.path.replace('email-newsletter/archive/', '').replace('.html', '').toLowerCase().replace(/-/g, ' ').replace(/_/g, " ");
+          const fileName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
           const isHTML = (/.html$/).test(filePath);
-          return isHTML;
+          const isNotIndex = filePath !== 'index.html';
+          return isHTML && isNotIndex;
         }
       }
       
