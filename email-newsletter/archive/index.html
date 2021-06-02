@@ -17,7 +17,7 @@ layout: default
           const fileName = file.path.replace('email-newsletter/archive/', '').replace('.html', '').toLowerCase().replace(/-/g, ' ').replace(/_/g, " ");
           const fileName1 = fileName.charAt(0).toUpperCase() + fileName.slice(1);
           const isHTML = (/.html$/).test(filePath);
-          const isNotIndex = filePath !== 'index.html';
+          const isNotIndex = filePath !== 'email-newsletter/archive/index.html';
           return isHTML && isNotIndex;
         }
       }
