@@ -1,0 +1,41 @@
+---
+layout: page
+---
+<html>
+  <body>
+    <div>
+      <h2>Newsletter Archive</h2>
+      <ul id="list">
+      </ul>
+    </div>
+    
+    <script>
+      const filterFiles = (filter) => {
+        filter = filter.toLowerCase()
+        return (file) => {
+          const filePath = file.path;
+          const fileName = file.path.replace('.html', '').toLowerCase().replace(/-/g, ' ');
+          const isHTML = (/.html$/).test(filePath);
+          return isHTML;
+        }
+      }
+      
+      const renderList = (data, filter = '') => {
+        let htmlString = '<ul>';
+        for (let file of data.filter(filterFiles(filter))) {
+          const filePath = file.path.replace('.html', '');
+          const fileName = file.path.replace('.html', '').toLowerCase().replace(/-/g, ' ');
+          htmlString += `<li><a href="https://openresearchcalendar.org/${filePath}">${fileName}</a></li>`;
+        }
+      htmlString += '</ul>';
+        document.getElementById('html_list').innerHTML = htmlString;
+      }
+      
+      (async () => {
+        const response = await fetch('https://api.github.com/repos/openresearchcalendar/openresearchcalendar.github.io/contents/email-newsletter/archive');
+        const data = await response.json();
+        renderList(data);
+      })()
+    </script>
+  <body>
+</html>
