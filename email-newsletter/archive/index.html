@@ -14,7 +14,7 @@ layout: default
         filter = filter.toLowerCase()
         return (file) => {
           const filePath = file.path;
-          const fileName = file.path.replace('email-newsletter/archive/', '').replace('.html', '').toLowerCase().replace(/-/g, ' ').replace(/_/g, " ");
+          const fileName = file.path.replace('email-newsletter/archive/', '').replace('.html', '').toLowerCase().replace(/-/g, ' ').replace(/_/g, " ").replace('newsletter', '');
           const fileName1 = fileName.charAt(0).toUpperCase() + fileName.slice(1);
           const isHTML = (/.html$/).test(filePath);
           const isNotIndex = filePath !== 'email-newsletter/archive/index.html';
@@ -26,7 +26,7 @@ layout: default
         let htmlString = '<ul>';
         for (let file of data.filter(filterFiles(filter))) {
           const filePath = file.path.replace('.html', '');
-          const fileName = file.path.replace('email-newsletter/archive/', '').replace('.html', '').toLowerCase().replace(/-/g, ' ').replace(/_/g, " ");
+          const fileName = file.path.replace('email-newsletter/archive/', '').replace('.html', '').toLowerCase().replace(/-/g, ' ').replace(/_/g, " ").replace('newsletter', '');
           const fileName1 = fileName.charAt(0).toUpperCase() + fileName.slice(1);
           htmlString += `<li><a href="https://openresearchcalendar.org/${filePath}">${fileName1}</a></li>`;
         }
