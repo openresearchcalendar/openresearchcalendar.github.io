@@ -1,5 +1,7 @@
 ---
 title: Bug Reports & Feature Requests
+show-avatar: false
+nav-short: true
 ---
 :bug: Bug Reports and :bulb: Feature Requests can be made on GitHub.
 

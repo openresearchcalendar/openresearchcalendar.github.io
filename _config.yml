@@ -33,14 +33,14 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/avatar-icon.png"
+# avatar: "/assets/img/avatar-icon.png"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
-#title-img: /path/to/image
+title-img: /assets/img/avatar-icon.png
 
 
 # --- Footer social media links --- #
@@ -74,7 +74,7 @@ social-network-links:
 
 # If you want to show a link to an RSS in the footer, add the site description here.
 # If you don't want to show an RSS link, remove the following line.
-rss-description: A community tool to gather all Open Research events in one place
+# rss-description: A community tool to gather all Open Research events in one place
 
 # --- General options --- #
 
@@ -228,7 +228,7 @@ defaults:
       layout: "page"
       head-extra: favicon.html # add favicon files to all pages
       footer-extra: datause.html # include data use policy in footer all pages
-      css: headingcolours.scss 
+      css: headingcolour.css 
   - 
     scope:
       path: "Documents/**" # any file in documents, don't include in the sitemap
