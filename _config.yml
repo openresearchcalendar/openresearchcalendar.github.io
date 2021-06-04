@@ -40,7 +40,7 @@ round-avatar: true
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
-title-img: Documents/Images/logo_wide-cropped.png
+# title-img: path/to/file
 
 
 # --- Footer social media links --- #
