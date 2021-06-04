@@ -2,7 +2,7 @@
 redirect_from: "/Open-Research-Calendar/"
 ---
 
-<h4 style="text-align: center;"><strong>Contents: </strong><a href="#overview">Overview</a>  |  <a href="#add-events">How to add events</a>  |  <a href="#contributors">Contributors</a>  |  <a href="#citation">How to cite the calendar</a>  |  <a href="#report-events">Reporting events</a>  |  <a href="#bug-report">Report bugs or suggest feature</a>  |  <a href="#data-use">Data Use</a></h4>
+<h4 style="text-align: center;"><strong>Page Contents: </strong><a href="#overview">Overview</a>  |  <a href="#add-events">How to add events</a>  |  <a href="#contributors">Contributors</a>  |  <a href="#citation">How to cite the calendar</a>  |  <a href="#report-events">Reporting events</a>  |  <a href="#bug-report">Report bugs or suggest feature</a>  |  <a href="#data-use">Data Use</a></h4>
 
 Hi there! :wave: Welcome to the information page of Open Research Calendar. Below you can read a bit more about our automated :robot: open-source community tool.  
 
