@@ -26,7 +26,7 @@ navbar-links:
     - Subscribe: "email-subscribe"
     - Unsubscribe: "email-unsubscribe"
     - Newsletter Archive: "email-newsletter/archive"
-  Request Sticker: "https://docs.google.com/forms/d/e/1FAIpQLSemzXy9XdL5oCDzlNkqnBfUY3kn3AEe8fxPVAe7YKzC_TMyPg/viewform"
+  Request Sticker: "sticker"
   Sponsor: "https://www.paypal.com/pools/c/8t2P69oRXQ"
 
 # --- Logo --- #
