@@ -228,7 +228,7 @@ defaults:
       layout: "page"
       head-extra: favicon.html # add favicon files to all pages
       footer-extra: datause.html # include data use policy in footer all pages
-      css: headingcolour.css 
+      css: /assets/css/headingcolour.css 
   - 
     scope:
       path: "Documents/**" # any file in documents, don't include in the sitemap
