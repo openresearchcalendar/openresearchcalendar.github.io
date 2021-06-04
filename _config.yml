@@ -18,10 +18,10 @@ author: Open Research Calendar
 
 navbar-links:
   Calendar: 
-    - Add Event: "add-event"
     - View Calendar: "calendar"
-    - Bug Report & Feature Request: "bug-feature"
+    - Add Event: "add-event"
     - Report Event: "report"
+    - Bug Report & Feature Request: "bug-feature"
   Email Newsletter:
     - Subscribe: "email-subscribe"
     - Unsubscribe: "email-unsubscribe"
