@@ -3,14 +3,21 @@ layout: maintenance
 title: Maintenance
 ---
 <!--- Remember to adjust target date/time on Line 381 of _layouts/maintenance.html --->
-<!--- To remove maintenance mode, remove the redirect_from above. Then remove redirect_to from 'add-event.html' line 5 --->
 
-<!--- paste redirect_from in here for future use: 
+<!--- To set-up maintenance mode, add    (1) to the YAML above.
+      To remove maintenance mode, remove (1) from the YAML above. --->
+
+<!--- (1)
 redirect_from: 
   - /index
-  - /calendar     
---->
-
-<!--- paste redirect_to in here for future use: 
-<meta http-equiv="Refresh" content="0; URL=https://openresearchcalendar.github.io/maintenance">     
+  - /add-event
+  - /bug-feature
+  - /calendar
+  - /Code_of_Conduct
+  - /Contributing
+  - /datause
+  - /email-subscribe
+  - /email-unsubscribe
+  - /report
+  - /sticker
 --->
