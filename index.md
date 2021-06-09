@@ -19,6 +19,10 @@ The tool was created to serve the open research community in collating worldwide
 
 If you would like to add your own events to the calendar, you can do so using our simple [Add Events Form](/add-event). Each event need to be added individually.
 
+<h1 style="text-align: center;"><strong>How to edit existing events</strong></h1>
+
+If you need to edit an existing event, you can do so  [here](/edit-event).
+
 <div id='contributors'></div>
 <h2><strong>Contributors and Contributions</strong></h2>  
 
