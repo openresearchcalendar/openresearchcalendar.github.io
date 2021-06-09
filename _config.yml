@@ -20,6 +20,7 @@ navbar-links:
   Calendar: 
     - View Calendar: "calendar"
     - Add Event: "add-event"
+    - Edit Event: "edit-event"
     - Report Event: "report"
     - Bug Report & Feature Request: "bug-feature"
   Email Newsletter:
