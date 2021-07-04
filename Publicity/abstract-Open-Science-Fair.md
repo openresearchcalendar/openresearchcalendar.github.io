@@ -43,11 +43,13 @@ Policy makers and funders, researchers, research Infrastructures and research co
 
 **Lightning talk content**
 
-Authors are asked to submit a short proposal that describes the main contributions of the poster. Proposals should contain a brief abstract, place an emphasis on the motivation for the work summarise the take-home message from the lightning talk.
+*Authors are asked to submit a short proposal that describes the main contributions of the poster. Proposals should contain a brief abstract, place an emphasis on the motivation for the work summarise the take-home message from the lightning talk.*
+
 * The lightnening talk will briefly highlight the features and functionalities of the Open Research Calendar. The main take home message of our lightening talk will be to invite contributions to the Open Research Calendar, such as adding events, advertising events that are listed on the calendar and contributing to the technical development of the Calendar. 
 
 **References**
 
 *This is not compulsory but may help. Use any clear unambiguous reference style you like.*
+
 Wtf people. It is a conference abstract, not a job vacancy. 
 
