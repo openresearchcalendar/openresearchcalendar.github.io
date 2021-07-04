@@ -1,4 +1,5 @@
 
+**Authors**
 
 Alexandra Lautarescu, King’s College London, alexandra.lautarescu@kcl.ac.uk
 
@@ -8,9 +9,12 @@ Cassandra Gould van Praag, University of Oxford, cassandra.gouldvanpraag@psych.o
 
 Esther Plomp, Delft University of Technology, e.plomp@tudelft.nl
 
+**Title**
+
 The Open Research Calendar
 
 **Abstract** (max 300 words)
+
 In a world affected by the COVID-19 crisis where online workshops, seminars, and conferences are increasingly hosted online and can be attended with the click of a button, keeping track of events is becoming more difficult. 
 A community-powered shared calendar, the Open Research Calendar (https://openresearchcalendar.org/), can enable interested users to keep track of open research events such as the Open Science Fair. 
 This calendar can help researchers find workshops, conferences and seminars on open research without an effortful search, and minimise the need for scattered manual updates via community-powered automated communication. 
@@ -24,21 +28,26 @@ The thousands of followers of the Open Research Calendar on Twitter (@openresear
 The current aims of the project are to increase awareness and encourage submission of events, as well as to invite technical developments to the Calendar via our public GitHub repository (https://github.com/openresearchcalendar/).
 
 **Conference Themes**
+
 Interdisciplinary collaborations: Networks, services, methods
 Sustaining Open infrastructures, services and tools for research communities
 Training and skills for open science
 
 **Keywords** (3-4)
-Open Research events, ..., 
+
+Open Research events, Community tool, ..., 
 
 **Audience**
+
 Policy makers and funders, researchers, research Infrastructures and research communities, repository managers, publishers and content providers, libraries, research administrators, research support staff. 
 
 **Lightning talk content**
+
 Authors are asked to submit a short proposal that describes the main contributions of the poster. Proposals should contain a brief abstract, place an emphasis on the motivation for the work summarise the take-home message from the lightning talk.
 * The lightnening talk will briefly highlight the features and functionalities of the Open Research Calendar. The main take home message of our lightening talk will be to invite contributions to the Open Research Calendar, such as adding events, advertising events that are listed on the calendar and contributing to the technical development of the Calendar. 
 
 **References**
+
 *This is not compulsory but may help. Use any clear unambiguous reference style you like.*
 Wtf people. It is a conference abstract, not a job vacancy. 
 
