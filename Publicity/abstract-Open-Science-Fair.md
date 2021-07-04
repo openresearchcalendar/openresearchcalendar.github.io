@@ -51,5 +51,5 @@ Policy makers and funders, researchers, research Infrastructures and research co
 
 *This is not compulsory but may help. Use any clear unambiguous reference style you like.*
 
-Wtf people. It is a conference abstract, not a job vacancy. 
+It is an abstract..
 
