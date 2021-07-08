@@ -16,13 +16,11 @@ The Open Research Calendar
 **Abstract** (max 300 words)
 
 In a world affected by the COVID-19 crisis where online workshops, seminars, and conferences are increasingly hosted online and can be attended with the click of a button, keeping track of events is becoming more difficult. 
-A community-powered shared calendar, the Open Research Calendar (https://openresearchcalendar.org/), can enable interested users to keep track of open research events such as the Open Science Fair. 
-This calendar can help researchers find workshops, conferences and seminars on open research without an effortful search, and minimises the need for scattered manual updates via community-powered automated communication. 
-The Open Research Calendar can also provide event organisers with an easy solution to promote their event, reaching a larger audience through this central advertisement portal than they could using traditional channels of event promotion such as newsletters, blogs and websites. 
+A community-powered shared calendar, the Open Research Calendar (https://openresearchcalendar.org/), can enable interested users to keep track of open research events such as the Open Science Fair. The Open Research Calendar can also provide event organisers with an easy solution to promote their event, reaching a larger audience through this central advertisement portal than they could using traditional channels of event promotion such as newsletters, blogs and websites. 
 The Open Research Calendar addresses these issues through a community Google calendar, which can be synced into a person’s own personal calendar and is automatically updated as new events are added. 
 Events can be added by anyone through entering the key information into a short submission form (https://openresearchcalendar.org/add-event/).
 Once an event is added, the contributor can edit the event details if needed.
-Adding an event to the Calendar generates an automated Tweet to notify followers of the calendar about the new event, and adds it to the list of events which will be emalied out to subscribers. 
+Adding an event to the Calendar generates an automated Tweet to notify followers of the calendar, and automatically adds the event to the list of events which will be emalied out to subscribers. 
 Quality control is ensured by the community (through a reporting form) and the Open Research Calendar team. 
 The thousands of followers of the Open Research Calendar on Twitter (@openresearchcal) and the hundreds of subscribers to the monthly newsletter indicate that there is a real need for this tool.
 The Calendar received over two thousand unique visitors to the website, whose demographics are from 128 countries from all over the world. 
@@ -36,7 +34,7 @@ Training and skills for open science
 
 **Keywords** (3-4)
 
-Open Research events, Community tool, ..., 
+Open Research events, Community tool, Networking, Collaborative platform
 
 **Audience**
 
