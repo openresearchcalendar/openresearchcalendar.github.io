@@ -24,7 +24,8 @@ Events can be added by anyone through entering the key information into a short 
 Once an event is added, the contributor can edit the event details if needed.
 Adding an event to the Calendar generates an automated Tweet to notify followers of the calendar about the new event, and adds it to the list of events which will be emalied out to subscribers. 
 Quality control is ensured by the community (through a reporting form) and the Open Research Calendar team. 
-The thousands of followers of the Open Research Calendar on Twitter (@openresearchcal) and the hundreds of subscribers to the monthly newsletter indicate that there is a real need for this tool. 
+The thousands of followers of the Open Research Calendar on Twitter (@openresearchcal) and the hundreds of subscribers to the monthly newsletter indicate that there is a real need for this tool.
+The Calendar received over two thousand unique visitors to the website, whose demographics are from 128 countries from all over the world. 
 The current aims of the project are to increase awareness and encourage submission of events, as well as to invite technical developments to the Calendar via our public GitHub repository (https://github.com/openresearchcalendar/).
 
 **Conference Themes**
