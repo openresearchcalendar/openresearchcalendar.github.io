@@ -22,7 +22,7 @@ The Open Research Calendar can also provide event organisers with an easy soluti
 The Open Research Calendar addresses these issues through a community Google calendar, which can be synced into a person’s own personal calendar and is automatically updated as new events are added. 
 Events can be added by anyone through entering the key information into a short submission form (https://openresearchcalendar.org/add-event/).
 Once an event is added, the contributor can edit the event details if needed.
-Adding an event to the Calendar generates an automated Tweet to notify followers of the calendar about the new event. 
+Adding an event to the Calendar generates an automated Tweet to notify followers of the calendar about the new event, and adds it to the list of events which will be emalied out to subscribers. 
 Quality control is ensured by the community (through a reporting form) and the Open Research Calendar team. 
 The thousands of followers of the Open Research Calendar on Twitter (@openresearchcal) and the hundreds of subscribers to the monthly newsletter indicate that there is a real need for this tool. 
 The current aims of the project are to increase awareness and encourage submission of events, as well as to invite technical developments to the Calendar via our public GitHub repository (https://github.com/openresearchcalendar/).
