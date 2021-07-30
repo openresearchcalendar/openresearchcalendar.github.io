@@ -6,7 +6,7 @@ nav-short: true
 ---
 The Open Research Calendar (ORC) is a community-powered tool that was created to gather all Open Research events in one place.  You can help support the ORC by making a donation.
 
-All donations will be used to support the ORC (including mailing ORC Badges). There are no fees for donating and 100% of your donation will go to the ORC.
+All donations will be used to support the ORC (including mailing ORC Stickers). There are no fees for donating and 100% of your donation will go to the ORC.
 
 To enable the service, we utilise an online bank called Monzo. The account is in the name of Bradley Kennedy, this is the name that will show on the donate page. When you click the button below, you will be taken to a new webpage where you will be asked how much you would like to donate.
 
