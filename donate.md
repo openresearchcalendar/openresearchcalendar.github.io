@@ -19,23 +19,5 @@ When you click the button below, you will be taken to a new webpage where you wi
 
 ## Donations
 
-| Date | Name | Message |
-|------|------|---------|
-|02/06/2021|Anonymous|Thanks for making the stickers.|
-|01/06/2021|Arielle Bennett|Thanks for putting the effort into this project|
-|15/04/2021|Lisa DeBruine|Thanks for running this cool project!|
-|05/03/2021|Etienne Roesch|Awesome idea! :D Etienne (Reading)|
-|18/02/2021|Megan Perry-Duxbury|Excited to get my sticker! Thanks for organising this!|
-|25/11/2020|E Karoune|Thanks for the stickers! and the calendar is a super idea|
-|11/11/2020|Anonymous||
-|06/11/2020|Anonymous||
-|05/11/2020|Daniel Poole||
-|05/11/2020|Marta Topor|Thank you so much!|
-|05/11/2020|Sam Parsons|You all rock, awesome resource :)|
-|05/11/2020|N Ballou|thanks!|
-|04/11/2020|Laura Klinkhamer|Thanks for doing this!|
-|27/10/2020|Katarzyna Banas|Thank you!|
-|26/10/2020|Cassandra Gould|go team :)|
-|02/10/2020|Dorothy Bishop|Hope this helps spread the word|
-|01/10/2020|Lena Ackermann||
-|01/10/2020|Aoife O'Mahony||
+<div><iframe width="719" height="695" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSVnLFmCQX0ur6V6RrZFicPxoyJQe-1Uy1QlqdHPiVfAdIta5ElY_fIxQik098gXeG9qgnrEvSvJvDH/pubchart?oid=1219936393&amp;format=image"></iframe>
+</div>
