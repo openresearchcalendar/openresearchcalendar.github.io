@@ -1,4 +1,4 @@
-User-agent: Googlebot
+User-agent: *
 Disallow: /Documents
 Disallow: /Documents/
 Disallow: /Publicity
