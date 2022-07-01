@@ -8,7 +8,10 @@ redirect_from:
   - /calendar
   - /Code_of_Conduct
   - /Contributing
+  - /email-newsletter/archive
   - /datause
+  - /donate
+  - /edit-event
   - /email-subscribe
   - /email-unsubscribe
   - /report
@@ -27,7 +30,10 @@ redirect_from:
   - /calendar
   - /Code_of_Conduct
   - /Contributing
+  - /email-newsletter/archive
   - /datause
+  - /donate
+  - /edit-event
   - /email-subscribe
   - /email-unsubscribe
   - /report
