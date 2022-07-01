@@ -1,6 +1,18 @@
 ---
 layout: maintenance
 title: Maintenance
+redirect_from: 
+  - /index
+  - /add-event
+  - /bug-feature
+  - /calendar
+  - /Code_of_Conduct
+  - /Contributing
+  - /datause
+  - /email-subscribe
+  - /email-unsubscribe
+  - /report
+  - /sticker
 ---
 <!--- Remember to adjust target date/time on Line 381 of _layouts/maintenance.html --->
 
