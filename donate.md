@@ -1,5 +1,5 @@
 ---
-title: Donate to the ORC
+title: Donate
 layout: page
 show-avatar: false
 nav-short: true
