@@ -8,7 +8,8 @@ The Open Research Calendar (ORC) is a community-powered tool that was created to
 
 Contributors are listed in the [Donations](#donations) section.
 
-To enable the service, we use Open Collective to share our finances openly, we also use an online bank called Monzo. The account is in the name of Bradley Kennedy, this is the name that will show on the donate page.
+## Open Finances:
+To enable the service, we use [Open Collective](https://opencollective.com/open-research-calendar) to share our finances openly, we also use an online bank called Monzo. The account is in the name of Bradley Kennedy, this is the name that will show on the donate page.
 
 ## Instructions:
 When you click the button below, you will be taken to Open Collective webpage.
