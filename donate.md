@@ -9,7 +9,7 @@ The Open Research Calendar (ORC) is a community-powered tool that was created to
 Contributors are listed in the [Donations](#donations) section.
 
 ## Open Finances:
-We use [Open Collective](https://opencollective.com/open-research-calendar) to collect donations and publish a full accounting of how our doantions are spent. This means we can concentrate on delivering ORC, and not worry about legal accounting issues! Donating via Open Collective adds a couple of extra clicks on your part, but it saves us a few sleepless nights 😉. We hope you will support us in working with Open Colelctive, and consider working with them for your grassroots projects!
+We use [Open Collective](https://opencollective.com/open-research-calendar) to collect donations and publish a full accounting of how our doantions are spent. Donating via Open Collective adds a couple of extra clicks for you, but it saves us a few sleepless nights 😉. We hope you will support us in working with Open Collective and consider using them for your grassroots projects!
 
 ## Instructions:
 Click the button below to access our page on Open Collective. From there, scroll down to the "contribute" button to make a donation. You can review our accounting at the bottom of the page.
