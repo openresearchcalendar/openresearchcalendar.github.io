@@ -24,7 +24,7 @@ Click the button below to access our page on Open Collective. From there, scroll
 
 ## Contributors
 
-<script src='https://opencollective.com/open-research-calendar/banner.js?style={"a":{"color":"orange"},"h2":{"fontFamily":"Verdana","fontWeight":"normal","fontSize":"20px"}}'></script>
+<script src='https://opencollective.com/open-research-calendar/banner.js?style={".ktgoEa":{"border-bottom-color":"orange"}}'></script>
 
 <div><iframe width="719" height="695" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSVnLFmCQX0ur6V6RrZFicPxoyJQe-1Uy1QlqdHPiVfAdIta5ElY_fIxQik098gXeG9qgnrEvSvJvDH/pubchart?oid=1219936393&amp;format=image"></iframe>
 </div>
