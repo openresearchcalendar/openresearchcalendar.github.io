@@ -18,6 +18,10 @@ Click the button below to access our page on Open Collective. From there, scroll
 
 <script src="https://opencollective.com/open-research-calendar/donate/button.js" color="blue"></script>
 
+<button class="button-77" role="button">Button 77</button>
+
+<a href="/donate-orc" class="button-77" role="button">Donate to the ORC</a>  
+
 ---
 
 ## Contributors
