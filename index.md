@@ -56,3 +56,6 @@ Please cite Open Research Calendar as below. Note author order is alphabetical, 
 <hr />
 <p style="text-align: right;"><span class="site-footer-owner">Supported by&nbsp;<a title="UK Reproducibility Network" href="https://www.ukrn.org/" target="_blank" rel="noopener"><img src="https://cpb-eu-w2.wpmucdn.com/blogs.bristol.ac.uk/dist/b/631/files/2020/09/UKRN-Logo-150-extra2.png" alt="" width="228" height="83" /></a></span></p>
 <p>&nbsp;</p>
+
+<script src="https://b5p4p6pddjw6.statuspage.io/embed/script.js"></script>
+
