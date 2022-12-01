@@ -48,7 +48,7 @@ Esther Plomp ([Twitter: @PhDToothFAIRy](https://twitter.com/PhDToothFAIRy))
 <div id='citation'></div>
 <h2><strong>Citation</strong></h2>  
 
-Please cite the Open Research Calendar as below. Note that the author order is alphabetical; for more detail, see [CRediT](http://doi.org/10.5281/zenodo.4109949) statement](http://doi.org/10.5281/zenodo.4109949).  
+Please cite the Open Research Calendar as below. Note that the author order is alphabetical; for more detail, see [CRediT](https://www.elsevier.com/authors/journal-authors/policies-and-ethics/credit-author-statement) statement.  
 
 > Cassandra D Gould van Praag, Bradley J Kennedy, Alexandra Lautarescu, & Esther Plomp. (2020, October 20). Open Research Calendar. Zenodo. <http://doi.org/10.5281/zenodo.4109949>.  
 
