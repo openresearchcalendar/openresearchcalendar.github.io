@@ -2,14 +2,14 @@
     "name": "Remove reported event",
     "flow": [
         {
-            "id": 1,
+            "id": 13,
             "module": "google-sheets:watchRows",
             "version": 2,
             "parameters": {
                 "limit": 2,
-                "sheetId": "YOUR SHEET NAME",
-                "__IMTCONN__": 111111,
-                "spreadsheetId": "YOUR SHEET ID",
+                "sheetId": "Form Responses 1",
+                "__IMTCONN__": 388472,
+                "spreadsheetId": "GOOGLE SHEET ID",
                 "tableFirstRow": "A1:Z1",
                 "includesHeaders": true,
                 "valueRenderOption": "FORMATTED_VALUE",
@@ -19,16 +19,15 @@
             "metadata": {
                 "designer": {
                     "x": 0,
-                    "y": 150,
-                    "name": "Watch for new report"
+                    "y": 150
                 },
                 "restore": {
                     "sheetId": {
                         "mode": "chose",
-                        "label": "YOUR SHEET NAME"
+                        "label": "Form Responses 1"
                     },
                     "__IMTCONN__": {
-                        "label": "My Google connection ()"
+                        "label": "My Google connection"
                     },
                     "spreadsheetId": {
                         "mode": "chose",
@@ -118,6 +117,16 @@
                         "name": "__ROW_NUMBER__",
                         "type": "number",
                         "label": "Row number"
+                    },
+                    {
+                        "name": "__SPREADSHEET_ID__",
+                        "type": "text",
+                        "label": "Spreadsheet ID"
+                    },
+                    {
+                        "name": "__SHEET__",
+                        "type": "text",
+                        "label": "Sheet"
                     },
                     {
                         "name": "0",
@@ -249,8 +258,7 @@
                         "type": "text",
                         "label": "(Z)"
                     }
-                ],
-                "advanced": true
+                ]
             },
             "onerror": [
                 {
@@ -259,8 +267,8 @@
                     "version": 1,
                     "metadata": {
                         "designer": {
-                            "x": 300,
-                            "y": 300,
+                            "x": 262,
+                            "y": 352,
                             "name": "If error - ignore"
                         }
                     }
@@ -272,11 +280,11 @@
             "module": "google-calendar:deleteAnEvent",
             "version": 5,
             "parameters": {
-                "__IMTCONN__": 111111
+                "__IMTCONN__": 388472
             },
             "mapper": {
-                "event": "{{1.`4`}}",
-                "calendar": "YOUR ACCOUNT"
+                "event": "{{13.`4`}}",
+                "calendar":
             },
             "metadata": {
                 "designer": {
@@ -289,10 +297,10 @@
                     },
                     "calendar": {
                         "mode": "chose",
-                        "label": "(Primary Calendar)"
+                        "label":(Primary Calendar)"
                     },
                     "__IMTCONN__": {
-                        "label": "My Google connection ()"
+                        "label": "My Google connection"
                     },
                     "sendUpdates": {
                         "mode": "chose",
@@ -318,7 +326,7 @@
                     {
                         "name": "sendUpdates",
                         "type": "select",
-                        "label": "Send notifications about the event creation",
+                        "label": "Send notifications about the event deletion",
                         "validate": {
                             "enum": [
                                 "all",
@@ -334,29 +342,167 @@
                         "required": true
                     }
                 ]
-            }
+            },
+            "onerror": [
+                {
+                    "id": 12,
+                    "module": "google-email:ActionSendEmail",
+                    "version": 2,
+                    "parameters": {
+                        "account": 388471
+                    },
+                    "mapper": {
+                        "cc": [],
+                        "to": [
+                            "ADMIN EMAIL"
+                        ],
+                        "bcc": [],
+                        "from": "",
+                        "html": "<p>Hello Admin,</p>\n<p>The following event was reported, but the event <strong>could not</strong> be automatically found.</p>\n<p>You may need to remove any trailing white space from the Event name (Column D in the Issue Reports spreadsheet), and if it finds the event ID etc, the 'Remove reported event' process can be <strong>manually</strong> triggered on Make.</p>\n<p><span style=\"text-decoration: underline;\">EVENT INFO:</span></p>\n<p>Timestamp: {{13.`0`}}</p>\n<p>Title: {{13.`3`}}</p>\n<p>Details of issue: {{13.`1`}}</p>\n<p>Email of the reporter(may be blank): {{13.`2`}}</p>\n<br />\n<p>All the very best,<br />Your friendly automated email bot</p>",
+                        "subject": "Reported Event ID not found",
+                        "attachments": []
+                    },
+                    "metadata": {
+                        "designer": {
+                            "x": 639,
+                            "y": 140
+                        },
+                        "restore": {
+                            "expect": {
+                                "cc": {
+                                    "mode": "chose"
+                                },
+                                "to": {
+                                    "mode": "chose",
+                                    "items": [
+                                        null
+                                    ]
+                                },
+                                "bcc": {
+                                    "mode": "chose"
+                                },
+                                "attachments": {
+                                    "mode": "chose"
+                                }
+                            },
+                            "parameters": {
+                                "account": {
+                                    "data": {
+                                        "scoped": "true",
+                                        "connection": "google-restricted"
+                                    },
+                                    "label": "My Google Restricted connection"
+                                }
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "name": "account",
+                                "type": "account:google-restricted",
+                                "label": "Connection",
+                                "required": true
+                            }
+                        ],
+                        "expect": [
+                            {
+                                "name": "from",
+                                "type": "text",
+                                "label": "From"
+                            },
+                            {
+                                "name": "to",
+                                "spec": {
+                                    "name": "value",
+                                    "type": "email",
+                                    "label": "Email address",
+                                    "required": true
+                                },
+                                "type": "array",
+                                "label": "To",
+                                "required": true
+                            },
+                            {
+                                "name": "subject",
+                                "type": "text",
+                                "label": "Subject"
+                            },
+                            {
+                                "name": "html",
+                                "type": "text",
+                                "label": "Content"
+                            },
+                            {
+                                "name": "attachments",
+                                "spec": [
+                                    {
+                                        "name": "fileName",
+                                        "type": "filename",
+                                        "label": "File name",
+                                        "required": true,
+                                        "semantic": "file:name"
+                                    },
+                                    {
+                                        "name": "data",
+                                        "type": "buffer",
+                                        "label": "Data",
+                                        "required": true,
+                                        "semantic": "file:data"
+                                    },
+                                    {
+                                        "name": "cid",
+                                        "type": "text",
+                                        "label": "Content-ID"
+                                    }
+                                ],
+                                "type": "array",
+                                "label": "Attachments"
+                            },
+                            {
+                                "name": "cc",
+                                "spec": {
+                                    "name": "value",
+                                    "type": "email",
+                                    "label": "Email address"
+                                },
+                                "type": "array",
+                                "label": "Copy recipient"
+                            },
+                            {
+                                "name": "bcc",
+                                "spec": {
+                                    "name": "value",
+                                    "type": "email",
+                                    "label": "Email address"
+                                },
+                                "type": "array",
+                                "label": "Blind copy recipient"
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
             "id": 6,
             "module": "twitter:deleteTweet",
             "version": 5,
             "parameters": {
-                "__IMTCONN__": 111111
+                "__IMTCONN__": 388475
             },
             "mapper": {
-                "status": "{{1.`5`}}"
+                "status": "{{13.`5`}}"
             },
             "metadata": {
                 "designer": {
-                    "x": 600,
-                    "y": 0
+                    "x": 639,
+                    "y": -160
                 },
                 "restore": {
                     "status": {
                         "mode": "edit"
                     },
                     "__IMTCONN__": {
-                        "label": "My Twitter connection ()"
+                        "label": "My Twitter connection (Open Research Calendar)"
                     }
                 },
                 "parameters": [
@@ -383,7 +529,7 @@
             "module": "google-sheets:updateRow",
             "version": 2,
             "parameters": {
-                "__IMTCONN__": 111111
+                "__IMTCONN__": 388472
             },
             "mapper": {
                 "mode": "select",
@@ -391,9 +537,9 @@
                     "6": "Yes",
                     "7": "Yes"
                 },
-                "sheetId": "YOUR SHEET NAME",
-                "rowNumber": "{{1.`__ROW_NUMBER__`}}",
-                "spreadsheetId": "YOUR SHEET ID",
+                "sheetId": "Form Responses 1",
+                "rowNumber": "{{13.`__ROW_NUMBER__`}}",
+                "spreadsheetId": "GOOGLE SHEET ID",
                 "includesHeaders": true,
                 "valueInputOption": "USER_ENTERED"
             },
@@ -408,10 +554,10 @@
                         "label": "Select spreadsheet and sheet"
                     },
                     "sheetId": {
-                        "label": "YOUR SHEET NAME"
+                        "label": "Form Responses 1"
                     },
                     "__IMTCONN__": {
-                        "label": "My Google connection ()"
+                        "label": "My Google connection"
                     },
                     "spreadsheetId": {
                         "label": "Issue Reports"
@@ -556,22 +702,22 @@
             "module": "google-sheets:filterRows",
             "version": 2,
             "parameters": {
-                "__IMTCONN__": 111111
+                "__IMTCONN__": 388472
             },
             "mapper": {
                 "limit": "1",
                 "filter": [
                     [
                         {
-                            "a": "S",
-                            "b": "{{1.`5`}}",
+                            "a": "P",
+                            "b": "{{13.`4`}}",
                             "o": "text:equal"
                         }
                     ]
                 ],
-                "sheetId": "YOUR SHEET NAME",
+                "sheetId": "Form responses 8",
                 "sortOrder": "asc",
-                "spreadsheetId": "YOUR SHEET ID",
+                "spreadsheetId": "GOOGLE SHEET ID",
                 "tableFirstRow": "A1:CZ1",
                 "includesHeaders": true,
                 "valueRenderOption": "FORMATTED_VALUE",
@@ -590,18 +736,18 @@
                     },
                     "sheetId": {
                         "mode": "chose",
-                        "label": "YOUR SHEET NAME"
+                        "label": "Form responses 8"
                     },
                     "sortOrder": {
                         "mode": "chose",
                         "label": "Ascending"
                     },
                     "__IMTCONN__": {
-                        "label": "My Google connection ()"
+                        "label": "My Google connection"
                     },
                     "spreadsheetId": {
                         "mode": "chose",
-                        "label": "YOUR SHEET NAME"
+                        "label": "CalPush_repro2020"
                     },
                     "tableFirstRow": {
                         "label": "A-CZ"
@@ -738,6 +884,16 @@
                         "label": "Row number"
                     },
                     {
+                        "name": "__SPREADSHEET_ID__",
+                        "type": "text",
+                        "label": "Spreadsheet ID"
+                    },
+                    {
+                        "name": "__SHEET__",
+                        "type": "text",
+                        "label": "Sheet"
+                    },
+                    {
                         "name": "0",
                         "type": "text",
                         "label": "Timestamp (A)"
@@ -755,82 +911,82 @@
                     {
                         "name": "3",
                         "type": "text",
-                        "label": "Start Date (D)"
+                        "label": "URL (D)"
                     },
                     {
                         "name": "4",
                         "type": "text",
-                        "label": "Start Time (E)"
+                        "label": "Description (E)"
                     },
                     {
                         "name": "5",
                         "type": "text",
-                        "label": "End Date (F)"
+                        "label": "Timezone (F)"
                     },
                     {
                         "name": "6",
                         "type": "text",
-                        "label": "End Time (G)"
+                        "label": "Start Date&Time (G)"
                     },
                     {
                         "name": "7",
                         "type": "text",
-                        "label": "URL (H)"
+                        "label": "End Date&Time (H)"
                     },
                     {
                         "name": "8",
                         "type": "text",
-                        "label": "Description (I)"
+                        "label": "FormattedEventName (I)"
                     },
                     {
                         "name": "9",
                         "type": "text",
-                        "label": "FormattedEventName (J)"
+                        "label": "UTCStart (J)"
                     },
                     {
                         "name": "10",
                         "type": "text",
-                        "label": "FormattedStart (K)"
+                        "label": "UTCEnd (K)"
                     },
                     {
                         "name": "11",
                         "type": "text",
-                        "label": "FormattedEnd (L)"
+                        "label": "Pushed to Calendar (L)"
                     },
                     {
                         "name": "12",
                         "type": "text",
-                        "label": "Pushed to Calendar (M)"
+                        "label": "CalendarEventCreated(ID) (M)"
                     },
                     {
                         "name": "13",
                         "type": "text",
-                        "label": "CalendarEventCreated(ID) (N)"
+                        "label": "last action (N)"
                     },
                     {
                         "name": "14",
                         "type": "text",
-                        "label": "last action (O)"
+                        "label": "Date entry made (O)"
                     },
                     {
                         "name": "15",
                         "type": "text",
-                        "label": "Date entry made (P)"
+                        "label": "Event ID (P)"
                     },
                     {
                         "name": "16",
                         "type": "text",
-                        "label": "Formula Copy Down Status (Q)"
+                        "label": "Twitter ID (Q)"
                     },
                     {
                         "name": "17",
                         "type": "text",
-                        "label": "Event ID (R)"
+                        "label": "(R)"
                     },
                     {
                         "name": "18",
                         "type": "text",
-                        "label": "Twitter ID (S)"
+                        "label": "(S)"
                     },
                     {
                         "name": "19",
@@ -1266,12 +1422,12 @@
             "module": "google-sheets:deleteRow",
             "version": 2,
             "parameters": {
-                "__IMTCONN__": 111111
+                "__IMTCONN__": 388472
             },
             "mapper": {
                 "sheetId": 1410198706,
                 "rowNumber": "{{8.`__ROW_NUMBER__`}}",
-                "spreadsheetId": "YOUR SHEET ID"
+                "spreadsheetId": "GOOGLE SHEET ID"
             },
             "metadata": {
                 "designer": {
@@ -1282,14 +1438,14 @@
                 "restore": {
                     "sheetId": {
                         "mode": "chose",
-                        "label": "YOUR SHEET NAME"
+                        "label": "Form responses 8"
                     },
                     "__IMTCONN__": {
-                        "label": "My Google connection ()"
+                        "label": "My Google connection"
                     },
                     "spreadsheetId": {
                         "mode": "chose",
-                        "label": "YOUR WORKBOOK NAME"
+                        "label": "CalPush_repro2020"
                     }
                 },
                 "parameters": [
@@ -1327,17 +1483,17 @@
             "module": "google-email:ActionSendEmail",
             "version": 2,
             "parameters": {
-                "account": 1259535
+                "account": 388471
             },
             "mapper": {
                 "cc": [],
                 "to": [
-                    "ADMIN EMAIL ADDRESS"
+                    "ADMIN EMAIL"
                 ],
                 "bcc": [],
                 "from": "",
-                "html": "<p>A new issue has been reported.</p>\n<p>Event: {{1.`3`}}<br />What is the issue: {{1.`1`}}<br />Email of reporting person (may be blank): {{1.`2`}}</p>\n<p>The event will have been deleted automatically from the calendar and the Tweet will also have been removed. An admin will now need to check the event. Please log into the Google Account and find the 'Issue Reports' spreadsheet to complete the admin record. If the event turns out to be ok, you can manually re-add to the calendar and manually tweet again using the below information.</p>\n<p>All the very best,<br />Your friendly automated email bot</p>\nDetails:\nTimestamp: {{8.`0`}}\nEvent title: {{8.`1`}}\nLocation: {{8.`2`}}\nStart Date: {{8.`3`}}\nStart Time: {{8.`4`}}\nEnd Date: {{8.`5`}}\nEnd Time: {{8.`6`}}\nURL: {{8.`7`}}\nDescription: {{8.`8`}}",
-                "subject": "New Issue Reported",
+                "html": "<p>Hello Admin,</p>\n<p>A new issue has been reported.</p>\n<p>Event: {{13.`3`}}<br />What is the issue: {{13.`1`}}<br />Email of reporting person (may be blank): {{13.`2`}}</p>\n<p>The event has been deleted automatically from the calendar, and the Tweet will also have been removed.</p>\n<p>An admin will now need to check the event. Please log into the Google Account and find the 'Issue Reports' spreadsheet to complete the admin record. If the event turns out to be ok, you can manually re-add to the calendar and manually tweet again using the below information.</p>\n<p>All the very best,<br />Your friendly automated email bot</p>\n<p>Details: Timestamp: {{8.`0`}}</p>\n<p>Event Title: {{8.`1`}}</p>\n<p>Location: {{8.`2`}}</p>\n<p>Start Date: {{8.`6`}}</p>\n<p>End Date: {{8.`7`}}</p>\n<p>Timezone: {{8.`5`}}</p>\n<p>URL: {{8.`3`}}</p>\n<p>Description: {{8.`4`}}</p>",
+                "subject": "New Issue Reported & Automatically Deleted",
                 "attachments": []
             },
             "metadata": {
@@ -1347,32 +1503,37 @@
                     "name": "Inform admins"
                 },
                 "restore": {
-                    "cc": {
-                        "mode": "chose",
-                        "items": []
+                    "expect": {
+                        "cc": {
+                            "mode": "chose"
+                        },
+                        "to": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        },
+                        "bcc": {
+                            "mode": "chose"
+                        },
+                        "attachments": {
+                            "mode": "chose"
+                        }
                     },
-                    "to": {
-                        "mode": "chose",
-                        "items": [
-                            "undefined"
-                        ]
-                    },
-                    "bcc": {
-                        "mode": "chose",
-                        "items": []
-                    },
-                    "account": {
-                        "label": "My Google Restricted connection ()"
-                    },
-                    "attachments": {
-                        "mode": "chose",
-                        "items": []
+                    "parameters": {
+                        "account": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google-restricted"
+                            },
+                            "label": "My Google Restricted connection"
+                        }
                     }
                 },
                 "parameters": [
                     {
                         "name": "account",
-                        "type": "account",
+                        "type": "account:google-restricted",
                         "label": "Connection",
                         "required": true
                     }
@@ -1386,17 +1547,13 @@
                     {
                         "name": "to",
                         "spec": {
-                            "name": " ",
+                            "name": "value",
                             "type": "email",
                             "label": "Email address",
                             "required": true
                         },
                         "type": "array",
                         "label": "To",
-                        "labels": {
-                            "add": "Add a recipient",
-                            "edit": "Edit a recipient"
-                        },
                         "required": true
                     },
                     {
@@ -1433,56 +1590,50 @@
                             }
                         ],
                         "type": "array",
-                        "label": "Attachments",
-                        "labels": {
-                            "add": "Add an attachment",
-                            "edit": "Edit an attachment"
-                        }
+                        "label": "Attachments"
                     },
                     {
                         "name": "cc",
                         "spec": {
+                            "name": "value",
                             "type": "email",
                             "label": "Email address"
                         },
                         "type": "array",
-                        "label": "Copy recipient",
-                        "labels": {
-                            "add": "Add a copy recipient",
-                            "edit": "Edit a copy recipient"
-                        }
+                        "label": "Copy recipient"
                     },
                     {
                         "name": "bcc",
                         "spec": {
+                            "name": "value",
                             "type": "email",
                             "label": "Email address"
                         },
                         "type": "array",
-                        "label": "Blind copy recipient",
-                        "labels": {
-                            "add": "Add a blind copy recipient",
-                            "edit": "Edit a blind copy recipient"
-                        }
+                        "label": "Blind copy recipient"
                     }
-                ]
+                ],
+                "advanced": true
             }
         }
     ],
     "metadata": {
+        "instant": false,
         "version": 1,
         "scenario": {
             "roundtrips": 1,
             "maxErrors": 3,
             "autoCommit": false,
+            "autoCommitTriggerLast": true,
             "sequential": false,
             "confidential": false,
             "dataloss": false,
-            "dlq": false
+            "dlq": false,
+            "freshVariables": false
         },
         "designer": {
             "orphans": []
         },
-        "zone": "eu1.integromat.com"
+        "zone": "eu1.make.com"
     }
 }

@@ -7,7 +7,7 @@
             "version": 5,
             "parameters": {
                 "limit": 2,
-                "__IMTCONN__": 111111
+                "__IMTCONN__": 388475
             },
             "mapper": {},
             "metadata": {
@@ -17,7 +17,7 @@
                 },
                 "restore": {
                     "__IMTCONN__": {
-                        "label": "My Twitter connection ()"
+                        "label": "My Twitter connection (Open Research Calendar)"
                     }
                 },
                 "parameters": [
@@ -41,7 +41,7 @@
             "module": "twitter:sendMessage",
             "version": 5,
             "parameters": {
-                "__IMTCONN__": 111111
+                "__IMTCONN__": 388475
             },
             "mapper": {
                 "text": "AUTOREPLY: Hey!👋 Thanks for sending us a message. This tool is fully automated 🤖 and so humans don't monitor the inbox. If you need to report an event, use the report link in the Twitter Bio. You can report bugs and suggest features using Github: https://github.com/openresearchcalendar/Open-Research-Calendar/issues/new/choose ",
@@ -54,7 +54,7 @@
                 },
                 "restore": {
                     "__IMTCONN__": {
-                        "label": "My Twitter connection ()"
+                        "label": "My Twitter connection (Open Research Calendar)"
                     }
                 },
                 "parameters": [
@@ -86,19 +86,29 @@
         }
     ],
     "metadata": {
+        "instant": false,
         "version": 1,
         "scenario": {
             "roundtrips": 1,
             "maxErrors": 3,
             "autoCommit": false,
+            "autoCommitTriggerLast": true,
             "sequential": false,
             "confidential": false,
             "dataloss": false,
-            "dlq": false
+            "dlq": false,
+            "freshVariables": false
         },
         "designer": {
-            "orphans": []
+            "orphans": [],
+            "notes": [
+                {
+                    "id": 1,
+                    "text": "Runs 4 times a day: 08:30 - 12:29 - 16:28 - 20:27",
+                    "filter": false
+                }
+            ]
         },
-        "zone": "eu1.integromat.com"
+        "zone": "eu1.make.com"
     }
 }
