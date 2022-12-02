@@ -26,7 +26,7 @@ This tool was designed to facilitate communication and sharing of global open re
 
 It exists as a community managed tool, where anyone is free to submit an event, and we rely on the community to report suspicious events to administrators for removal.
 
-The tool incorporates freely available resources to receive event information via a goole form, publish it to a google calendar and tweet about it to followers of [@openresearchcal](https://twitter.com/OpenResearchCal).
+The tool incorporates freely available resources to receive event information, publish it to a Google calendar and Tweet about it to followers of [@openresearchcal](https://twitter.com/OpenResearchCal).
 
 <p><img style="display: block; margin-left: auto; margin-right: auto;" src="./Documents/Images/Schematic.png" alt="" width="800" /></p>
 
