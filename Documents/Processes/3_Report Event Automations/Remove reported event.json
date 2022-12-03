@@ -2,18 +2,11 @@
     "name": "Remove reported event",
     "flow": [
         {
-            "id": 13,
-            "module": "google-sheets:watchRows",
-            "version": 2,
+            "id": 14,
+            "module": "tripetto:watchalldata",
+            "version": 1,
             "parameters": {
-                "limit": 2,
-                "sheetId": "Form Responses 1",
-                "__IMTCONN__": 388472,
-                "spreadsheetId": "GOOGLE SHEET ID",
-                "tableFirstRow": "A1:Z1",
-                "includesHeaders": true,
-                "valueRenderOption": "FORMATTED_VALUE",
-                "dateTimeRenderOption": "FORMATTED_STRING"
+                "__IMTHOOK__": 449690
             },
             "mapper": {},
             "metadata": {
@@ -22,51 +15,120 @@
                     "y": 150
                 },
                 "restore": {
-                    "sheetId": {
-                        "mode": "chose",
-                        "label": "Form Responses 1"
+                    "parameters": {
+                        "__IMTHOOK__": {
+                            "data": {
+                                "editable": "false"
+                            },
+                            "label": "Report-event"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTHOOK__",
+                        "type": "hook:tripetto",
+                        "label": "Webhook",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 19,
+            "module": "google-sheets:filterRows",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 388472
+            },
+            "mapper": {
+                "from": "drive",
+                "filter": [
+                    [
+                        {
+                            "a": "B",
+                            "o": "exist"
+                        }
+                    ]
+                ],
+                "sheetId": "Sheet1",
+                "sortOrder": "asc",
+                "spreadsheetId": "GOOGLE SHEET ID",
+                "tableFirstRow": "A1:CZ1",
+                "includesHeaders": true,
+                "valueRenderOption": "FORMATTED_VALUE",
+                "dateTimeRenderOption": "FORMATTED_STRING"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 150
+                },
+                "restore": {
+                    "expect": {
+                        "from": {
+                            "label": "Select from My Drive"
+                        },
+                        "orderBy": {
+                            "mode": "chose",
+                            "label": "Empty"
+                        },
+                        "sheetId": {
+                            "mode": "chose",
+                            "label": "Sheet1"
+                        },
+                        "sortOrder": {
+                            "mode": "chose",
+                            "label": "Ascending"
+                        },
+                        "spreadsheetId": {
+                            "mode": "chose",
+                            "label": "Admin Emails"
+                        },
+                        "tableFirstRow": {
+                            "label": "A-CZ"
+                        },
+                        "includesHeaders": {
+                            "mode": "chose",
+                            "label": "Yes"
+                        },
+                        "valueRenderOption": {
+                            "mode": "chose",
+                            "label": "Formatted value"
+                        },
+                        "dateTimeRenderOption": {
+                            "mode": "chose",
+                            "label": "Formatted string"
+                        }
                     },
-                    "__IMTCONN__": {
-                        "label": "My Google connection"
-                    },
-                    "spreadsheetId": {
-                        "mode": "chose",
-                        "label": "Issue Reports"
-                    },
-                    "includesHeaders": {
-                        "label": "Yes"
-                    },
-                    "valueRenderOption": {
-                        "mode": "chose",
-                        "label": "Formatted value"
-                    },
-                    "dateTimeRenderOption": {
-                        "mode": "chose",
-                        "label": "Formatted string"
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            },
+                            "label": "My Google connection ()"
+                        }
                     }
                 },
                 "parameters": [
                     {
                         "name": "__IMTCONN__",
-                        "type": "account",
+                        "type": "account:google",
                         "label": "Connection",
                         "required": true
-                    },
+                    }
+                ],
+                "expect": [
                     {
-                        "name": "spreadsheetId",
+                        "name": "from",
                         "type": "select",
-                        "label": "Spreadsheet",
-                        "required": true
-                    },
-                    {
-                        "name": "includesHeaders",
-                        "type": "select",
-                        "label": "Table contains headers",
+                        "label": "Enter a Spreadsheet ID and Sheet Name",
                         "required": true,
                         "validate": {
                             "enum": [
-                                true,
-                                false
+                                "drive",
+                                "share"
                             ]
                         }
                     },
@@ -95,24 +157,1205 @@
                     },
                     {
                         "name": "limit",
-                        "type": "uinteger",
-                        "label": "Limit",
-                        "required": true
+                        "type": "number",
+                        "label": "Maximum number of returned rows"
                     },
                     {
-                        "name": "tableFirstRow",
-                        "type": "text",
-                        "label": "Row with headers",
+                        "name": "spreadsheetId",
+                        "type": "select",
+                        "label": "Spreadsheet",
                         "required": true
                     },
                     {
                         "name": "sheetId",
                         "type": "select",
-                        "label": "Sheet",
+                        "label": "Sheet Name",
                         "required": true
+                    },
+                    {
+                        "name": "includesHeaders",
+                        "type": "select",
+                        "label": "Table contains headers",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                true,
+                                false
+                            ]
+                        }
+                    },
+                    {
+                        "name": "tableFirstRow",
+                        "type": "select",
+                        "label": "Column range",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "A1:Z1",
+                                "A1:BZ1",
+                                "A1:CZ1",
+                                "A1:DZ1",
+                                "A1:MZ1",
+                                "A1:ZZ1",
+                                "A1:AZZ1",
+                                "A1:BZZ1",
+                                "A1:CZZ1",
+                                "A1:DZZ1",
+                                "A1:MZZ1",
+                                "A1:ZZZ1"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "filter",
+                        "type": "filter",
+                        "label": "Filter",
+                        "options": "rpc://google-sheets/2/rpcGetFilterKeys?includesHeaders=true"
+                    },
+                    {
+                        "name": "sortOrder",
+                        "type": "select",
+                        "label": "Sort order",
+                        "validate": {
+                            "enum": [
+                                "asc",
+                                "desc"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "orderBy",
+                        "type": "select",
+                        "label": "Order by"
                     }
                 ],
                 "interface": [
+                    {
+                        "name": "__IMTLENGTH__",
+                        "type": "uinteger",
+                        "label": "Total number of bundles"
+                    },
+                    {
+                        "name": "__IMTINDEX__",
+                        "type": "uinteger",
+                        "label": "Bundle order position"
+                    },
+                    {
+                        "name": "__ROW_NUMBER__",
+                        "type": "number",
+                        "label": "Row number"
+                    },
+                    {
+                        "name": "__SPREADSHEET_ID__",
+                        "type": "text",
+                        "label": "Spreadsheet ID"
+                    },
+                    {
+                        "name": "__SHEET__",
+                        "type": "text",
+                        "label": "Sheet"
+                    },
+                    {
+                        "name": "0",
+                        "type": "text",
+                        "label": "Name (A)"
+                    },
+                    {
+                        "name": "1",
+                        "type": "text",
+                        "label": "Email (B)"
+                    },
+                    {
+                        "name": "2",
+                        "type": "text",
+                        "label": "(C)"
+                    },
+                    {
+                        "name": "3",
+                        "type": "text",
+                        "label": "(D)"
+                    },
+                    {
+                        "name": "4",
+                        "type": "text",
+                        "label": "(E)"
+                    },
+                    {
+                        "name": "5",
+                        "type": "text",
+                        "label": "(F)"
+                    },
+                    {
+                        "name": "6",
+                        "type": "text",
+                        "label": "(G)"
+                    },
+                    {
+                        "name": "7",
+                        "type": "text",
+                        "label": "(H)"
+                    },
+                    {
+                        "name": "8",
+                        "type": "text",
+                        "label": "(I)"
+                    },
+                    {
+                        "name": "9",
+                        "type": "text",
+                        "label": "(J)"
+                    },
+                    {
+                        "name": "10",
+                        "type": "text",
+                        "label": "(K)"
+                    },
+                    {
+                        "name": "11",
+                        "type": "text",
+                        "label": "(L)"
+                    },
+                    {
+                        "name": "12",
+                        "type": "text",
+                        "label": "(M)"
+                    },
+                    {
+                        "name": "13",
+                        "type": "text",
+                        "label": "(N)"
+                    },
+                    {
+                        "name": "14",
+                        "type": "text",
+                        "label": "(O)"
+                    },
+                    {
+                        "name": "15",
+                        "type": "text",
+                        "label": "(P)"
+                    },
+                    {
+                        "name": "16",
+                        "type": "text",
+                        "label": "(Q)"
+                    },
+                    {
+                        "name": "17",
+                        "type": "text",
+                        "label": "(R)"
+                    },
+                    {
+                        "name": "18",
+                        "type": "text",
+                        "label": "(S)"
+                    },
+                    {
+                        "name": "19",
+                        "type": "text",
+                        "label": "(T)"
+                    },
+                    {
+                        "name": "20",
+                        "type": "text",
+                        "label": "(U)"
+                    },
+                    {
+                        "name": "21",
+                        "type": "text",
+                        "label": "(V)"
+                    },
+                    {
+                        "name": "22",
+                        "type": "text",
+                        "label": "(W)"
+                    },
+                    {
+                        "name": "23",
+                        "type": "text",
+                        "label": "(X)"
+                    },
+                    {
+                        "name": "24",
+                        "type": "text",
+                        "label": "(Y)"
+                    },
+                    {
+                        "name": "25",
+                        "type": "text",
+                        "label": "(Z)"
+                    },
+                    {
+                        "name": "26",
+                        "type": "text",
+                        "label": "(AA)"
+                    },
+                    {
+                        "name": "27",
+                        "type": "text",
+                        "label": "(AB)"
+                    },
+                    {
+                        "name": "28",
+                        "type": "text",
+                        "label": "(AC)"
+                    },
+                    {
+                        "name": "29",
+                        "type": "text",
+                        "label": "(AD)"
+                    },
+                    {
+                        "name": "30",
+                        "type": "text",
+                        "label": "(AE)"
+                    },
+                    {
+                        "name": "31",
+                        "type": "text",
+                        "label": "(AF)"
+                    },
+                    {
+                        "name": "32",
+                        "type": "text",
+                        "label": "(AG)"
+                    },
+                    {
+                        "name": "33",
+                        "type": "text",
+                        "label": "(AH)"
+                    },
+                    {
+                        "name": "34",
+                        "type": "text",
+                        "label": "(AI)"
+                    },
+                    {
+                        "name": "35",
+                        "type": "text",
+                        "label": "(AJ)"
+                    },
+                    {
+                        "name": "36",
+                        "type": "text",
+                        "label": "(AK)"
+                    },
+                    {
+                        "name": "37",
+                        "type": "text",
+                        "label": "(AL)"
+                    },
+                    {
+                        "name": "38",
+                        "type": "text",
+                        "label": "(AM)"
+                    },
+                    {
+                        "name": "39",
+                        "type": "text",
+                        "label": "(AN)"
+                    },
+                    {
+                        "name": "40",
+                        "type": "text",
+                        "label": "(AO)"
+                    },
+                    {
+                        "name": "41",
+                        "type": "text",
+                        "label": "(AP)"
+                    },
+                    {
+                        "name": "42",
+                        "type": "text",
+                        "label": "(AQ)"
+                    },
+                    {
+                        "name": "43",
+                        "type": "text",
+                        "label": "(AR)"
+                    },
+                    {
+                        "name": "44",
+                        "type": "text",
+                        "label": "(AS)"
+                    },
+                    {
+                        "name": "45",
+                        "type": "text",
+                        "label": "(AT)"
+                    },
+                    {
+                        "name": "46",
+                        "type": "text",
+                        "label": "(AU)"
+                    },
+                    {
+                        "name": "47",
+                        "type": "text",
+                        "label": "(AV)"
+                    },
+                    {
+                        "name": "48",
+                        "type": "text",
+                        "label": "(AW)"
+                    },
+                    {
+                        "name": "49",
+                        "type": "text",
+                        "label": "(AX)"
+                    },
+                    {
+                        "name": "50",
+                        "type": "text",
+                        "label": "(AY)"
+                    },
+                    {
+                        "name": "51",
+                        "type": "text",
+                        "label": "(AZ)"
+                    },
+                    {
+                        "name": "52",
+                        "type": "text",
+                        "label": "(BA)"
+                    },
+                    {
+                        "name": "53",
+                        "type": "text",
+                        "label": "(BB)"
+                    },
+                    {
+                        "name": "54",
+                        "type": "text",
+                        "label": "(BC)"
+                    },
+                    {
+                        "name": "55",
+                        "type": "text",
+                        "label": "(BD)"
+                    },
+                    {
+                        "name": "56",
+                        "type": "text",
+                        "label": "(BE)"
+                    },
+                    {
+                        "name": "57",
+                        "type": "text",
+                        "label": "(BF)"
+                    },
+                    {
+                        "name": "58",
+                        "type": "text",
+                        "label": "(BG)"
+                    },
+                    {
+                        "name": "59",
+                        "type": "text",
+                        "label": "(BH)"
+                    },
+                    {
+                        "name": "60",
+                        "type": "text",
+                        "label": "(BI)"
+                    },
+                    {
+                        "name": "61",
+                        "type": "text",
+                        "label": "(BJ)"
+                    },
+                    {
+                        "name": "62",
+                        "type": "text",
+                        "label": "(BK)"
+                    },
+                    {
+                        "name": "63",
+                        "type": "text",
+                        "label": "(BL)"
+                    },
+                    {
+                        "name": "64",
+                        "type": "text",
+                        "label": "(BM)"
+                    },
+                    {
+                        "name": "65",
+                        "type": "text",
+                        "label": "(BN)"
+                    },
+                    {
+                        "name": "66",
+                        "type": "text",
+                        "label": "(BO)"
+                    },
+                    {
+                        "name": "67",
+                        "type": "text",
+                        "label": "(BP)"
+                    },
+                    {
+                        "name": "68",
+                        "type": "text",
+                        "label": "(BQ)"
+                    },
+                    {
+                        "name": "69",
+                        "type": "text",
+                        "label": "(BR)"
+                    },
+                    {
+                        "name": "70",
+                        "type": "text",
+                        "label": "(BS)"
+                    },
+                    {
+                        "name": "71",
+                        "type": "text",
+                        "label": "(BT)"
+                    },
+                    {
+                        "name": "72",
+                        "type": "text",
+                        "label": "(BU)"
+                    },
+                    {
+                        "name": "73",
+                        "type": "text",
+                        "label": "(BV)"
+                    },
+                    {
+                        "name": "74",
+                        "type": "text",
+                        "label": "(BW)"
+                    },
+                    {
+                        "name": "75",
+                        "type": "text",
+                        "label": "(BX)"
+                    },
+                    {
+                        "name": "76",
+                        "type": "text",
+                        "label": "(BY)"
+                    },
+                    {
+                        "name": "77",
+                        "type": "text",
+                        "label": "(BZ)"
+                    },
+                    {
+                        "name": "78",
+                        "type": "text",
+                        "label": "(CA)"
+                    },
+                    {
+                        "name": "79",
+                        "type": "text",
+                        "label": "(CB)"
+                    },
+                    {
+                        "name": "80",
+                        "type": "text",
+                        "label": "(CC)"
+                    },
+                    {
+                        "name": "81",
+                        "type": "text",
+                        "label": "(CD)"
+                    },
+                    {
+                        "name": "82",
+                        "type": "text",
+                        "label": "(CE)"
+                    },
+                    {
+                        "name": "83",
+                        "type": "text",
+                        "label": "(CF)"
+                    },
+                    {
+                        "name": "84",
+                        "type": "text",
+                        "label": "(CG)"
+                    },
+                    {
+                        "name": "85",
+                        "type": "text",
+                        "label": "(CH)"
+                    },
+                    {
+                        "name": "86",
+                        "type": "text",
+                        "label": "(CI)"
+                    },
+                    {
+                        "name": "87",
+                        "type": "text",
+                        "label": "(CJ)"
+                    },
+                    {
+                        "name": "88",
+                        "type": "text",
+                        "label": "(CK)"
+                    },
+                    {
+                        "name": "89",
+                        "type": "text",
+                        "label": "(CL)"
+                    },
+                    {
+                        "name": "90",
+                        "type": "text",
+                        "label": "(CM)"
+                    },
+                    {
+                        "name": "91",
+                        "type": "text",
+                        "label": "(CN)"
+                    },
+                    {
+                        "name": "92",
+                        "type": "text",
+                        "label": "(CO)"
+                    },
+                    {
+                        "name": "93",
+                        "type": "text",
+                        "label": "(CP)"
+                    },
+                    {
+                        "name": "94",
+                        "type": "text",
+                        "label": "(CQ)"
+                    },
+                    {
+                        "name": "95",
+                        "type": "text",
+                        "label": "(CR)"
+                    },
+                    {
+                        "name": "96",
+                        "type": "text",
+                        "label": "(CS)"
+                    },
+                    {
+                        "name": "97",
+                        "type": "text",
+                        "label": "(CT)"
+                    },
+                    {
+                        "name": "98",
+                        "type": "text",
+                        "label": "(CU)"
+                    },
+                    {
+                        "name": "99",
+                        "type": "text",
+                        "label": "(CV)"
+                    },
+                    {
+                        "name": "100",
+                        "type": "text",
+                        "label": "(CW)"
+                    },
+                    {
+                        "name": "101",
+                        "type": "text",
+                        "label": "(CX)"
+                    },
+                    {
+                        "name": "102",
+                        "type": "text",
+                        "label": "(CY)"
+                    },
+                    {
+                        "name": "103",
+                        "type": "text",
+                        "label": "(CZ)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 20,
+            "module": "builtin:BasicAggregator",
+            "version": 1,
+            "parameters": {
+                "feeder": 19
+            },
+            "mapper": {
+                "0": "{{19.`0`}}",
+                "1": "{{19.`1`}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 150
+                },
+                "restore": {
+                    "extra": {
+                        "feeder": {
+                            "label": "Google Sheets - Search Rows [19]"
+                        },
+                        "target": {
+                            "label": "Custom"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 21,
+            "module": "util:SetVariable2",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "name": "adminemails",
+                "scope": "roundtrip",
+                "value": "{{join(map(20.array; 1); \",\")}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 900,
+                    "y": 150
+                },
+                "restore": {
+                    "expect": {
+                        "scope": {
+                            "label": "One cycle"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "label": "Variable name",
+                        "required": true
+                    },
+                    {
+                        "name": "scope",
+                        "type": "select",
+                        "label": "Variable lifetime",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "roundtrip",
+                                "execution"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "value",
+                        "type": "any",
+                        "label": "Variable value"
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "adminemails",
+                        "type": "any",
+                        "label": "adminemails"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 15,
+            "module": "google-sheets:addRow",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 388472
+            },
+            "mapper": {
+                "from": "drive",
+                "mode": "select",
+                "values": {
+                    "0": "{{14.tripettoCreateDate}}",
+                    "1": "{{14.`Please detail the issue:`}}",
+                    "2": "{{14.`If you would like a response, please provide an email address (optional)`}}",
+                    "3": "{{trim(14.`What is the problematic event?`)}}",
+                    "4": "=IFERROR(vlookup(INDIRECT(\"D\"&ROW()),IMPORTRANGE(\"URL TO GOOGLE SHEET\",\"Form responses 8!B:Q\"),15,false),)",
+                    "5": "=IFERROR(vlookup(INDIRECT(\"D\"&ROW()),IMPORTRANGE(\"URL TO GOOGLE SHEET\",\"Form responses 8!B:Q\"),16,false),)"
+                },
+                "sheetId": "Form Responses 1",
+                "spreadsheetId": "/GOOGLE SHEET ID",
+                "includesHeaders": true,
+                "insertDataOption": "INSERT_ROWS",
+                "valueInputOption": "USER_ENTERED",
+                "insertUnformatted": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1200,
+                    "y": 150
+                },
+                "restore": {
+                    "expect": {
+                        "from": {
+                            "label": "My Drive"
+                        },
+                        "mode": {
+                            "label": "Select by path"
+                        },
+                        "sheetId": {
+                            "label": "Form Responses 1"
+                        },
+                        "spreadsheetId": {
+                            "path": [
+                                "Issue Reports"
+                            ]
+                        },
+                        "includesHeaders": {
+                            "label": "Yes",
+                            "nested": [
+                                {
+                                    "name": "values",
+                                    "spec": [
+                                        {
+                                            "name": "0",
+                                            "type": "text",
+                                            "label": "Timestamp (A)"
+                                        },
+                                        {
+                                            "name": "1",
+                                            "type": "text",
+                                            "label": "Please detail the issue: (B)"
+                                        },
+                                        {
+                                            "name": "2",
+                                            "type": "text",
+                                            "label": "If you would like a response, please provide an email address (optional) (C)"
+                                        },
+                                        {
+                                            "name": "3",
+                                            "type": "text",
+                                            "label": "What is the problematic event? (D)"
+                                        },
+                                        {
+                                            "name": "4",
+                                            "type": "text",
+                                            "label": "Event ID Lookup (E)"
+                                        },
+                                        {
+                                            "name": "5",
+                                            "type": "text",
+                                            "label": "Tweet ID Lookup (F)"
+                                        },
+                                        {
+                                            "name": "6",
+                                            "type": "text",
+                                            "label": "EVENT DELETED? Auto column (G)"
+                                        },
+                                        {
+                                            "name": "7",
+                                            "type": "text",
+                                            "label": "TWEET DELETED? Auto column (H)"
+                                        },
+                                        {
+                                            "name": "8",
+                                            "type": "text",
+                                            "label": "ADMIN - ALLOCATED TO? (I)"
+                                        },
+                                        {
+                                            "name": "9",
+                                            "type": "text",
+                                            "label": "ADMIN - COMPLETED? (J)"
+                                        },
+                                        {
+                                            "name": "10",
+                                            "type": "text",
+                                            "label": "Formula Copy Down Status (K)"
+                                        }
+                                    ],
+                                    "type": "collection",
+                                    "label": "Values"
+                                }
+                            ]
+                        },
+                        "insertDataOption": {
+                            "mode": "chose",
+                            "label": "Insert rows"
+                        },
+                        "valueInputOption": {
+                            "mode": "chose",
+                            "label": "User entered"
+                        },
+                        "insertUnformatted": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            },
+                            "label": "My Google connection ()"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "mode",
+                        "type": "select",
+                        "label": "Choose a Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "select",
+                                "fromAll",
+                                "map"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "insertUnformatted",
+                        "type": "boolean",
+                        "label": "Unformatted",
+                        "required": true
+                    },
+                    {
+                        "name": "valueInputOption",
+                        "type": "select",
+                        "label": "Value input option",
+                        "validate": {
+                            "enum": [
+                                "USER_ENTERED",
+                                "RAW"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "insertDataOption",
+                        "type": "select",
+                        "label": "Insert data option",
+                        "validate": {
+                            "enum": [
+                                "INSERT_ROWS",
+                                "OVERWRITE"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "from",
+                        "type": "select",
+                        "label": "Choose a Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "spreadsheetId",
+                        "type": "file",
+                        "label": "Spreadsheet ID",
+                        "required": true
+                    },
+                    {
+                        "name": "sheetId",
+                        "type": "select",
+                        "label": "Sheet Name",
+                        "required": true
+                    },
+                    {
+                        "name": "includesHeaders",
+                        "type": "select",
+                        "label": "Table contains headers",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                true,
+                                false
+                            ]
+                        }
+                    },
+                    {
+                        "name": "values",
+                        "spec": [
+                            {
+                                "name": "0",
+                                "type": "text",
+                                "label": "Timestamp (A)"
+                            },
+                            {
+                                "name": "1",
+                                "type": "text",
+                                "label": "Please detail the issue: (B)"
+                            },
+                            {
+                                "name": "2",
+                                "type": "text",
+                                "label": "If you would like a response, please provide an email address (optional) (C)"
+                            },
+                            {
+                                "name": "3",
+                                "type": "text",
+                                "label": "What is the problematic event? (D)"
+                            },
+                            {
+                                "name": "4",
+                                "type": "text",
+                                "label": "Event ID Lookup (E)"
+                            },
+                            {
+                                "name": "5",
+                                "type": "text",
+                                "label": "Tweet ID Lookup (F)"
+                            },
+                            {
+                                "name": "6",
+                                "type": "text",
+                                "label": "EVENT DELETED? Auto column (G)"
+                            },
+                            {
+                                "name": "7",
+                                "type": "text",
+                                "label": "TWEET DELETED? Auto column (H)"
+                            },
+                            {
+                                "name": "8",
+                                "type": "text",
+                                "label": "ADMIN - ALLOCATED TO? (I)"
+                            },
+                            {
+                                "name": "9",
+                                "type": "text",
+                                "label": "ADMIN - COMPLETED? (J)"
+                            },
+                            {
+                                "name": "10",
+                                "type": "text",
+                                "label": "Formula Copy Down Status (K)"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Values"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 18,
+            "module": "google-sheets:filterRows",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 388472
+            },
+            "mapper": {
+                "from": "drive",
+                "filter": [
+                    [
+                        {
+                            "a": "A",
+                            "b": "{{14.tripettoCreateDate}}",
+                            "o": "text:equal"
+                        }
+                    ]
+                ],
+                "sheetId": "Form Responses 1",
+                "sortOrder": "asc",
+                "spreadsheetId": "GOOGLE SHEET ID",
+                "tableFirstRow": "A1:Z1",
+                "includesHeaders": true,
+                "valueRenderOption": "FORMATTED_VALUE",
+                "dateTimeRenderOption": "FORMATTED_STRING"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1500,
+                    "y": 150
+                },
+                "restore": {
+                    "expect": {
+                        "from": {
+                            "label": "Select from My Drive"
+                        },
+                        "orderBy": {
+                            "mode": "chose",
+                            "label": "Empty"
+                        },
+                        "sheetId": {
+                            "mode": "chose",
+                            "label": "Form Responses 1"
+                        },
+                        "sortOrder": {
+                            "mode": "chose",
+                            "label": "Ascending"
+                        },
+                        "spreadsheetId": {
+                            "mode": "chose",
+                            "label": "Issue Reports"
+                        },
+                        "tableFirstRow": {
+                            "label": "A-Z"
+                        },
+                        "includesHeaders": {
+                            "mode": "chose",
+                            "label": "Yes"
+                        },
+                        "valueRenderOption": {
+                            "mode": "chose",
+                            "label": "Formatted value"
+                        },
+                        "dateTimeRenderOption": {
+                            "mode": "chose",
+                            "label": "Formatted string"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            },
+                            "label": "My Google connection ()"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "from",
+                        "type": "select",
+                        "label": "Enter a Spreadsheet ID and Sheet Name",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "valueRenderOption",
+                        "type": "select",
+                        "label": "Value render option",
+                        "validate": {
+                            "enum": [
+                                "FORMATTED_VALUE",
+                                "UNFORMATTED_VALUE",
+                                "FORMULA"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "dateTimeRenderOption",
+                        "type": "select",
+                        "label": "Date and time render option",
+                        "validate": {
+                            "enum": [
+                                "SERIAL_NUMBER",
+                                "FORMATTED_STRING"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "type": "number",
+                        "label": "Maximum number of returned rows"
+                    },
+                    {
+                        "name": "spreadsheetId",
+                        "type": "select",
+                        "label": "Spreadsheet",
+                        "required": true
+                    },
+                    {
+                        "name": "sheetId",
+                        "type": "select",
+                        "label": "Sheet Name",
+                        "required": true
+                    },
+                    {
+                        "name": "includesHeaders",
+                        "type": "select",
+                        "label": "Table contains headers",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                true,
+                                false
+                            ]
+                        }
+                    },
+                    {
+                        "name": "tableFirstRow",
+                        "type": "select",
+                        "label": "Column range",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "A1:Z1",
+                                "A1:BZ1",
+                                "A1:CZ1",
+                                "A1:DZ1",
+                                "A1:MZ1",
+                                "A1:ZZ1",
+                                "A1:AZZ1",
+                                "A1:BZZ1",
+                                "A1:CZZ1",
+                                "A1:DZZ1",
+                                "A1:MZZ1",
+                                "A1:ZZZ1"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "filter",
+                        "type": "filter",
+                        "label": "Filter",
+                        "options": "rpc://google-sheets/2/rpcGetFilterKeys?includesHeaders=true"
+                    },
+                    {
+                        "name": "sortOrder",
+                        "type": "select",
+                        "label": "Sort order",
+                        "validate": {
+                            "enum": [
+                                "asc",
+                                "desc"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "orderBy",
+                        "type": "select",
+                        "label": "Order by"
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "__IMTLENGTH__",
+                        "type": "uinteger",
+                        "label": "Total number of bundles"
+                    },
+                    {
+                        "name": "__IMTINDEX__",
+                        "type": "uinteger",
+                        "label": "Bundle order position"
+                    },
                     {
                         "name": "__ROW_NUMBER__",
                         "type": "number",
@@ -259,21 +1502,7 @@
                         "label": "(Z)"
                     }
                 ]
-            },
-            "onerror": [
-                {
-                    "id": 4,
-                    "module": "builtin:Ignore",
-                    "version": 1,
-                    "metadata": {
-                        "designer": {
-                            "x": 262,
-                            "y": 352,
-                            "name": "If error - ignore"
-                        }
-                    }
-                }
-            ]
+            }
         },
         {
             "id": 11,
@@ -283,34 +1512,42 @@
                 "__IMTCONN__": 388472
             },
             "mapper": {
-                "event": "{{13.`4`}}",
-                "calendar":
+                "event": "{{18.`4`}}",
+                "calendar": ""
             },
             "metadata": {
                 "designer": {
-                    "x": 339,
-                    "y": -10
+                    "x": 1800,
+                    "y": 150
                 },
                 "restore": {
-                    "event": {
-                        "mode": "edit"
+                    "expect": {
+                        "event": {
+                            "mode": "edit"
+                        },
+                        "calendar": {
+                            "mode": "chose",
+                            "label": " (Primary Calendar)"
+                        },
+                        "sendUpdates": {
+                            "mode": "chose",
+                            "label": "Empty"
+                        }
                     },
-                    "calendar": {
-                        "mode": "chose",
-                        "label":(Primary Calendar)"
-                    },
-                    "__IMTCONN__": {
-                        "label": "My Google connection"
-                    },
-                    "sendUpdates": {
-                        "mode": "chose",
-                        "label": ""
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            },
+                            "label": "My Google connection ()"
+                        }
                     }
                 },
                 "parameters": [
                     {
                         "name": "__IMTCONN__",
-                        "type": "account",
+                        "type": "account:google",
                         "label": "Connection",
                         "required": true
                     }
@@ -353,19 +1590,17 @@
                     },
                     "mapper": {
                         "cc": [],
-                        "to": [
-                            "ADMIN EMAIL"
-                        ],
+                        "to": "{{split(21.adminemails; \",\")}}",
                         "bcc": [],
                         "from": "",
-                        "html": "<p>Hello Admin,</p>\n<p>The following event was reported, but the event <strong>could not</strong> be automatically found.</p>\n<p>You may need to remove any trailing white space from the Event name (Column D in the Issue Reports spreadsheet), and if it finds the event ID etc, the 'Remove reported event' process can be <strong>manually</strong> triggered on Make.</p>\n<p><span style=\"text-decoration: underline;\">EVENT INFO:</span></p>\n<p>Timestamp: {{13.`0`}}</p>\n<p>Title: {{13.`3`}}</p>\n<p>Details of issue: {{13.`1`}}</p>\n<p>Email of the reporter(may be blank): {{13.`2`}}</p>\n<br />\n<p>All the very best,<br />Your friendly automated email bot</p>",
+                        "html": "<p>Hello Admin,</p>\n<p>The following event was reported, but the event <strong>could not</strong> be automatically found.</p>\n<p>You may need to remove any trailing white space from the Event name (Column D in the Issue Reports spreadsheet), and if it finds the event ID etc, the 'Remove reported event' process can be <strong>manually</strong> triggered on Make.</p>\n<p><span style=\"text-decoration: underline;\">EVENT INFO:</span></p>\n<p>Timestamp: {{14.tripettoCreateDate}}</p>\n<p>Title: {{14.`What is the problematic event?`}}</p>\n<p>Details of issue: {{14.`Please detail the issue:`}}</p>\n<p>Email of the reporter(may be blank): {{ifempty(14.`If you would like a response, please provide an email address (optional)`; \"Email Not Provided\")}}</p>\n<br />\n<p>All the very best,<br />Your friendly automated email bot</p>",
                         "subject": "Reported Event ID not found",
                         "attachments": []
                     },
                     "metadata": {
                         "designer": {
-                            "x": 639,
-                            "y": 140
+                            "x": 2100,
+                            "y": 300
                         },
                         "restore": {
                             "expect": {
@@ -373,10 +1608,7 @@
                                     "mode": "chose"
                                 },
                                 "to": {
-                                    "mode": "chose",
-                                    "items": [
-                                        null
-                                    ]
+                                    "mode": "edit"
                                 },
                                 "bcc": {
                                     "mode": "chose"
@@ -391,7 +1623,7 @@
                                         "scoped": "true",
                                         "connection": "google-restricted"
                                     },
-                                    "label": "My Google Restricted connection"
+                                    "label": "My Google Restricted connection ()"
                                 }
                             }
                         },
@@ -490,25 +1722,33 @@
                 "__IMTCONN__": 388475
             },
             "mapper": {
-                "status": "{{13.`5`}}"
+                "status": "{{18.`5`}}"
             },
             "metadata": {
                 "designer": {
-                    "x": 639,
-                    "y": -160
+                    "x": 2100,
+                    "y": 0
                 },
                 "restore": {
-                    "status": {
-                        "mode": "edit"
+                    "expect": {
+                        "status": {
+                            "mode": "edit"
+                        }
                     },
-                    "__IMTCONN__": {
-                        "label": "My Twitter connection (Open Research Calendar)"
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "twitter"
+                            },
+                            "label": "My Twitter connection (Open Research Calendar)"
+                        }
                     }
                 },
                 "parameters": [
                     {
                         "name": "__IMTCONN__",
-                        "type": "account",
+                        "type": "account:twitter",
                         "label": "Connection",
                         "required": true
                     }
@@ -532,48 +1772,126 @@
                 "__IMTCONN__": 388472
             },
             "mapper": {
+                "from": "drive",
                 "mode": "select",
                 "values": {
-                    "6": "Yes",
-                    "7": "Yes"
+                    "6": "Yes - Deleted by Make",
+                    "7": "Yes - Deleted by Make"
                 },
                 "sheetId": "Form Responses 1",
-                "rowNumber": "{{13.`__ROW_NUMBER__`}}",
-                "spreadsheetId": "GOOGLE SHEET ID",
+                "rowNumber": "{{18.`__ROW_NUMBER__`}}",
+                "spreadsheetId": "/GOOGLE SHEET ID",
                 "includesHeaders": true,
                 "valueInputOption": "USER_ENTERED"
             },
             "metadata": {
                 "designer": {
-                    "x": 900,
+                    "x": 2400,
                     "y": 0,
                     "name": "Log that event and tweet deleted"
                 },
                 "restore": {
-                    "mode": {
-                        "label": "Select spreadsheet and sheet"
+                    "expect": {
+                        "from": {
+                            "label": "My Drive"
+                        },
+                        "mode": {
+                            "label": "Select by path"
+                        },
+                        "sheetId": {
+                            "label": "Form Responses 1"
+                        },
+                        "spreadsheetId": {
+                            "path": [
+                                "Issue Reports"
+                            ]
+                        },
+                        "includesHeaders": {
+                            "label": "Yes",
+                            "nested": [
+                                {
+                                    "name": "values",
+                                    "spec": [
+                                        {
+                                            "name": "0",
+                                            "type": "text",
+                                            "label": "Timestamp (A)"
+                                        },
+                                        {
+                                            "name": "1",
+                                            "type": "text",
+                                            "label": "Please detail the issue: (B)"
+                                        },
+                                        {
+                                            "name": "2",
+                                            "type": "text",
+                                            "label": "If you would like a response, please provide an email address (optional) (C)"
+                                        },
+                                        {
+                                            "name": "3",
+                                            "type": "text",
+                                            "label": "What is the problematic event? (D)"
+                                        },
+                                        {
+                                            "name": "4",
+                                            "type": "text",
+                                            "label": "Event ID Lookup (E)"
+                                        },
+                                        {
+                                            "name": "5",
+                                            "type": "text",
+                                            "label": "Tweet ID Lookup (F)"
+                                        },
+                                        {
+                                            "name": "6",
+                                            "type": "text",
+                                            "label": "EVENT DELETED? Auto column (G)"
+                                        },
+                                        {
+                                            "name": "7",
+                                            "type": "text",
+                                            "label": "TWEET DELETED? Auto column (H)"
+                                        },
+                                        {
+                                            "name": "8",
+                                            "type": "text",
+                                            "label": "ADMIN - ALLOCATED TO? (I)"
+                                        },
+                                        {
+                                            "name": "9",
+                                            "type": "text",
+                                            "label": "ADMIN - COMPLETED? (J)"
+                                        },
+                                        {
+                                            "name": "10",
+                                            "type": "text",
+                                            "label": "Formula Copy Down Status (K)"
+                                        }
+                                    ],
+                                    "type": "collection",
+                                    "label": "Values"
+                                }
+                            ]
+                        },
+                        "valueInputOption": {
+                            "mode": "chose",
+                            "label": "User entered"
+                        }
                     },
-                    "sheetId": {
-                        "label": "Form Responses 1"
-                    },
-                    "__IMTCONN__": {
-                        "label": "My Google connection"
-                    },
-                    "spreadsheetId": {
-                        "label": "Issue Reports"
-                    },
-                    "includesHeaders": {
-                        "label": "Yes"
-                    },
-                    "valueInputOption": {
-                        "mode": "chose",
-                        "label": "User entered"
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            },
+                            "label": "My Google connection ()"
+                        }
                     }
                 },
                 "parameters": [
                     {
                         "name": "__IMTCONN__",
-                        "type": "account",
+                        "type": "account:google",
                         "label": "Connection",
                         "required": true
                     }
@@ -582,11 +1900,12 @@
                     {
                         "name": "mode",
                         "type": "select",
-                        "label": "Mode",
+                        "label": "Choose a Method",
                         "required": true,
                         "validate": {
                             "enum": [
                                 "select",
+                                "fromAll",
                                 "map"
                             ]
                         }
@@ -603,15 +1922,28 @@
                         }
                     },
                     {
-                        "name": "spreadsheetId",
+                        "name": "from",
                         "type": "select",
-                        "label": "Spreadsheet",
+                        "label": "Choose a Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "spreadsheetId",
+                        "type": "file",
+                        "label": "Spreadsheet ID",
                         "required": true
                     },
                     {
                         "name": "sheetId",
                         "type": "select",
-                        "label": "Sheet",
+                        "label": "Sheet Name",
                         "required": true
                     },
                     {
@@ -705,12 +2037,13 @@
                 "__IMTCONN__": 388472
             },
             "mapper": {
+                "from": "drive",
                 "limit": "1",
                 "filter": [
                     [
                         {
                             "a": "P",
-                            "b": "{{13.`4`}}",
+                            "b": "{{18.`4`}}",
                             "o": "text:equal"
                         }
                     ]
@@ -725,60 +2058,76 @@
             },
             "metadata": {
                 "designer": {
-                    "x": 1200,
+                    "x": 2700,
                     "y": 0,
                     "name": "Find the event in main spreadsheet"
                 },
                 "restore": {
-                    "orderBy": {
-                        "mode": "chose",
-                        "label": ""
+                    "expect": {
+                        "from": {
+                            "label": "Select from My Drive"
+                        },
+                        "orderBy": {
+                            "mode": "chose"
+                        },
+                        "sheetId": {
+                            "mode": "chose",
+                            "label": "Form responses 8"
+                        },
+                        "sortOrder": {
+                            "mode": "chose",
+                            "label": "Ascending"
+                        },
+                        "spreadsheetId": {
+                            "mode": "chose",
+                            "label": "CalPush_repro2020"
+                        },
+                        "tableFirstRow": {
+                            "label": "A-CZ"
+                        },
+                        "includesHeaders": {
+                            "mode": "chose",
+                            "label": "Yes"
+                        },
+                        "valueRenderOption": {
+                            "mode": "chose",
+                            "label": "Formatted value"
+                        },
+                        "dateTimeRenderOption": {
+                            "mode": "chose",
+                            "label": "Formatted string"
+                        }
                     },
-                    "sheetId": {
-                        "mode": "chose",
-                        "label": "Form responses 8"
-                    },
-                    "sortOrder": {
-                        "mode": "chose",
-                        "label": "Ascending"
-                    },
-                    "__IMTCONN__": {
-                        "label": "My Google connection"
-                    },
-                    "spreadsheetId": {
-                        "mode": "chose",
-                        "label": "CalPush_repro2020"
-                    },
-                    "tableFirstRow": {
-                        "label": "A-CZ"
-                    },
-                    "includesHeaders": {
-                        "mode": "chose",
-                        "label": "Yes"
-                    },
-                    "valueRenderOption": {
-                        "mode": "chose",
-                        "label": "Formatted value"
-                    },
-                    "dateTimeRenderOption": {
-                        "mode": "chose",
-                        "label": "Formatted string"
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            },
+                            "label": "My Google connection ()"
+                        }
                     }
                 },
                 "parameters": [
                     {
                         "name": "__IMTCONN__",
-                        "type": "account",
+                        "type": "account:google",
                         "label": "Connection",
                         "required": true
                     }
                 ],
                 "expect": [
                     {
-                        "name": "spreadsheetId",
+                        "name": "from",
                         "type": "select",
-                        "label": "Spreadsheet",
-                        "required": true
+                        "label": "Enter a Spreadsheet ID and Sheet Name",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share"
+                            ]
+                        }
                     },
                     {
                         "name": "valueRenderOption",
@@ -809,9 +2158,15 @@
                         "label": "Maximum number of returned rows"
                     },
                     {
+                        "name": "spreadsheetId",
+                        "type": "select",
+                        "label": "Spreadsheet",
+                        "required": true
+                    },
+                    {
                         "name": "sheetId",
                         "type": "select",
-                        "label": "Sheet",
+                        "label": "Sheet Name",
                         "required": true
                     },
                     {
@@ -838,7 +2193,13 @@
                                 "A1:CZ1",
                                 "A1:DZ1",
                                 "A1:MZ1",
-                                "A1:ZZ1"
+                                "A1:ZZ1",
+                                "A1:AZZ1",
+                                "A1:BZZ1",
+                                "A1:CZZ1",
+                                "A1:DZZ1",
+                                "A1:MZZ1",
+                                "A1:ZZZ1"
                             ]
                         }
                     },
@@ -846,9 +2207,7 @@
                         "name": "filter",
                         "type": "filter",
                         "label": "Filter",
-                        "options": {
-                            "store": "rpc://google-sheets@2/rpcGetFilterKeys?includesHeaders=true"
-                        }
+                        "options": "rpc://google-sheets/2/rpcGetFilterKeys?includesHeaders=true"
                     },
                     {
                         "name": "sortOrder",
@@ -1425,43 +2784,65 @@
                 "__IMTCONN__": 388472
             },
             "mapper": {
+                "from": "drive",
+                "select": "list",
                 "sheetId": 1410198706,
                 "rowNumber": "{{8.`__ROW_NUMBER__`}}",
-                "spreadsheetId": "GOOGLE SHEET ID"
+                "spreadsheetId": "/GOOGLE SHEET ID"
             },
             "metadata": {
                 "designer": {
-                    "x": 1500,
+                    "x": 3000,
                     "y": 0,
                     "name": "Delete row from main spreadsheet"
                 },
                 "restore": {
-                    "sheetId": {
-                        "mode": "chose",
-                        "label": "Form responses 8"
+                    "expect": {
+                        "from": {
+                            "label": "My Drive"
+                        },
+                        "select": {
+                            "label": "Select from the list"
+                        },
+                        "sheetId": {
+                            "label": "Form responses 8"
+                        },
+                        "spreadsheetId": {
+                            "path": [
+                                "CalPush_repro2020"
+                            ]
+                        }
                     },
-                    "__IMTCONN__": {
-                        "label": "My Google connection"
-                    },
-                    "spreadsheetId": {
-                        "mode": "chose",
-                        "label": "CalPush_repro2020"
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            },
+                            "label": "My Google connection ()"
+                        }
                     }
                 },
                 "parameters": [
                     {
                         "name": "__IMTCONN__",
-                        "type": "account",
+                        "type": "account:google",
                         "label": "Connection",
                         "required": true
                     }
                 ],
                 "expect": [
                     {
-                        "name": "spreadsheetId",
+                        "name": "select",
                         "type": "select",
-                        "label": "Spreadsheet",
-                        "required": true
+                        "label": "Enter a Spreadsheet and Sheet ID",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "map",
+                                "list"
+                            ]
+                        }
                     },
                     {
                         "name": "rowNumber",
@@ -1470,9 +2851,28 @@
                         "required": true
                     },
                     {
+                        "name": "from",
+                        "type": "select",
+                        "label": "Choose a Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "spreadsheetId",
+                        "type": "file",
+                        "label": "Spreadsheet ID",
+                        "required": true
+                    },
+                    {
                         "name": "sheetId",
                         "type": "select",
-                        "label": "Sheet",
+                        "label": "Sheet ID",
                         "required": true
                     }
                 ]
@@ -1487,18 +2887,16 @@
             },
             "mapper": {
                 "cc": [],
-                "to": [
-                    "ADMIN EMAIL"
-                ],
+                "to": "{{split(21.adminemails; \",\")}}",
                 "bcc": [],
                 "from": "",
-                "html": "<p>Hello Admin,</p>\n<p>A new issue has been reported.</p>\n<p>Event: {{13.`3`}}<br />What is the issue: {{13.`1`}}<br />Email of reporting person (may be blank): {{13.`2`}}</p>\n<p>The event has been deleted automatically from the calendar, and the Tweet will also have been removed.</p>\n<p>An admin will now need to check the event. Please log into the Google Account and find the 'Issue Reports' spreadsheet to complete the admin record. If the event turns out to be ok, you can manually re-add to the calendar and manually tweet again using the below information.</p>\n<p>All the very best,<br />Your friendly automated email bot</p>\n<p>Details: Timestamp: {{8.`0`}}</p>\n<p>Event Title: {{8.`1`}}</p>\n<p>Location: {{8.`2`}}</p>\n<p>Start Date: {{8.`6`}}</p>\n<p>End Date: {{8.`7`}}</p>\n<p>Timezone: {{8.`5`}}</p>\n<p>URL: {{8.`3`}}</p>\n<p>Description: {{8.`4`}}</p>",
+                "html": "<p>Hello Admin,</p>\n<p>A new issue has been reported.</p>\n<p>Event: {{14.`What is the problematic event?`}}<br />What is the issue: {{14.`Please detail the issue:`}}<br />Email of reporting person (may be blank): {{ifempty(14.`If you would like a response, please provide an email address (optional)`; \"Email Not Provided\")}}</p>\n<p>The event has been deleted automatically from the calendar, and the Tweet will also have been removed.</p>\n<p>An admin will now need to check the event. Please log into the Google Account and find the 'Issue Reports' spreadsheet to complete the admin record. If the event turns out to be ok, you can manually re-add to the calendar and manually tweet again using the below information.</p>\n<p>All the very best,<br />Your friendly automated email bot</p>\n<p>Details: Timestamp: {{8.`0`}}</p>\n<p>Event Title: {{8.`1`}}</p>\n<p>Location: {{8.`2`}}</p>\n<p>Start Date: {{8.`6`}}</p>\n<p>End Date: {{8.`7`}}</p>\n<p>Timezone: {{8.`5`}}</p>\n<p>URL: {{8.`3`}}</p>\n<p>Description: {{8.`4`}}</p>",
                 "subject": "New Issue Reported & Automatically Deleted",
                 "attachments": []
             },
             "metadata": {
                 "designer": {
-                    "x": 1800,
+                    "x": 3300,
                     "y": 0,
                     "name": "Inform admins"
                 },
@@ -1508,10 +2906,7 @@
                             "mode": "chose"
                         },
                         "to": {
-                            "mode": "chose",
-                            "items": [
-                                null
-                            ]
+                            "mode": "edit"
                         },
                         "bcc": {
                             "mode": "chose"
@@ -1526,7 +2921,7 @@
                                 "scoped": "true",
                                 "connection": "google-restricted"
                             },
-                            "label": "My Google Restricted connection"
+                            "label": "My Google Restricted connection ()"
                         }
                     }
                 },
@@ -1618,7 +3013,7 @@
         }
     ],
     "metadata": {
-        "instant": false,
+        "instant": true,
         "version": 1,
         "scenario": {
             "roundtrips": 1,
