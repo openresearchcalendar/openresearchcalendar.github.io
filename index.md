@@ -5,7 +5,7 @@ redirect_from: "/Open-Research-Calendar/"
 
 Hi there! :wave: Welcome to the Open Research Calendar. Below you can read a bit more about our automated :robot: open-source community tool.  
 
-<iframe width="600" height="360" src="https://datastudio.google.com/embed/reporting/cbefe1ef-80b5-46db-a7c5-62b0e59b2ff7/page/HWJOC" frameborder="0" style="border:0; display: block;margin: auto;" allowfullscreen></iframe>
+<div id="content-desktop"><iframe width="600" height="360" src="https://datastudio.google.com/embed/reporting/cbefe1ef-80b5-46db-a7c5-62b0e59b2ff7/page/HWJOC" frameborder="0" style="border:0; display: block;margin: auto;" allowfullscreen></iframe></div>
 
 <h1 style="text-align: center;"><strong>Overview</strong></h1>
 

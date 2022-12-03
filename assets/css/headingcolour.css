@@ -2,6 +2,11 @@ h1, h2, h3, h4 {
     color: #ff7700;
   }
 
+@media screen and (max-width: 768px) {
+    #content-desktop {display: none;}
+    #content-mobile {display: block;}
+    }
+
 .button-77 {
   align-items: center;
   appearance: none;
