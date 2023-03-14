@@ -51,7 +51,7 @@
                 "sheetId": "Form responses 8",
                 "fieldType": "string",
                 "sortOrder": "asc",
-                "spreadsheetId": "GOOGLE SHEET ID",
+                "spreadsheetId": "SHEET_ID",
                 "tableFirstRow": "A1:CZ1",
                 "includesHeaders": true,
                 "valueRenderOption": "FORMATTED_VALUE",
@@ -80,7 +80,7 @@
                         "label": "Ascending"
                     },
                     "__IMTCONN__": {
-                        "label": "My Google connection"
+                        "label": "My Google connection (  )"
                     },
                     "spreadsheetId": {
                         "mode": "chose",
@@ -774,6 +774,12 @@
             },
             "mapper": {
                 "mode": "select",
+                "valueInputOption": "USER_ENTERED",
+                "from": "drive",
+                "spreadsheetId": "/SHEET_ID",
+                "sheetId": "Form responses 8",
+                "rowNumber": "{{4.`__ROW_NUMBER__`}}",
+                "includesHeaders": true,
                 "values": {
                     "0": "{{formatDate(2.tripettoCreateDate; \"DD/MM/YYYY HH:mm:ss\")}}",
                     "1": "{{2.`Event title`}}",
@@ -782,13 +788,9 @@
                     "4": "{{2.Description}}",
                     "5": "{{if(2.`Is the event in UTC +0 (Dublin, Edinburgh, Lisbon, London) timezone?` = \"Yes\"; \"(UTC+00:00) Dublin, Edinburgh, Lisbon, London\"; 2.`Select Timezone`)}}",
                     "6": "{{2.`Start Date & Time`}}",
-                    "7": "{{2.`End Date & Time`}}"
-                },
-                "sheetId": "Form responses 8",
-                "rowNumber": "{{4.`__ROW_NUMBER__`}}",
-                "spreadsheetId": "GOOGLE SHEET ID",
-                "includesHeaders": true,
-                "valueInputOption": "USER_ENTERED"
+                    "7": "{{2.`End Date & Time`}}",
+                    "8": "{{2.`Event title`}}"
+                }
             },
             "metadata": {
                 "designer": {
@@ -796,30 +798,137 @@
                     "y": 0
                 },
                 "restore": {
-                    "mode": {
-                        "label": "Select spreadsheet and sheet"
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My Google connection (  )",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            }
+                        }
                     },
-                    "sheetId": {
-                        "label": "Form responses 8"
-                    },
-                    "__IMTCONN__": {
-                        "label": "My Google connection"
-                    },
-                    "spreadsheetId": {
-                        "label": "CalPush_repro2020"
-                    },
-                    "includesHeaders": {
-                        "label": "Yes"
-                    },
-                    "valueInputOption": {
-                        "mode": "chose",
-                        "label": "User entered"
+                    "expect": {
+                        "mode": {
+                            "label": "Select by path"
+                        },
+                        "valueInputOption": {
+                            "mode": "chose",
+                            "label": "User entered"
+                        },
+                        "from": {
+                            "label": "My Drive"
+                        },
+                        "spreadsheetId": {
+                            "path": [
+                                "SHEET_ID"
+                            ]
+                        },
+                        "sheetId": {
+                            "label": "Form responses 8"
+                        },
+                        "includesHeaders": {
+                            "nested": [
+                                {
+                                    "name": "values",
+                                    "label": "Values",
+                                    "type": "collection",
+                                    "spec": [
+                                        {
+                                            "name": "0",
+                                            "label": "Timestamp (A)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "1",
+                                            "label": "Event title (B)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "2",
+                                            "label": "Location (C)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "3",
+                                            "label": "URL (D)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "4",
+                                            "label": "Description (E)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "5",
+                                            "label": "Timezone (F)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "6",
+                                            "label": "Start Date&Time (G)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "7",
+                                            "label": "End Date&Time (H)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "8",
+                                            "label": "FormattedEventName (I)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "9",
+                                            "label": "UTCStart (J)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "10",
+                                            "label": "UTCEnd (K)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "11",
+                                            "label": "Pushed to Calendar (L)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "12",
+                                            "label": "CalendarEventCreated(ID) (M)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "13",
+                                            "label": "last action (N)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "14",
+                                            "label": "Date entry made (O)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "15",
+                                            "label": "Event ID (P)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "16",
+                                            "label": "Twitter ID (Q)",
+                                            "type": "text"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "label": "Yes"
+                        }
                     }
                 },
                 "parameters": [
                     {
                         "name": "__IMTCONN__",
-                        "type": "account",
+                        "type": "account:google",
                         "label": "Connection",
                         "required": true
                     }
@@ -828,11 +937,12 @@
                     {
                         "name": "mode",
                         "type": "select",
-                        "label": "Mode",
+                        "label": "Choose a Method",
                         "required": true,
                         "validate": {
                             "enum": [
                                 "select",
+                                "fromAll",
                                 "map"
                             ]
                         }
@@ -849,15 +959,28 @@
                         }
                     },
                     {
-                        "name": "spreadsheetId",
+                        "name": "from",
                         "type": "select",
-                        "label": "Spreadsheet",
+                        "label": "Choose a Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "spreadsheetId",
+                        "type": "file",
+                        "label": "Spreadsheet ID",
                         "required": true
                     },
                     {
                         "name": "sheetId",
                         "type": "select",
-                        "label": "Sheet",
+                        "label": "Sheet Name",
                         "required": true
                     },
                     {
@@ -880,6 +1003,8 @@
                     },
                     {
                         "name": "values",
+                        "type": "collection",
+                        "label": "Values",
                         "spec": [
                             {
                                 "name": "0",
@@ -966,9 +1091,7 @@
                                 "type": "text",
                                 "label": "Twitter ID (Q)"
                             }
-                        ],
-                        "type": "collection",
-                        "label": "Values"
+                        ]
                     }
                 ]
             }
