@@ -3,5 +3,7 @@ Disallow: /Documents
 Disallow: /Documents/
 Disallow: /Publicity
 Disallow: /Publicity/
+Disallow: /email-newsletter
+Disallow: /email-newsletter/
 
 Sitemap: https://openresearchcalendar.github.io/sitemap.xml
