@@ -236,7 +236,13 @@ defaults:
       path: "Documents/**" # any file in documents, don't include in the sitemap
     values:
       sitemap: false 
-
+  - 
+    scope:
+      path: "email-newsletter/**" # any file in newsletter, don't include in the sitemap
+    values:
+      sitemap: false
+      
+      
 # Exclude these files from production site
 exclude:
   - CNAME
