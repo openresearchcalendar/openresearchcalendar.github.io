@@ -5,7 +5,7 @@ title: Edit Event
 full-width: true
 ---
 {: .box-warning}
-<i class="fa fa-bolt icon-yellow" aria-hidden="true"></i> **PLEASE DO NOT USE:** Sorry, the edit event function is not currently working correctly. For updates, please subscribe to status alerts by clicking <a title="Webpage Status" href="https://openresearchcalendar.statuspage.io" target="_blank" rel="noopener">here</a>.   
+<i class="fa fa-bolt icon-yellow" aria-hidden="true"></i> We are experiencing some issues at the moment. _You can still edit events_, but the update will not be Tweeted. <br><br>For updates, please subscribe to status alerts by clicking <a title="Webpage Status" href="https://openresearchcalendar.statuspage.io" target="_blank" rel="noopener">here</a>.   
 
 <p style="text-align: center;">Use this page to edit an event that has already been submitted to the calendar.<br />Click the 'Edit-link' in the table below for the event you wish to change.</p>
 
