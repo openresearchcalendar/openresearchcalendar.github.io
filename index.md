@@ -1,6 +1,13 @@
 ---
 redirect_from: "/Open-Research-Calendar/"
 ---
+<div id='citation'></div>
+<h2><strong>Citation</strong></h2>  
+
+Please cite the Open Research Calendar as below. Note that the author order is alphabetical; for more detail, see [CRediT](https://www.elsevier.com/authors/journal-authors/policies-and-ethics/credit-author-statement) statement.  
+
+> Cassandra D Gould van Praag, Bradley J Kennedy, Alexandra Lautarescu, & Esther Plomp. (2020, October 20). Open Research Calendar. Zenodo. <http://doi.org/10.5281/zenodo.4109949>.  
+ 
 <p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/openresearchcalendar/openresearchcalendar.github.io/master/Documents/Images/logo_wide-cropped.png" alt="" width="360" height="110" /></p>
 
 Hi there! :wave: Welcome to the Open Research Calendar. Below you can read a bit more about our automated :robot: open-source community tool.  
@@ -44,13 +51,6 @@ Esther Plomp ([Twitter: @PhDToothFAIRy](https://twitter.com/PhDToothFAIRy))
 | **Visualization** | Cassandra D. Gould van Praag, Bradley J. Kennedy and Esther Plomp. |
 | **Writing -<br /> Original Draft Preparation** | Cassandra D. Gould van Praag, Bradley J. Kennedy and Esther Plomp. |
 | **Writing -<br /> Review & Editing** | Cassandra D. Gould van Praag, Bradley J. Kennedy, Alexandra Lautarescu and Esther Plomp. |
-
-<div id='citation'></div>
-<h2><strong>Citation</strong></h2>  
-
-Please cite the Open Research Calendar as below. Note that the author order is alphabetical; for more detail, see [CRediT](https://www.elsevier.com/authors/journal-authors/policies-and-ethics/credit-author-statement) statement.  
-
-> Cassandra D Gould van Praag, Bradley J Kennedy, Alexandra Lautarescu, & Esther Plomp. (2020, October 20). Open Research Calendar. Zenodo. <http://doi.org/10.5281/zenodo.4109949>.  
 
 <hr />
 <p style="text-align: right;"><span class="site-footer-owner">Supported by&nbsp;<a title="UK Reproducibility Network" href="https://www.ukrn.org/" target="_blank" rel="noopener"><img src="https://cpb-eu-w2.wpmucdn.com/blogs.bristol.ac.uk/dist/b/631/files/2020/09/UKRN-Logo-150-extra2.png" alt="" width="228" height="83" /></a></span></p>
