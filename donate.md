@@ -21,5 +21,6 @@ We use [Open Collective](https://opencollective.com/open-research-calendar) to c
 
 <script src="https://opencollective.com/open-research-calendar/banner.js"></script>
 
-<!--<div><iframe width="719" height="695" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSVnLFmCQX0ur6V6RrZFicPxoyJQe-1Uy1QlqdHPiVfAdIta5ElY_fIxQik098gXeG9qgnrEvSvJvDH/pubchart?oid=1219936393&amp;format=image"></iframe>
-</div>-->  
+<br><br><br><br>
+<div><iframe width="719" height="695" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSVnLFmCQX0ur6V6RrZFicPxoyJQe-1Uy1QlqdHPiVfAdIta5ElY_fIxQik098gXeG9qgnrEvSvJvDH/pubchart?oid=1219936393&amp;format=image"></iframe>
+</div>
