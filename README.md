@@ -12,12 +12,13 @@ Thank you for visiting the Open Research Calendar project repository.
 
 This page is a hub to give you some information about the tool, what you will find in this repository and how to contribute. Jump straight to one of the sections below, or scroll down to find out more.
 
-* [What are we doing? (And why?)](#what-are-we-doing)
-* [Who are we?](#who-are-we)
-* [What do we need?](#what-do-we-need)
-* [Get in touch](#contact-us)
-* [Re-use and licensing](#re---use-and-licensing)
-* [How to cite us](#how-to-cite-us)
+- [Open Research Calendar](#open-research-calendar)
+  - [What are we doing?](#what-are-we-doing)
+  - [Who are we?](#who-are-we)
+  - [What do we need?](#what-do-we-need)
+  - [Contact us](#contact-us)
+  - [Re-use and licensing](#re-use-and-licensing)
+  - [How to cite us](#how-to-cite-us)
 
 
 ## What are we doing?
