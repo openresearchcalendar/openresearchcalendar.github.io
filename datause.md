@@ -6,7 +6,7 @@ The data collected as part of this tool is stored securely in a Google Drive.
 
 Privacy policy for the relevant services:  
 
-[Google](https://policies.google.com/privacy) | [Twitter](https://twitter.com/en/privacy)
+[Google](https://policies.google.com/privacy) | [Twitter](https://twitter.com/en/privacy) | [LinkedIn](https://www.linkedin.com/legal/privacy-policy)
 
 Make.com: 
 - [Privacy notice](https://www.make.com/en/privacy-notice)
