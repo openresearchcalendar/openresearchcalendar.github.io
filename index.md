@@ -9,6 +9,8 @@ Please cite the Open Research Calendar as below. Note that the author order is a
 > Cassandra D Gould van Praag, Bradley J Kennedy, Alexandra Lautarescu, & Esther Plomp. (2020, October 20). Open Research Calendar. Zenodo. <http://doi.org/10.5281/zenodo.4109949>.  
  
 <p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/openresearchcalendar/openresearchcalendar.github.io/master/Documents/Images/logo_wide-cropped.png" alt="" width="360" height="110" /></p>
+<p style="text-align: right;"><span class="site-footer-owner">Supported by&nbsp;<a title="UK Reproducibility Network" href="https://www.ukrn.org/" target="_blank" rel="noopener"><img src="https://cpb-eu-w2.wpmucdn.com/blogs.bristol.ac.uk/dist/b/631/files/2020/09/UKRN-Logo-150-extra2.png" alt="" width="228" height="83" /></a></span></p>
+<p>&nbsp;</p>
 
 Hi there! :wave: Welcome to the Open Research Calendar. Below you can read a bit more about our automated :robot: open-source community tool.  
 
@@ -16,7 +18,7 @@ Hi there! :wave: Welcome to the Open Research Calendar. Below you can read a bit
 
 <h1 style="text-align: center;"><strong>Overview</strong></h1>
 
-Open Research Calendar ([@openresearchcal](https://twitter.com/OpenResearchCal)) was created as a community-powered tool by a few of the attendees of the ‘Advanced Methods in Reproducible Science’ workshop, which was organised by the University of Bristol (also known on Twitter as [#Repro2020](https://twitter.com/search?q=%23Repro2020)). Attendees of #Repro2019 initially generated the idea. The tool was designed, created, and beta-tested in January 2020 and officially launched in February 2020. :tada:
+Open Research Calendar ([X: @openresearchcal](https://twitter.com/OpenResearchCal) | [LinkedIn](https://www.linkedin.com/company/104698896/)) was created as a community-powered tool by a few of the attendees of the ‘Advanced Methods in Reproducible Science’ workshop, which was organised by the University of Bristol (also known on Twitter as [#Repro2020](https://twitter.com/search?q=%23Repro2020)). Attendees of #Repro2019 initially generated the idea. The tool was designed, created, and beta-tested in January 2020 and officially launched in February 2020. :tada:
 
 The tool was created to serve the open research community in collating worldwide :earth_africa: open research events into one database. These events are displayed in a [Google Calendar](/calendar) :calendar: (iCal [Link](https://calendar.google.com/calendar/ical/openresearchcalendar%40gmail.com/public/basic.ics)), which can be synced into a person's own calendar (updating as new events get added). You are advised to review information about calendared events carefully and use your best judgement before committing to attendance or entering into a transaction.
 
@@ -53,8 +55,5 @@ Esther Plomp ([Twitter: @PhDToothFAIRy](https://twitter.com/PhDToothFAIRy))
 | **Writing -<br /> Review & Editing** | Cassandra D. Gould van Praag, Bradley J. Kennedy, Alexandra Lautarescu and Esther Plomp. |
 
 <hr />
-<p style="text-align: right;"><span class="site-footer-owner">Supported by&nbsp;<a title="UK Reproducibility Network" href="https://www.ukrn.org/" target="_blank" rel="noopener"><img src="https://cpb-eu-w2.wpmucdn.com/blogs.bristol.ac.uk/dist/b/631/files/2020/09/UKRN-Logo-150-extra2.png" alt="" width="228" height="83" /></a></span></p>
-<p>&nbsp;</p>
 
 <script src="https://b5p4p6pddjw6.statuspage.io/embed/script.js"></script>
-
