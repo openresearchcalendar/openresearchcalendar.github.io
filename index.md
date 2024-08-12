@@ -9,6 +9,10 @@ redirect_from: "/Open-Research-Calendar/"
   <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-bundle.js"></script>
   <script src="https://unpkg.com/@statuspage/status-widget/dist/index.js"></script>
 </head>
+
+<div id="status-widget-container"></div>
+<p>System Status: <statuspage-widget src="https://openresearchcalendar.statuspage.io"></statuspage-widget></p>
+
 <div id='citation'></div>
 <h2><strong>Citation</strong></h2>  
 Please cite the Open Research Calendar as below. Note that the author order is alphabetical; for more detail, see [CRediT](https://www.elsevier.com/authors/journal-authors/policies-and-ethics/credit-author-statement) statement.  
@@ -62,6 +66,5 @@ Esther Plomp ([Twitter: @PhDToothFAIRy](https://twitter.com/PhDToothFAIRy))
 | **Writing -<br /> Review & Editing** | Cassandra D. Gould van Praag, Bradley J. Kennedy, Alexandra Lautarescu and Esther Plomp. |
 
 <hr />
-<statuspage-widget src="https://openresearchcalendar.statuspage.io"></statuspage-widget>
 
 <script src="https://openresearchcalendar.statuspage.io/embed/script.js"></script>
