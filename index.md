@@ -1,9 +1,16 @@
 ---
 redirect_from: "/Open-Research-Calendar/"
 ---
+<head>
+  <!-- Required for IE11 Only -->
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js"></script>
+
+  <!-- Standard dependencies -->
+  <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-bundle.js"></script>
+  <script src="https://unpkg.com/@statuspage/status-widget/dist/index.js"></script>
+</head>
 <div id='citation'></div>
 <h2><strong>Citation</strong></h2>  
-
 Please cite the Open Research Calendar as below. Note that the author order is alphabetical; for more detail, see [CRediT](https://www.elsevier.com/authors/journal-authors/policies-and-ethics/credit-author-statement) statement.  
 
 > Cassandra D Gould van Praag, Bradley J Kennedy, Alexandra Lautarescu, & Esther Plomp. (2020, October 20). Open Research Calendar. Zenodo. <http://doi.org/10.5281/zenodo.4109949>.  
@@ -55,5 +62,6 @@ Esther Plomp ([Twitter: @PhDToothFAIRy](https://twitter.com/PhDToothFAIRy))
 | **Writing -<br /> Review & Editing** | Cassandra D. Gould van Praag, Bradley J. Kennedy, Alexandra Lautarescu and Esther Plomp. |
 
 <hr />
+<statuspage-widget src="https://openresearchcalendar.statuspage.io"></statuspage-widget>
 
-<script src="https://b5p4p6pddjw6.statuspage.io/embed/script.js"></script>
+<script src="https://openresearchcalendar.statuspage.io/embed/script.js"></script>
