@@ -29,7 +29,7 @@ Hi there! :wave: Welcome to the Open Research Calendar. Below you can read a bit
 
 <!--Button-->
 <div class="text-center">
-  <a href="http://openresearchcalendar.org/metrics" target="_blank" class="button-77" role="button"><i class="fa fa-external-link"></i> Donate to our collective</a>  
+  <a href="http://openresearchcalendar.org/metrics" target="_blank" class="button-77" role="button"><i class="fa fa-external-link"></i> View more metrics</a>  
 </div>
 
 
