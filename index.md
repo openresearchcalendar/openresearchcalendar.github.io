@@ -28,25 +28,10 @@ Hi there! :wave: Welcome to the Open Research Calendar. Below you can read a bit
 <div id="content-desktop"><iframe width="600" height="360" src="https://datastudio.google.com/embed/reporting/cbefe1ef-80b5-46db-a7c5-62b0e59b2ff7/page/HWJOC" frameborder="0" style="border:0; display: block;margin: auto;" allowfullscreen></iframe></div>
 
 <!--Button-->
-<center>
- <table align="center" cellspacing="0" cellpadding="0" width="100%">
-   <tr>
-     <td align="center" style="padding: 10px;">
-       <table border="0" class="mobile-button" cellspacing="0" cellpadding="0">
-         <tr>
-           <td align="center" bgcolor="#ff7700" style="background-color: #ff7700; margin: auto; max-width: 600px; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; padding: 15px 20px; " width="100%">
-           <!--[if mso]>&nbsp;<![endif]-->
-               <a href="http://openresearchcalendar.org/metrics" target="_blank" style="18px; font-family: Lucida, Geneva, Verdana, sans-serif; color: #ffffff; font-weight:normal; text-align:center; background-color: #ff7700; text-decoration: none; border: none; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px; display: inline-block;">
-                   <span style="font-size: 18px; font-family: Lucida, Geneva, Verdana, sans-serif; color: #ffffff; font-weight:normal; line-height:1.5em; text-align:center;">View more metrics</span>
-             </a>
-           <!--[if mso]>&nbsp;<![endif]-->
-           </td>
-         </tr>
-       </table>
-     </td>
-   </tr>
- </table>
-</center>
+<div class="text-center">
+  <a href="http://openresearchcalendar.org/metrics" target="_blank" class="button-77" role="button"><i class="fa fa-external-link"></i> Donate to our collective</a>  
+</div>
+
 
 <h1 style="text-align: center;"><strong>Overview</strong></h1>
 
