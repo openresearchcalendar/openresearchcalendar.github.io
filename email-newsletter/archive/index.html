@@ -28,12 +28,12 @@ nav-short: true
         let htmlString = '<ul>';
         const sortedFiles = data
           .filter(filterFiles(filter))
-          .sort((a, b) => b.path.localeCompare(a.path));
-          
+          .sort()
+          .reverse();
         for (let file of sortedFiles) {
           const filePath = file.path.replace('.html', '');
           const fileName = file.path.replace('email-newsletter/archive/', '').replace('.html', '').toLowerCase().replace(/-/g, ' ').replace(/_/g, " ").replace('newsletter', '');
-          const fileName1 = fileName.charAt(4).toUpperCase() + fileName.slice(1);
+          const fileName1 = fileName.charAt(7).toUpperCase() + fileName.slice(1);
           htmlString += `<li><a href="https://openresearchcalendar.org/${filePath}">${fileName1}</a></li>`;
         }
       htmlString += '</ul>';
