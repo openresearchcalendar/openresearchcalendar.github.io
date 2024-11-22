@@ -79,8 +79,9 @@ function pushToCalendar() {
           var oldEventStart = oldEvent.getStartTime();
           var oldEventEnd = oldEvent.getEndTime();
           var oldEventLocation = oldEvent.getLocation();
+          var oldEventDesc = oldEvent.getDescription();
           
-          if (newEventTitle != oldEventTitle || newEventStart.toISOString() != oldEventStart.toISOString() || newEventEnd.toISOString() != oldEventEnd.toISOString() || newEventLocation != oldEventLocation)  {
+          if (newEventTitle != oldEventTitle || newEventStart.toISOString() != oldEventStart.toISOString() || newEventEnd.toISOString() != oldEventEnd.toISOString() || newEventLocation != oldEventLocation || newEventDesc != oldEventDesc)  {
           //above wasn't working when attempting to compare dates and strings in one line, so converted the dates to ISO (date formt) sting (https://stackoverflow.com/questions/11174385/compare-two-dates-google-apps-script)
 
             oldEvent.deleteEvent(); 
