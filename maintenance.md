@@ -1,6 +1,23 @@
 ---
 layout: maintenance
 title: Maintenance
+redirect_from: 
+  - /index
+  - /add-event
+  - /bug-feature
+  - /calendar
+  - /Code_of_Conduct
+  - /Contributing
+  - /email-newsletter/archive
+  - /datause
+  - /donate
+  - /donate-orc
+  - /edit-event
+  - /email-subscribe
+  - /email-unsubscribe
+  - /metrics
+  - /report
+  - /sticker
 ---
 <!--- Remember to adjust target date/time on Line 381 of _layouts/maintenance.html --->
 
@@ -18,9 +35,11 @@ redirect_from:
   - /email-newsletter/archive
   - /datause
   - /donate
+  - /donate-orc
   - /edit-event
   - /email-subscribe
   - /email-unsubscribe
+  - /metrics
   - /report
   - /sticker
 --->
