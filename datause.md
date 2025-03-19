@@ -9,21 +9,12 @@ All data submitted to the Open Research Calendar is stored securely and processe
 
 ### Privacy policy for relevant external services:  
 
-Google: 
-- [Privacy Policy](https://policies.google.com/privacy)
-
-Make.com: 
-- [Privacy notice](https://www.make.com/en/privacy-notice)
-- [Terms and Conditions](https://www.make.com/en/terms-and-conditions)  
-- [Sub-processors for Make](https://www.make.com/sub-processors.pdf)
-
-Open Collective:
-- [Privacy policy](https://opencollective.com/privacypolicy)
-
-Royal Mail:
-- [Privacy notice](https://www.royalmail.com/privacy-notice)
-
-
+| Service        | Privacy Policy | Additional Information |
+|---------------|---------------|------------------------|
+| **Google**     | [Privacy Policy](https://policies.google.com/privacy) | - |
+| **Make**   | [Privacy Notice](https://www.make.com/en/privacy-notice) | [Terms and Conditions](https://www.make.com/en/terms-and-conditions) <br> [Sub-processors](https://www.make.com/sub-processors.pdf) |
+| **Open Collective** | [Privacy Policy](https://opencollective.com/privacypolicy) | - |
+| **Royal Mail** | [Privacy Notice](https://www.royalmail.com/privacy-notice) | - |
 
 ### Data use specifically for distribution of Open Research Calendar merchandise:
 As part of the Open Research Calendar merchandise program, we collect the following information:
