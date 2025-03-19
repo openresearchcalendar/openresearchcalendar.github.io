@@ -23,6 +23,19 @@ Please cite the Open Research Calendar as below. Note that the author order is a
 <p style="text-align: right;"><span class="site-footer-owner">Supported by&nbsp;<a title="UK Reproducibility Network" href="https://www.ukrn.org/" target="_blank" rel="noopener"><img src="https://cpb-eu-w2.wpmucdn.com/blogs.bristol.ac.uk/dist/b/631/files/2020/09/UKRN-Logo-150-extra2.png" alt="" width="228" height="83" /></a></span></p>
 <p>&nbsp;</p>
 
+<h2 style="text-align: center;"><strong>Find us on:</strong></h2>
+<div style="text-align: center; padding: 10px;">
+  <a href="https://bsky.app/profile/openresearchcalendar.org" target="_blank" style="margin: 0 10px;">
+    <img src="https://raw.githubusercontent.com/openresearchcalendar/openresearchcalendar.github.io/master/Documents/Images/bluesky.svg" alt="BlueSky" width="32" height="32">
+  </a>
+  <a href="https://www.linkedin.com/company/open-research-calendar" target="_blank" style="margin: 0 10px;">
+    <img src="https://raw.githubusercontent.com/openresearchcalendar/openresearchcalendar.github.io/master/Documents/Images/linkedin.svg" alt="LinkedIn" width="32" height="32">
+  </a>
+  <a href="https://x.com/OpenResearchCal" target="_blank" style="margin: 0 10px;">
+    <img src="https://raw.githubusercontent.com/openresearchcalendar/openresearchcalendar.github.io/master/Documents/Images/twitter.svg" alt="Twitter (X)" width="32" height="32">
+  </a>
+</div>
+
 Hi there! :wave: Welcome to the Open Research Calendar. Below you can read a bit more about our automated :robot: open-source community tool.  
 
 <div id="content-desktop"><iframe width="600" height="360" src="https://datastudio.google.com/embed/reporting/cbefe1ef-80b5-46db-a7c5-62b0e59b2ff7/page/HWJOC" frameborder="0" style="border:0; display: block;margin: auto;" allowfullscreen></iframe></div>
