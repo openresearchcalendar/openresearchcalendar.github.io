@@ -1,6 +1,6 @@
 name: 🐞 Bug
 description: File a bug report
-title: "<YOUR TITLE HERE>"
+title: ""
 labels: ["bug"]
 body:
   - type: markdown
