@@ -102,6 +102,4 @@ Esther Plomp
 | **Writing -<br /> Original Draft Preparation** | CDGvP, BJK, EP. |
 | **Writing -<br /> Review & Editing** | CDGvP, BJK, AL, EP. |
 
-<hr />
-
 <script src="https://openresearchcalendar.statuspage.io/embed/script.js"></script>
