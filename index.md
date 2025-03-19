@@ -15,7 +15,7 @@ redirect_from: "/Open-Research-Calendar/"
 
 <div id='citation'></div>
 <h2><strong>Citation</strong></h2>  
-Please cite the Open Research Calendar as below. Note that the author order is alphabetical; for more detail, see [CRediT](https://www.elsevier.com/authors/journal-authors/policies-and-ethics/credit-author-statement) statement.  
+Please cite the Open Research Calendar as below. Note that the author order is alphabetical; for more detail, see [CRediT](/#contributors) statement.  
 
 > Cassandra D Gould van Praag, Bradley J Kennedy, AL, & EP. (2020, October 20). Open Research Calendar. Zenodo. <http://doi.org/10.5281/zenodo.4109949>.  
  
