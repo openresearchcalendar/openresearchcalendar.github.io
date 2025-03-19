@@ -3,9 +3,6 @@ title: Bug Reports & Feature Requests
 show-avatar: false
 nav-short: true
 ---
-
-# Bug Reports & Feature Requests
-
 We value your feedback! If you encounter a bug or have an idea for a new feature, you can submit your request through our **GitHub Issues page**.
 
 <div style="background-color: #f9f9f9; padding: 15px; border-radius: 8px; text-align: center;">
