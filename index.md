@@ -21,7 +21,7 @@ Please cite the Open Research Calendar as below. Note that the author order is a
  
 
 <div style="background-color: #f9f9f9; padding: 15px; border-radius: 8px; text-align: center;">
-  <p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/openresearchcalendar/openresearchcalendar.github.io/master/Documents/Images/logo_wide-cropped.png" alt="" width="360" height="110" /></p>
+  <p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/openresearchcalendar/openresearchcalendar.github.io/master/Documents/Images/logo_cropped bg-removed.png" alt="" width="360" height="110" /></p>
   <p style="text-align: right;">
     <span class="site-footer-owner">Supported by&nbsp;
       <a title="UK Reproducibility Network" href="https://www.ukrn.org/" target="_blank" rel="noopener">
@@ -86,10 +86,10 @@ If you need to edit an existing event, you can do so [here](/edit-event).
 
 Follows the [CRediT (Contributor Roles Taxonomy)](https://www.elsevier.com/authors/journal-authors/policies-and-ethics/credit-author-statement)
 
-Cassandra D Gould van Praag
-Bradley J Kennedy
-Alexandra Lautarescu
-Esther Plomp
+Cassandra D Gould van Praag  
+Bradley J Kennedy  
+Alexandra Lautarescu  
+Esther Plomp  
 
 | **Conceptualization** | CDGvP, BJK, AL, EP. |
 | **Data Curation** | BJK. |
