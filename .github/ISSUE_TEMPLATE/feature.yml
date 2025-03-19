@@ -1,6 +1,6 @@
 name: 💡 Feature request
 description: Suggest an idea for this project
-title: "[FEATURE]: <YOUR TITLE HERE>"
+title: "<YOUR TITLE HERE>"
 labels: ["enhancement"]
 body:
   - type: markdown
