@@ -21,11 +21,11 @@ Please cite the Open Research Calendar as below. Note that the author order is a
  
 
 <div style="background-color: #f9f9f9; padding: 15px; border-radius: 8px; text-align: center;">
-  <p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/openresearchcalendar/openresearchcalendar.github.io/master/Documents/Images/logo_cropped bg-removed.png" alt="" width="360" height="110" /></p>
+  <p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/openresearchcalendar/openresearchcalendar.github.io/master/Documents/Images/logo_cropped bg-removed.png" alt="" width="340" height="110" /></p>
   <p style="text-align: right;">
     <span class="site-footer-owner">Supported by&nbsp;
       <a title="UK Reproducibility Network" href="https://www.ukrn.org/" target="_blank" rel="noopener">
-        <img src="https://cpb-eu-w2.wpmucdn.com/blogs.bristol.ac.uk/dist/b/631/files/2020/09/UKRN-Logo-150-extra2.png" alt="" width="228" height="83" />
+        <img src="https://cpb-eu-w2.wpmucdn.com/blogs.bristol.ac.uk/dist/b/631/files/2020/09/UKRN-Logo-150-extra2.png" alt="" width="179" height="65" />
       </a>
     </span>
   </p>
