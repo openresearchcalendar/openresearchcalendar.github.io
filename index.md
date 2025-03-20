@@ -17,7 +17,7 @@ redirect_from: "/Open-Research-Calendar/"
 <h2><strong>Citation</strong></h2>  
 Please cite the Open Research Calendar as below. Note that the author order is alphabetical; for more detail, see [CRediT](/#contributors) statement.  
 
-> Cassandra D Gould van Praag, Bradley J Kennedy, AL, & EP. (2020, October 20). Open Research Calendar. Zenodo. <http://doi.org/10.5281/zenodo.4109949>.  
+> Cassandra D Gould van Praag, Bradley J Kennedy, Alexandra Lautarescu, & Esther Plomp. (2020, October 20). Open Research Calendar. Zenodo. <http://doi.org/10.5281/zenodo.4109949>.  
  
 
 <div style="background-color: #f9f9f9; padding: 15px; border-radius: 8px; text-align: center;">
