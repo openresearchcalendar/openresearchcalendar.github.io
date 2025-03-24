@@ -66,13 +66,13 @@ Hi there! :wave: Welcome to the Open Research Calendar. Below you can read a bit
 
 <h1 style="text-align: center;"><strong>Overview</strong></h1>
 
-Open Research Calendar was created as a community-powered tool by a few of the attendees of the ‘Advanced Methods in Reproducible Science’ workshop, which was organised by the University of Bristol. Attendees of #Repro2019 initially generated the idea. The tool was designed, created, and beta-tested in January 2020 and officially launched in February 2020. :tada:
+Open Research Calendar was created as a community-powered tool by a few of the attendees of the 2020 ‘Advanced Methods in Reproducible Science’ workshop, which was organised by the University of Bristol. Attendees of the 2019 workshop initially generated the idea. The tool was designed, created, and beta-tested in January 2020 and officially launched in February 2020. :tada:
 
 The tool was created to serve the open research community in collating worldwide :earth_africa: open research events into one database. These events are displayed in a [Google Calendar](/calendar) :calendar: (iCal [Link](https://calendar.google.com/calendar/ical/openresearchcalendar%40gmail.com/public/basic.ics)), which can be synced into a person's own calendar (updating as new events get added). You are advised to review information about calendared events carefully and use your best judgement before committing to attendance or entering into a transaction.
 
 :warning: We ultimately take no responsibility for the content or administration of any events which appear in the calendar.
 
-:email: Do you want a summary of the submitted events straight to your inbox? :mailbox: We now have an automated newsletter that will send a summary of the upcoming events on the 1st of each month. Sign up [here](/email-subscribe).  
+:email: Do you want a summary of the submitted events straight to your inbox? We have an automated newsletter that will send a summary of the upcoming events on the 1st of each month. Sign up [here](/email-subscribe).  
 
 <h1 style="text-align: center;"><strong>How to add events</strong></h1>
 If you want to add your events to the calendar, you can do so using our simple [Add Events Form](/add-event). Each event needs to be entered individually.
