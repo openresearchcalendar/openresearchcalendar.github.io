@@ -35,22 +35,22 @@ Please cite the Open Research Calendar as below. Note that the author order is a
 <h2 style="text-align: center;"><strong>Find us on:</strong></h2>
 <div style="text-align: center; padding: 10px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
   <div style="text-align: center;">
-    <a href="https://bsky.app/profile/openresearchcalendar.org" target="_blank">
+    <a href="https://bsky.app/profile/openresearchcalendar.org" target="_blank" style="text-decoration: none; color: inherit;">
       <img src="https://raw.githubusercontent.com/openresearchcalendar/openresearchcalendar.github.io/master/Documents/Images/bluesky.svg" alt="BlueSky" width="42" height="42">
-    </a>
     <p style="margin: 5px 0 0; font-size: 14px;"><strong>BlueSky</strong><br>@openresearchcalendar.org</p>
+    </a>
   </div>
   <div style="text-align: center;">
-    <a href="https://www.linkedin.com/company/open-research-calendar" target="_blank">
+    <a href="https://www.linkedin.com/company/open-research-calendar" target="_blank" style="text-decoration: none; color: inherit;">
       <img src="https://raw.githubusercontent.com/openresearchcalendar/openresearchcalendar.github.io/master/Documents/Images/linkedin.svg" alt="LinkedIn" width="42" height="42">
-    </a>
     <p style="margin: 5px 0 0; font-size: 14px;"><strong>LinkedIn</strong><br>open-research-calendar</p>
+    </a>
   </div>
   <div style="text-align: center;">
-    <a href="https://x.com/OpenResearchCal" target="_blank">
-      <img src="https://raw.githubusercontent.com/openresearchcalendar/openresearchcalendar.github.io/master/Documents/Images/twitter.svg" alt="Twitter (X)" width="42" height="42">
+    <a href="https://mastodon.social/@openresearchcalendar" target="_blank" style="text-decoration: none; color: inherit;">
+      <img src="https://raw.githubusercontent.com/openresearchcalendar/openresearchcalendar.github.io/master/Documents/Images/mastodon.svg" alt="Mastodon" width="42" height="42">
+    <p style="margin: 5px 0 0; font-size: 14px;"><strong>Mastodon</strong><br>@openresearchcalendar</p>
     </a>
-    <p style="margin: 5px 0 0; font-size: 14px;"><strong>X</strong><br>@openresearchcal</p>
   </div>
 </div>
 <p>&nbsp;</p>
