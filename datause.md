@@ -16,6 +16,8 @@ All data submitted to the Open Research Calendar is stored securely and processe
 | **Open Collective** | [Privacy Policy](https://opencollective.com/privacypolicy) | - |
 | **Royal Mail** | [Privacy Notice](https://www.royalmail.com/privacy-notice) | - |
 
+If you follow the Open Research Calendar on any of our social media accounts, you will have already agreed to their specific Privacy Policies. We do not have access to your personal data on these platforms. We only have access to the information you choose to share publicly, such as your name and user handle. We do not use this information for any purpose other than to communicate with you about Open Research Calendar events and updates.
+
 ### Data use specifically for distribution of Open Research Calendar merchandise:
 As part of the Open Research Calendar merchandise program, we collect the following information:
 - Name
