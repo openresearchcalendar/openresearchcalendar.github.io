@@ -7,7 +7,7 @@ We value your feedback! If you encounter a bug or have an idea for a new feature
 
 <div style="background-color: #f9f9f9; padding: 15px; border-radius: 8px; text-align: center;">
   <p><strong>Submit your report or request on GitHub:</strong></p>
-  <a href="https://github.com/openresearchcalendar/Open-Research-Calendar/issues/new/choose" 
+  <a href="https://github.com/openresearchcalendar/Open-Research-Calendar/issues/new/choose" target="_blank" rel="noopener"
      style="display: inline-block; background-color: #ff7700; color: white; padding: 10px 20px; 
             border-radius: 5px; text-decoration: none; font-weight: bold;">
     <i class="fa fa-external-link"></i> Submit an Issue
