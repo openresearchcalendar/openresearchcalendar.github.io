@@ -4,7 +4,7 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4109949.svg)](https://doi.org/10.5281/zenodo.4109949)
 
-> [View Public Webpage](https://openresearchcalendar.github.io/)  
+> [View Public Webpage](https://openresearchcalendar.org/)  
 
 Thank you for visiting the Open Research Calendar project repository.
 
@@ -25,9 +25,9 @@ This page is a hub to give you some information about the tool, what you will fi
 
 This tool was designed to facilitate communication and sharing of global open research events. It was built to help event organisers attract other interested parties to their events, and help individuals find events which they would like to join.
 
-It exists as a community managed tool, where anyone is free to submit an event, and we rely on the community to report suspicious events to administrators for removal.
+It exists as a community managed tool, where anyone is free to submit an event, and we rely on the community to report suspicious events for removal.
 
-The tool incorporates freely available resources to receive event information, publish it to a Google calendar and Tweet about it to followers of [@openresearchcal](https://twitter.com/OpenResearchCal).
+The tool incorporates freely available resources to receive event information, publish it to a Google calendar and post about it on Social Media (LinkedIn, BlueSky and Mastodon).
 
 <p><img style="display: block; margin-left: auto; margin-right: auto;" src="./Documents/Images/Schematic.png" alt="" width="800" /></p>
 
@@ -50,13 +50,13 @@ We are supported by the [UK Reproducibility Network (UKRN)](https://www.ukrn.org
 
 Feedback and contributions!
 
-The tool was designed, developed and launched in under 5 days in January 2020. Since then we have been making minor tweaks to the workflow.
+The tool was designed, developed and launched in under 5 days in January 2020. Since then we have been making tweaks to the workflows and adding features as and when we have the time available!
 
 We welcome feedback on any aspect of the tool via our [github issues](https://github.com/openresearchcalendar/Open-Research-Calendar/issues).
 
 ## Contact us
 
-Our Twitter and email accounts are fully automated so you cannot contact us through those. However, you can contact the team using the GitHub Repository. 
+Our social media and email accounts are all fully automated so you cannot contact us through those. However, you can contact the team using the GitHub Repository. 
 
 Comment on this repository via [github issues](https://github.com/openresearchcalendar/Open-Research-Calendar/issues)
 
