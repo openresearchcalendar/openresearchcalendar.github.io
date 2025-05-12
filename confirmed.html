@@ -46,8 +46,8 @@ body {
     fill: none;
     stroke: #28a745;
     stroke-width: 5;
-    stroke-dasharray: 251; /* Updated circumference */
-    stroke-dashoffset: 251; /* Updated offset */
+    stroke-dasharray: 381; /* Updated circumference */
+    stroke-dashoffset: 381; /* Updated offset */
     animation: draw 1s ease-out forwards;
 }
 @keyframes draw {
@@ -57,9 +57,10 @@ body {
 }
 .success-icon {
     position: relative;
-    width: 65px; /* Reduced size */
-    height: 68px; /* Reduced size */
+    width: 45px; 
+    height: 48px;
     z-index: 1;
+    top: 16px; /* Adjust this value to move the icon down */
 }
 .title {
     color: #2c3e50;
@@ -81,9 +82,9 @@ body {
   <div class="bg-white p-5 rounded shadow text-center" style="max-width: 600px; width: 90%;">
     <div class="icon-wrapper">
       <svg width="80" height="80" viewBox="-10 -10 120 120"> <!-- Updated viewBox -->
-        <circle class="circle" cx="50" cy="50" r="40" /> <!-- Updated cx, cy, and r -->
+        <circle class="circle" cx="50" cy="50" r="55" /> <!-- Updated cx, cy, and r -->
       </svg>
-      <img class="success-icon" src="https://github.com/openresearchcal/openresearchcalendar.github.io/blob/master/assets/img/greentick.png?raw=true" alt="Success" />
+      <img class="success-icon" src="https://github.com/openresearchcalendar/openresearchcalendar.github.io/blob/master/assets/img/greentick.png?raw=true" alt="Success" />
     </div>
     <h1 class="title">Newsletter Subscription Confirmed!</h1>
     <h3 class="subtitle">Thank you <span id="name"></span></h3>
