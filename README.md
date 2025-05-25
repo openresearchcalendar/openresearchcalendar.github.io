@@ -8,8 +8,6 @@
 
 Thank you for visiting the Open Research Calendar project repository.
 
-**This is the GitHub README**
-
 This page is a hub to give you some information about the tool, what you will find in this repository and how to contribute. Jump straight to one of the sections below, or scroll down to find out more.
 
 - [Open Research Calendar](#open-research-calendar)
@@ -31,12 +29,9 @@ The tool incorporates freely available resources to receive event information, p
 
 <p><img style="display: block; margin-left: auto; margin-right: auto;" src="./Documents/Images/Schematic.png" alt="" width="800" /></p>
 
-Further details of the processes and code used to run this tool are available in the [Documents](./Documents) directory.
-
-
 ## Who are we?
 
-We are a small team or researchers who met at [Advanced Methods in Reproducible Science 2020](https://www.bristol.ac.uk/psychology/research/ukrn/ukrnevents/repro2020/) and built on an idea which was submitted for a hackathon at the previous 2019 meeting. We continue to support and develop this community tool alongside our day jobs!
+We are a small team of researchers who met at [Advanced Methods in Reproducible Science 2020](https://www.bristol.ac.uk/psychology/research/ukrn/ukrnevents/repro2020/) and built on an idea which was submitted for a hackathon at the previous 2019 meeting. We continue to support and develop this community tool alongside our day jobs!
 
 The developers and maintainers of this tool are (alphabetically):
 - [Cassandra Gould van Praag](https://ox.ukrn.org/people/#CassandraGouldvanPraag)
@@ -52,13 +47,13 @@ Feedback and contributions!
 
 The tool was designed, developed and launched in under 5 days in January 2020. Since then we have been making tweaks to the workflows and adding features as and when we have the time available!
 
-We welcome feedback on any aspect of the tool via our [github issues](https://github.com/openresearchcalendar/Open-Research-Calendar/issues).
+We welcome feedback on any aspect of the tool via our [Github Issues](https://github.com/openresearchcalendar/Open-Research-Calendar/issues).
 
 ## Contact us
 
-Our social media and email accounts are all fully automated so you cannot contact us through those. However, you can contact the team using the GitHub Repository. 
+Our social media and email accounts are all fully automated so you cannot contact us through those. However, you can add to GitHub Issues or Discussions.
 
-Comment on this repository via [github issues](https://github.com/openresearchcalendar/Open-Research-Calendar/issues)
+Comment on this repository via [GitHub Discussions](https://github.com/openresearchcalendar/openresearchcalendar.github.io/discussions)
 
 ## Re-use and licensing
 
@@ -68,4 +63,4 @@ We'd love for you to re-use this tool for your own community! We are sharing our
 
 We are grateful for acknowledgement using the reference below. Note author order is alphabetical, for more detail see [CRediT statement](http://doi.org/10.5281/zenodo.4109949).
 
-Cassandra D Gould van Praag, Bradley J Kennedy, Alexandra Lautarescu, & Esther Plomp. (2020, October 20). Open Research Calendar. Zenodo. http://doi.org/10.5281/zenodo.4109949   
+Cassandra D Gould van Praag, Bradley J Kennedy, Alexandra Lautarescu, & Esther Plomp. (2020, October 20). Open Research Calendar. Zenodo. http://doi.org/10.5281/zenodo.4109949
