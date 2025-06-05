@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Subscription Link Expired - Newsletter Signup</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<style>
+body {
+    background-color: #ff7700;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.message-box {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+}
+.icon-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+.icon-wrapper svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+}
+.circle {
+    fill: none;
+    stroke: #dc3545;
+    stroke-width: 5;
+    stroke-dasharray: 381; /* Updated circumference */
+    stroke-dashoffset: 381; /* Updated offset */
+    animation: draw 1s ease-out forwards;
+}
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+.success-icon {
+    position: relative;
+    width: 45px; 
+    height: 48px;
+    z-index: 1;
+    top: 16px; /* Adjust this value to move the icon down */
+}
+.text-icon {
+    position: relative;
+    color: #dc3545;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1;
+    z-index: 1;
+    top: 16px;
+}
+.title {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.subtitle {
+    color: #34495e;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+.close-message {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+</style>
+<body>
+<div class="container d-flex align-items-center justify-content-center min-vh-100">
+  <div class="bg-white p-5 rounded shadow text-center" style="max-width: 600px; width: 90%;">
+    <div class="icon-wrapper">
+      <svg width="80" height="80" viewBox="-10 -10 120 120"> <!-- Updated viewBox -->
+        <circle class="circle" cx="50" cy="50" r="55" /> <!-- Updated cx, cy, and r -->
+      </svg>
+        <div class="text-icon">!</div>
+    </div>
+        <h1 class="title">Subscription Link Expired</h1>
+    <h3 class="subtitle">Sorry, but we couldn't confirm your subscription.</h3>
+    <h3 class="subtitle">It looks like the link you used has expired.</h3>
+    <p class="close-message">Please fill out the subscription form again. You’ll receive a new confirmation link by email.</p>
+    <a href="https://openresearchcalendar.org/email-subscribe" class="btn btn-dark" >Go to Subscription Page</a>
+  </div>
+</div>
+</body>
+</html>
