@@ -25,20 +25,38 @@ nav-short: true
       }
       
       const renderList = (data, filter = '') => {
-        let htmlString = '<ul>';
+        const groupedByYear = {};
+
         const sortedFiles = data
           .filter(filterFiles(filter))
           .sort()
           .reverse();
+
         for (let file of sortedFiles) {
           const filePath = file.path.replace('.html', '');
-          const fileName = file.path.replace('email-newsletter/archive/', '').replace('.html', '').toLowerCase().replace(/-/g, ' ').replace(/_/g, " ").replace('newsletter', '');
-          const fileName1 = fileName.replace(fileName.charAt(6),fileName.charAt(6).toUpperCase());
-          htmlString += `<li><a href="https://openresearchcalendar.org/${filePath}">${fileName1}</a></li>`;
+          const fileName = file.path.replace('email-newsletter/archive/', '').replace('.html', '');
+          const readableName = fileName.toLowerCase().replace(/-/g, ' ').replace(/_/g, ' ').replace('newsletter', '');
+          const displayName = readableName.replace(readableName.charAt(6), readableName.charAt(6).toUpperCase());
+          
+          const yearKey = '20' + fileName.slice(0, 2);  // assumes filenames start with YY
+          if (!groupedByYear[yearKey]) {
+            groupedByYear[yearKey] = [];
+          }
+
+          groupedByYear[yearKey].push({ path: filePath, name: displayName });
         }
-      htmlString += '</ul>';
+
+        let htmlString = '';
+        for (let year of Object.keys(groupedByYear).sort().reverse()) {
+          htmlString += `<h3>${year}</h3><ul>`;
+          for (let file of groupedByYear[year]) {
+            htmlString += `<li><a href="https://openresearchcalendar.org/${file.path}">${file.name}</a></li>`;
+          }
+          htmlString += '</ul>';
+        }
+
         document.getElementById('list').innerHTML = htmlString;
-      }
+      };
       
       (async () => {
         const response = await fetch('https://api.github.com/repos/openresearchcalendar/openresearchcalendar.github.io/contents/email-newsletter/archive');
