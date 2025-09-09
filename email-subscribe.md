@@ -3,6 +3,7 @@ show-avatar: false
 nav-short: true
 ---
 <title>Email Subscribe</title>
+### Note: Double opt-in is **required** before you are added to the subscriber list. Confirm your email address by clicking the link in your sign up email.
 <div id="tripetto"></div>
 <script src="https://unpkg.com/tripetto-runner-foundation"></script>
 <script src="https://unpkg.com/tripetto-runner-autoscroll"></script>
