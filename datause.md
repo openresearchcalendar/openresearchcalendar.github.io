@@ -40,7 +40,8 @@ As part of the Open Research Calendar merchandise program, we collect the follow
 - Email
 - Address (Street, City, Country, Postcode)
 
-This information is used to send merchandise to users who have requested it. The data is stored securely using Google Services and deleted after the merchandise has been posted.
+This information is used to send merchandise to users who have requested it. The data is stored securely using Google Services and personal information is deleted after the merchandise has been posted.
+The City and Country information is retained to provide the data for our [Metrics Page](https://lookerstudio.google.com/reporting/619ac603-b4ae-4236-a0aa-ebedbf1680c1/page/HWJOC). These details are not connected to any personal information and are only used to provide aggregate data on the distribution of our merchandise.
 
 ### Data Retention
 We retain event data indefinitely to maintain a comprehensive record of all events submitted to the Open Research Calendar.
