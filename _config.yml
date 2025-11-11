@@ -19,6 +19,7 @@ author: Open Research Calendar
 navbar-links:
   Calendar: 
     - View Calendar: "calendar"
+    - View Events List: "events-list"
     - Add Event: "add-event"
     - Edit Event: "edit-event"
     - Report Event: "report"

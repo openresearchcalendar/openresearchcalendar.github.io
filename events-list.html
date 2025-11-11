@@ -1,0 +1,559 @@
+---
+title: Events List
+permalink: /events-list
+show-avatar: false
+nav-short: true
+full-width: true
+---
+
+<link rel="stylesheet" href="/assets/css/events-list.css">
+
+<div class="events-page">
+  <p class="events-intro">
+    Browse events submitted to the Open Research Calendar.<br/> Use the search field and filters to narrow the list, then follow the event link for full details. <br/><br/><strong>Note:</strong> This page will only show future events.
+  </p>
+
+  <div class="events-controls" aria-live="polite">
+    <div class="search-control">
+      <label for="events-search"><strong>Search</strong></label>
+      <input
+        id="events-search"
+        type="search"
+        placeholder="Search by title, description, location, or timezone"
+        autocomplete="off"
+      >
+    </div>
+
+    <div class="filter-group">
+      <label for="sort-events"><strong>Sort By</strong></label>
+      <select id="sort-events">
+        <option value="date-asc">Date — Earliest</option>
+        <option value="date-desc">Date — Latest</option>
+        <option value="title-asc">Title — A → Z</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="language-filter"><strong>Language</strong></label>
+      <select id="language-filter">
+        <option value="">All languages</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="location-filter"><strong>Location</strong></label>
+      <select id="location-filter">
+        <option value="">All locations</option>
+      </select>
+    </div>
+
+    <div class="tags-control">
+      <div class="tags-control-header">
+        <label for="tag-filter-list"><strong>Filter by tags</strong></label>
+        <button type="button" id="clear-tags-btn" class="clear-tags-btn" disabled>Clear</button>
+      </div>
+      <div id="tag-filter-list" class="tags-list" role="listbox" aria-multiselectable="true"></div>
+    </div>
+  </div>
+
+  <div id="events-meta" class="events-meta">Loading events…</div>
+  <div id="events-error" class="error-state" hidden></div>
+  <div id="events-empty" class="empty-state" hidden>No events match the current filters.</div>
+  <div id="events-container" class="events-grid" aria-live="polite"></div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const SHEET_ID = '1QnsALwDwHk4HJQGj0Sc19uJ5sLmmQDS3xUWMXW0Uh9o';
+    const SHEET_NAME = 'Form responses 8';
+    const GVIZ_ENDPOINT = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${encodeURIComponent(SHEET_NAME)}&headers=1&tq=${encodeURIComponent('select *')}`;
+    const TAG_COLUMN_LABEL = 'Tags';
+    const collator = new Intl.Collator(undefined, { sensitivity: 'base', usage: 'sort' });
+
+    const dom = {
+      search: document.getElementById('events-search'),
+      sortSelect: document.getElementById('sort-events'),
+      languageFilter: document.getElementById('language-filter'),
+      locationFilter: document.getElementById('location-filter'),
+      tagList: document.getElementById('tag-filter-list'),
+      clearTagsBtn: document.getElementById('clear-tags-btn'),
+      meta: document.getElementById('events-meta'),
+      container: document.getElementById('events-container'),
+      empty: document.getElementById('events-empty'),
+      error: document.getElementById('events-error')
+    };
+
+    const state = {
+      events: [],
+      filtered: [],
+      tags: new Set(),
+      languages: [],
+      locations: [],
+      activeTags: new Set(),
+      activeLanguage: '',
+      activeLocation: '',
+      searchTerm: '',
+      sortBy: 'date-asc'
+    };
+
+    init();
+
+    async function init() {
+      setLoadingState(true);
+      try {
+        const table = await fetchSheet();
+        state.events = transformToEvents(table);
+        state.tags = collectTags(state.events);
+        buildTagFilters(state.tags);
+        const languageInfo = collectLanguages(state.events);
+        state.languages = languageInfo.options;
+        buildLanguageFilter(languageInfo);
+        const locationInfo = collectLocations(state.events);
+        state.locations = locationInfo.options;
+        buildLocationFilter(locationInfo);
+        applyFilters();
+        dom.meta.dataset.loading = 'false';
+        dom.meta.textContent = `Showing ${state.filtered.length} event${state.filtered.length === 1 ? '' : 's'}.`;
+      } catch (error) {
+        console.error('Failed to load events:', error);
+        showError('Sorry, we were unable to load the events. Please refresh the page to try again.');
+      } finally {
+        setLoadingState(false);
+      }
+    }
+
+    function setLoadingState(isLoading) {
+      if (isLoading) {
+        dom.meta.dataset.loading = 'true';
+        dom.meta.textContent = 'Loading events…';
+      } else if (dom.meta.dataset.loading === 'true') {
+        dom.meta.dataset.loading = 'false';
+        dom.meta.textContent = '';
+      }
+    }
+
+    async function fetchSheet() {
+      const response = await fetch(GVIZ_ENDPOINT);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const text = await response.text();
+      const jsonStart = text.indexOf('{');
+      const jsonEnd = text.lastIndexOf('}');
+      if (jsonStart === -1 || jsonEnd === -1) {
+        throw new Error('Unexpected response format');
+      }
+      const json = JSON.parse(text.slice(jsonStart, jsonEnd + 1));
+      return json.table;
+    }
+
+    function transformToEvents(table) {
+      const labelToIndex = table.cols.reduce((acc, col, idx) => {
+        acc[col.label] = idx;
+        return acc;
+      }, {});
+
+      const getCell = (row, label) => {
+        const idx = labelToIndex[label];
+        if (idx === undefined) return {};
+        const cell = row.c[idx];
+        if (!cell) return {};
+        return { value: cell.v ?? '', formatted: cell.f ?? '' };
+      };
+
+      return table.rows
+        .map(({ c: cells }) => {
+          const row = { c: cells };
+          const rawTitle = (getCell(row, 'Event title').value || '').trim();
+          if (!rawTitle) return null;
+          const { cleanTitle, language } = extractLanguageFromTitle(rawTitle);
+          const title = cleanTitle || rawTitle;
+          const location = (getCell(row, 'Location').value || '').trim();
+          const url = (getCell(row, 'URL').value || '').trim();
+          const description = (getCell(row, 'Description').value || '').trim();
+          const timezone = (getCell(row, 'Timezone').value || '').trim();
+          const startCell = getCell(row, 'Start Date&Time');
+          const endCell = getCell(row, 'End Date&Time');
+          const startDate = parseDate(startCell.value);
+          const endDate = parseDate(endCell.value);
+          const startDisplay = startCell.formatted || formatDate(startDate);
+          const endDisplay = endCell.formatted || formatDate(endDate);
+          const tagsRaw = (getCell(row, TAG_COLUMN_LABEL).value || '').trim();
+          const tags = parseTags(tagsRaw);
+
+          return {
+            title,
+            language: language || '',
+            location,
+            url,
+            description,
+            timezone,
+            startDate,
+            endDate,
+            startDisplay,
+            endDisplay,
+            tags
+          };
+        })
+        .filter(Boolean);
+    }
+
+    function parseDate(value) {
+      if (!value) return null;
+      if (typeof value === 'string' && value.startsWith('Date(')) {
+        const parts = value.slice(5, -1).split(',').map(Number);
+        return new Date(parts[0], parts[1], parts[2], parts[3] || 0, parts[4] || 0, parts[5] || 0);
+      }
+      const date = new Date(value);
+      return isNaN(date) ? null : date;
+    }
+
+    function formatDate(date) {
+      if (!date) return 'Date TBC';
+      try {
+        return new Intl.DateTimeFormat(undefined, {
+          weekday: 'short',
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        }).format(date);
+      } catch {
+        return date.toLocaleString();
+      }
+    }
+
+    function parseTags(value) {
+      if (!value) return [];
+      return value
+        .split(',')
+        .map(tag => tag.trim())
+        .filter(Boolean);
+    }
+
+    function extractLanguageFromTitle(title) {
+      if (!title) {
+        return { cleanTitle: '', language: '' };
+      }
+      const match = title.match(/\s*\[([^\]]+)\]\s*$/);
+      if (match && typeof match.index === 'number') {
+        const cleanTitle = title.slice(0, match.index).trim();
+        return {
+          cleanTitle,
+          language: match[1].trim()
+        };
+      }
+      return { cleanTitle: title, language: '' };
+    }
+
+    function collectTags(events) {
+      const tags = new Set();
+      events.forEach(event => {
+        event.tags.forEach(tag => tags.add(tag));
+      });
+      return new Set([...tags].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' })));
+    }
+
+    function collectLanguages(events) {
+      const langSet = new Set();
+      let hasUnspecified = false;
+      events.forEach(event => {
+        if (event.language) {
+          langSet.add(event.language);
+        } else {
+          hasUnspecified = true;
+        }
+      });
+      return {
+        options: [...langSet].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' })),
+        hasUnspecified
+      };
+    }
+
+    function collectLocations(events) {
+      const locationSet = new Set();
+      let hasUnspecified = false;
+      events.forEach(event => {
+        if (event.location) {
+          locationSet.add(event.location);
+        } else {
+          hasUnspecified = true;
+        }
+      });
+      return {
+        options: [...locationSet].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' })),
+        hasUnspecified
+      };
+    }
+
+    function buildTagFilters(tags) {
+      dom.tagList.innerHTML = '';
+      if (!tags.size) {
+        const emptyMsg = document.createElement('p');
+        emptyMsg.textContent = 'No tags available yet.';
+        dom.tagList.appendChild(emptyMsg);
+        dom.clearTagsBtn.disabled = true;
+        return;
+      }
+
+      tags.forEach(tag => {
+        const id = `tag-${tag.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+        const label = document.createElement('label');
+        label.className = 'tag-checkbox';
+        label.setAttribute('role', 'option');
+        label.htmlFor = id;
+
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.id = id;
+        checkbox.value = tag;
+        checkbox.addEventListener('change', () => {
+          if (checkbox.checked) {
+            state.activeTags.add(tag);
+          } else {
+            state.activeTags.delete(tag);
+          }
+          dom.clearTagsBtn.disabled = state.activeTags.size === 0;
+          applyFilters();
+        });
+
+        label.appendChild(checkbox);
+        label.appendChild(document.createTextNode(tag));
+        dom.tagList.appendChild(label);
+      });
+
+      dom.clearTagsBtn.disabled = true;
+    }
+
+    function buildLanguageFilter({ options, hasUnspecified }) {
+      dom.languageFilter.innerHTML = '<option value="">All languages</option>';
+      const fragment = document.createDocumentFragment();
+      options.forEach(language => {
+        const option = document.createElement('option');
+        option.value = language;
+        option.textContent = language;
+        fragment.appendChild(option);
+      });
+      if (hasUnspecified) {
+        const option = document.createElement('option');
+        option.value = '__none';
+        option.textContent = 'Language not specified';
+        fragment.appendChild(option);
+      }
+      dom.languageFilter.appendChild(fragment);
+    }
+
+    function buildLocationFilter({ options, hasUnspecified }) {
+      dom.locationFilter.innerHTML = '<option value="">All locations</option>';
+      const fragment = document.createDocumentFragment();
+      options.forEach(location => {
+        const option = document.createElement('option');
+        option.value = location;
+        option.textContent = location;
+        fragment.appendChild(option);
+      });
+      if (hasUnspecified) {
+        const option = document.createElement('option');
+        option.value = '__none';
+        option.textContent = 'Location not specified';
+        fragment.appendChild(option);
+      }
+      dom.locationFilter.appendChild(fragment);
+    }
+
+    dom.clearTagsBtn.addEventListener('click', () => {
+      state.activeTags.clear();
+      dom.tagList.querySelectorAll('input[type="checkbox"]').forEach(input => {
+        input.checked = false;
+      });
+      dom.clearTagsBtn.disabled = true;
+      applyFilters();
+    });
+
+    dom.search.addEventListener('input', event => {
+      state.searchTerm = event.target.value.trim().toLowerCase();
+      applyFilters();
+    });
+
+    dom.languageFilter.addEventListener('change', event => {
+      state.activeLanguage = event.target.value;
+      applyFilters();
+    });
+
+    dom.locationFilter.addEventListener('change', event => {
+      state.activeLocation = event.target.value;
+      applyFilters();
+    });
+
+    dom.sortSelect.addEventListener('change', event => {
+      state.sortBy = event.target.value;
+      applyFilters();
+    });
+
+    function applyFilters() {
+      const search = state.searchTerm;
+      const activeTags = state.activeTags;
+
+      const filtered = state.events.filter(event => {
+        const fields = [event.title, event.description, event.location, event.timezone, event.language]
+          .join(' ')
+          .toLowerCase();
+        const matchesSearch = !search || fields.includes(search);
+        const matchesTags = activeTags.size === 0 || event.tags.some(tag => activeTags.has(tag));
+        const matchesLanguage =
+          !state.activeLanguage ||
+          (state.activeLanguage === '__none' ? !event.language : event.language === state.activeLanguage);
+        const matchesLocation =
+          !state.activeLocation ||
+          (state.activeLocation === '__none' ? !event.location : event.location === state.activeLocation);
+        return matchesSearch && matchesTags && matchesLanguage && matchesLocation;
+      });
+
+      state.filtered = sortEvents(filtered);
+      renderEvents();
+    }
+
+    function sortEvents(events) {
+      const sorted = [...events];
+      switch (state.sortBy) {
+        case 'date-desc':
+          sorted.sort(compareDateDesc);
+          break;
+        case 'title-asc':
+          sorted.sort((a, b) => collator.compare(a.title || '', b.title || ''));
+          break;
+        case 'date-asc':
+        default:
+          sorted.sort(compareDateAsc);
+          break;
+      }
+      return sorted;
+    }
+
+    function compareDateAsc(a, b) {
+      const aHasDate = Boolean(a.startDate);
+      const bHasDate = Boolean(b.startDate);
+      if (!aHasDate && !bHasDate) {
+        return collator.compare(a.title || '', b.title || '');
+      }
+      if (!aHasDate) return 1;
+      if (!bHasDate) return -1;
+      const diff = a.startDate - b.startDate;
+      return diff !== 0 ? diff : collator.compare(a.title || '', b.title || '');
+    }
+
+    function compareDateDesc(a, b) {
+      const aHasDate = Boolean(a.startDate);
+      const bHasDate = Boolean(b.startDate);
+      if (!aHasDate && !bHasDate) {
+        return collator.compare(a.title || '', b.title || '');
+      }
+      if (!aHasDate) return 1;
+      if (!bHasDate) return -1;
+      const diff = b.startDate - a.startDate;
+      return diff !== 0 ? diff : collator.compare(a.title || '', b.title || '');
+    }
+
+    function renderEvents() {
+      dom.container.innerHTML = '';
+      dom.error.hidden = true;
+
+      if (state.filtered.length === 0) {
+        dom.empty.hidden = false;
+        dom.meta.textContent = 'No events to show.';
+        return;
+      }
+
+      dom.empty.hidden = true;
+      dom.meta.textContent = `Showing ${state.filtered.length} event${state.filtered.length === 1 ? '' : 's'}.`;
+
+      state.filtered.forEach(event => {
+        const card = document.createElement('article');
+        card.className = 'event-card';
+
+        const title = document.createElement('h3');
+        title.textContent = event.title;
+        card.appendChild(title);
+
+        const dates = document.createElement('div');
+        dates.className = 'event-dates';
+        dates.textContent = formatDateRange(event.startDisplay, event.endDisplay, event.timezone);
+        card.appendChild(dates);
+
+        if (event.location) {
+          const location = document.createElement('div');
+          location.className = 'event-location';
+          location.textContent = `Location: ${event.location}`;
+          card.appendChild(location);
+        }
+
+        if (event.description) {
+          const descToggle = document.createElement('button');
+          descToggle.type = 'button';
+          descToggle.className = 'description-toggle';
+          descToggle.textContent = 'View description';
+          descToggle.setAttribute('aria-expanded', 'false');
+
+          const description = document.createElement('p');
+          description.className = 'event-description';
+          description.textContent = event.description;
+          description.hidden = true;
+
+          descToggle.addEventListener('click', () => {
+            const willShow = description.hidden;
+            description.hidden = !willShow;
+            descToggle.textContent = willShow ? 'Hide description' : 'View description';
+            descToggle.setAttribute('aria-expanded', willShow ? 'true' : 'false');
+          });
+
+          card.appendChild(descToggle);
+          card.appendChild(description);
+        }
+
+        if (event.tags.length) {
+          const tagWrap = document.createElement('div');
+          tagWrap.className = 'tag-pills';
+          event.tags.forEach(tag => {
+            const pill = document.createElement('span');
+            pill.className = 'tag-pill';
+            pill.textContent = tag;
+            tagWrap.appendChild(pill);
+          });
+          card.appendChild(tagWrap);
+        }
+
+        if (event.url) {
+          const actions = document.createElement('div');
+          actions.className = 'event-actions';
+          const link = document.createElement('a');
+          link.href = event.url;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.textContent = 'Open event page';
+          actions.appendChild(link);
+          card.appendChild(actions);
+        }
+
+        dom.container.appendChild(card);
+      });
+    }
+
+    function formatDateRange(start, end, timezone) {
+      if (start && end && start !== 'Date TBC' && end !== 'Date TBC') {
+        return `${start} — ${end}${timezone ? ` (${timezone})` : ''}`;
+      }
+      if (start && start !== 'Date TBC') {
+        return `${start}${timezone ? ` (${timezone})` : ''}`;
+      }
+      return timezone ? `Date TBC (${timezone})` : 'Date TBC';
+    }
+
+    function showError(message) {
+      dom.error.textContent = message;
+      dom.error.hidden = false;
+      dom.empty.hidden = true;
+      dom.meta.textContent = '';
+    }
+  });
+</script>
