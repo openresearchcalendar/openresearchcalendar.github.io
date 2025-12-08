@@ -81,8 +81,12 @@ body {
 <div class="container d-flex align-items-center justify-content-center min-vh-100">
   <div class="bg-white p-5 rounded shadow text-center" style="max-width: 600px; width: 90%;">
     <h1 class="title">Please confirm your subscription to the Newsletter</h1>
-    <h3 class="subtitle">Your email: <span id="email"></span></h3>
+    <h3 id="subtitle" class="subtitle">Your email: <span id="email"></span></h3>
     <a id="confirm-link" href="#" class="btn btn-primary btn-lg mt-3">Confirm Subscription</a>
+    <div id="error" class="alert alert-danger mt-4 d-none" role="alert">
+      The link you followed seems to be missing information. Please recheck the link and try again. If the problem persists, you can report it on GitHub Issues:
+      <a href="https://github.com/openresearchcalendar/openresearchcalendar.github.io/issues/new/choose" target="_blank" rel="noopener">openresearchcalendar/openresearchcalendar.github.io</a>.
+    </div>
   </div>
 </div>
 
@@ -93,12 +97,26 @@ $( document ).ready(function() {
     var domain = params.get('b') || '';
     var uuid = params.get('uuid') || '';
     var email = (localPart && domain) ? localPart + '@' + domain : '';
+    var confirmLink = document.getElementById('confirm-link');
+    var errorBox = document.getElementById('error');
+    var subtitle = document.getElementById('subtitle');
+    var paramsMissing = !localPart || !domain || !uuid;
 
-    if (email) {
+    if (email && !paramsMissing) {
         document.getElementById('email').textContent = email;
+    } else {
+        if (subtitle) {
+            subtitle.textContent = 'We could not retrieve your subscription details.';
+        }
+        if (confirmLink) {
+            confirmLink.classList.add('d-none');
+        }
+        if (errorBox) {
+            errorBox.classList.remove('d-none');
+        }
+        return;
     }
 
-    var confirmLink = document.getElementById('confirm-link');
     if (confirmLink) {
         confirmLink.addEventListener('click', function(event) {
             event.preventDefault();
