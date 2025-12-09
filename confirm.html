@@ -96,6 +96,7 @@ $( document ).ready(function() {
     var localPart = params.get('a') || '';
     var domain = params.get('b') || '';
     var uuid = params.get('uuid') || '';
+    var renewal = params.get('renewal') || '';
     var email = (localPart && domain) ? localPart + '@' + domain : '';
     var confirmLink = document.getElementById('confirm-link');
     var errorBox = document.getElementById('error');
@@ -128,6 +129,9 @@ $( document ).ready(function() {
 
             // Submit as a real POST so the browser follows any Location header directly.
             var hookUrl = 'https://hook.eu1.make.com/be7vlink66xd8wlvwz0mh64krxxs695c?uuid=' + encodeURIComponent(uuid);
+            if (renewal) {
+                hookUrl += '&renewal=' + encodeURIComponent(renewal);
+            }
             var form = document.createElement('form');
             form.method = 'POST';
             form.action = hookUrl;
