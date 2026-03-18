@@ -1,0 +1,284 @@
+:root {
+  --orc-accent: #ff7700;
+  --orc-accent-dark: #d86100;
+  --orc-accent-soft: #fff4e8;
+  --orc-border: #ead7c8;
+  --orc-border-strong: #d9c2b0;
+  --orc-surface: #ffffff;
+  --orc-surface-muted: #fffaf5;
+  --orc-text: #2f2f2f;
+  --orc-text-muted: #606060;
+  --orc-shadow: 0 16px 36px rgba(71, 38, 12, 0.08);
+}
+
+.orc-archive-page {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1rem 1rem 3rem;
+  color: var(--orc-text);
+}
+
+.orc-archive-page *,
+.orc-archive-page *::before,
+.orc-archive-page *::after {
+  box-sizing: border-box;
+}
+
+.orc-archive-page h1,
+.orc-archive-page h2,
+.orc-archive-page h3,
+.orc-archive-page p {
+  margin-top: 0;
+}
+
+.orc-panel,
+.orc-archive-stat,
+.orc-issue-card {
+  min-width: 0;
+  border: 1px solid var(--orc-border);
+  border-radius: 22px;
+  background: var(--orc-surface);
+  box-shadow: var(--orc-shadow);
+}
+
+.orc-panel {
+  padding: 1.3rem;
+}
+
+.orc-panel__eyebrow,
+.orc-issue-card__eyebrow,
+.orc-archive-note__eyebrow,
+.orc-archive-stat__label {
+  margin-bottom: 0.45rem;
+  color: var(--orc-accent-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.orc-archive-hero {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+  background:
+    radial-gradient(circle at top right, rgba(255, 119, 0, 0.14), transparent 30%),
+    linear-gradient(135deg, #fffaf5, #ffffff);
+}
+
+.orc-archive-hero h1 {
+  margin-bottom: 0.85rem;
+  font-size: clamp(2rem, 3vw, 2.9rem);
+  line-height: 1.05;
+}
+
+.orc-archive-hero__intro,
+.orc-year-panel__count,
+.orc-issue-card__meta,
+.orc-archive-empty,
+.orc-archive-note p {
+  color: var(--orc-text-muted);
+  line-height: 1.65;
+}
+
+.orc-archive-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.2rem;
+}
+
+.orc-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.8rem 1.15rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.orc-button:hover,
+.orc-button:focus {
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.orc-button:focus-visible,
+.orc-text-link:focus-visible {
+  outline: 3px solid rgba(255, 119, 0, 0.28);
+  outline-offset: 3px;
+}
+
+.orc-button--primary {
+  background: var(--orc-accent);
+  color: #ffffff;
+}
+
+.orc-button--primary:hover,
+.orc-button--primary:focus {
+  background: var(--orc-accent-dark);
+  color: #ffffff;
+}
+
+.orc-button--secondary {
+  border-color: var(--orc-border-strong);
+  background: #ffffff;
+  color: var(--orc-text);
+}
+
+.orc-button--secondary:hover,
+.orc-button--secondary:focus {
+  border-color: var(--orc-accent);
+  color: var(--orc-text);
+}
+
+.orc-archive-stats {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1.3rem;
+}
+
+.orc-archive-stat {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.orc-archive-stat__value {
+  margin-bottom: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--orc-text);
+}
+
+.orc-archive-note {
+  align-self: start;
+  padding: 1.1rem;
+  border: 1px solid rgba(217, 194, 176, 0.8);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.orc-archive-note h2 {
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.orc-text-link {
+  color: var(--orc-accent-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.orc-text-link:hover,
+.orc-text-link:focus {
+  text-decoration: underline;
+}
+
+.orc-archive-years {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.orc-year-panel__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.orc-year-panel__header h2 {
+  margin-bottom: 0;
+}
+
+.orc-year-panel__count {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.orc-year-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.orc-issue-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem;
+  background: linear-gradient(180deg, #ffffff, #fffaf5);
+}
+
+.orc-issue-card h3,
+.orc-issue-card__meta {
+  margin-bottom: 0;
+}
+
+.orc-issue-card h3 {
+  font-size: 1.2rem;
+  color: var(--orc-text);
+}
+
+.orc-issue-card .orc-button {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.orc-archive-empty {
+  margin-bottom: 0;
+}
+
+@media (min-width: 860px) {
+  .orc-archive-hero {
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.9fr);
+    align-items: start;
+  }
+
+  .orc-archive-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .orc-archive-page {
+    padding-left: 0.35rem;
+    padding-right: 0.35rem;
+  }
+
+  .orc-panel,
+  .orc-archive-stat,
+  .orc-issue-card {
+    border-radius: 18px;
+  }
+
+  .orc-panel {
+    padding: 1rem;
+  }
+
+  .orc-archive-actions,
+  .orc-issue-card .orc-button {
+    width: 100%;
+  }
+
+  .orc-archive-actions .orc-button,
+  .orc-issue-card .orc-button {
+    width: 100%;
+  }
+}

@@ -1,68 +1,93 @@
 ---
 show-avatar: false
 nav-short: true
+full-width: true
 ---
-<html>
-  <body>
-    <div>
-      <h2>Newsletter Archive</h2>
-      <h4>**Please note that links in Archived Newsletters may not work as expected**</h4>
-      <ul id="list">
-      </ul>
+<link rel="stylesheet" href="{{ '/assets/css/newsletter-archive.css' | relative_url }}">
+
+{% assign newsletters = site.static_files | where_exp: "file", "file.path contains '/email-newsletter/archive/'" | sort: "basename" | reverse %}
+{% assign archive_years = newsletters | group_by_exp: "file", "file.basename | slice: 0, 2" %}
+{% assign archive_years = archive_years | sort: "name" | reverse %}
+{% assign latest_issue = newsletters | first %}
+
+<div class="orc-archive-page">
+  <section class="orc-panel orc-archive-hero">
+    <div class="orc-archive-hero__copy">
+      <p class="orc-panel__eyebrow">Email Newsletter</p>
+      <h1>Browse previous issues</h1>
+      <p class="orc-archive-hero__intro">
+        Explore the Open Research Calendar newsletter archive by year, then month. Each issue opens as the original archived HTML newsletter.
+      </p>
+
+      {% if latest_issue %}
+        {% assign latest_parts = latest_issue.basename | split: "_" %}
+        {% assign latest_year = "20" | append: latest_parts[0] %}
+        {% assign latest_month = latest_parts[2] %}
+        <div class="orc-archive-actions">
+          <a class="orc-button orc-button--primary" href="{{ latest_issue.path | relative_url }}">Read the latest issue</a>
+          <a class="orc-button orc-button--secondary" href="{{ '/email-subscribe' | relative_url }}">Subscribe to new issues</a>
+        </div>
+
+        <div class="orc-archive-stats" aria-label="Archive summary">
+          <article class="orc-archive-stat">
+            <p class="orc-archive-stat__label">Issues archived</p>
+            <p class="orc-archive-stat__value">{{ newsletters | size }}</p>
+          </article>
+          <article class="orc-archive-stat">
+            <p class="orc-archive-stat__label">Years covered</p>
+            <p class="orc-archive-stat__value">{{ archive_years | size }}</p>
+          </article>
+          <article class="orc-archive-stat">
+            <p class="orc-archive-stat__label">Latest issue</p>
+            <p class="orc-archive-stat__value">{{ latest_month }} {{ latest_year }}</p>
+          </article>
+        </div>
+      {% endif %}
     </div>
-    
-    <script>
-      const filterFiles = (filter) => {
-        filter = filter.toLowerCase()
-        return (file) => {
-          const filePath = file.path;
-          const fileName = file.path.replace('email-newsletter/archive/', '').replace('.html', '').toLowerCase().replace(/-/g, ' ').replace(/_/g, " ").replace('newsletter', '');
-          const fileName1 = fileName.charAt(0).toUpperCase() + fileName.slice(1);
-          const isHTML = (/.html$/).test(filePath);
-          const isNotIndex = filePath !== 'email-newsletter/archive/index.html';
-          return isHTML && isNotIndex;
-        }
-      }
-      
-      const renderList = (data, filter = '') => {
-        const groupedByYear = {};
 
-        const sortedFiles = data
-          .filter(filterFiles(filter))
-          .sort()
-          .reverse();
+    <aside class="orc-archive-note">
+      <p class="orc-archive-note__eyebrow">Archive note</p>
+      <h2>Older links may have changed</h2>
+      <p>
+        Archived newsletters are preserved as originally sent, so some event or registration links may no longer work exactly as they did at the time.
+      </p>
+      <a class="orc-text-link" href="{{ '/calendar' | relative_url }}">View the current calendar instead</a>
+    </aside>
+  </section>
 
-        for (let file of sortedFiles) {
-          const filePath = file.path.replace('.html', '');
-          const fileName = file.path.replace('email-newsletter/archive/', '').replace('.html', '');
-          const readableName = fileName.toLowerCase().replace(/-/g, ' ').replace(/_/g, ' ').replace('newsletter', '');
-          const displayName = readableName.replace(readableName.charAt(6), readableName.charAt(6).toUpperCase());
-          
-          const yearKey = '20' + fileName.slice(0, 2);  // assumes filenames start with YY
-          if (!groupedByYear[yearKey]) {
-            groupedByYear[yearKey] = [];
-          }
+  {% if newsletters.size > 0 %}
+    <div class="orc-archive-years">
+      {% for year_group in archive_years %}
+        {% assign year_items = year_group.items | sort: "basename" | reverse %}
+        <section class="orc-panel orc-year-panel" aria-labelledby="archive-year-{{ year_group.name }}">
+          <div class="orc-year-panel__header">
+            <div>
+              <p class="orc-panel__eyebrow">Archive Year</p>
+              <h2 id="archive-year-{{ year_group.name }}">20{{ year_group.name }}</h2>
+            </div>
+            <p class="orc-year-panel__count">{{ year_items | size }} issues</p>
+          </div>
 
-          groupedByYear[yearKey].push({ path: filePath, name: displayName });
-        }
-
-        let htmlString = '';
-        for (let year of Object.keys(groupedByYear).sort().reverse()) {
-          htmlString += `<h3>${year}</h3><ul>`;
-          for (let file of groupedByYear[year]) {
-            htmlString += `<li><a href="https://openresearchcalendar.org/${file.path}">${file.name}</a></li>`;
-          }
-          htmlString += '</ul>';
-        }
-
-        document.getElementById('list').innerHTML = htmlString;
-      };
-      
-      (async () => {
-        const response = await fetch('https://api.github.com/repos/openresearchcalendar/openresearchcalendar.github.io/contents/email-newsletter/archive');
-        const data = await response.json();
-        renderList(data);
-      })()
-    </script>
-  <body>
-</html>
+          <div class="orc-year-grid">
+            {% for file in year_items %}
+              {% assign parts = file.basename | split: "_" %}
+              {% assign month_number = parts[1] %}
+              {% assign month_name = parts[2] %}
+              {% assign issue_year = "20" | append: parts[0] %}
+              <article class="orc-issue-card">
+                <p class="orc-issue-card__eyebrow">Month {{ month_number }}</p>
+                <h3>{{ month_name }}</h3>
+                <p class="orc-issue-card__meta">{{ issue_year }} archive issue</p>
+                <a class="orc-button orc-button--secondary" href="{{ file.path | relative_url }}">Open newsletter</a>
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+      {% endfor %}
+    </div>
+  {% else %}
+    <section class="orc-panel">
+      <p class="orc-archive-empty">No archived newsletters are available right now.</p>
+    </section>
+  {% endif %}
+</div>
