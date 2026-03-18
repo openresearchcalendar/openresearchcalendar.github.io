@@ -27,7 +27,7 @@ full-width: true
       </div>
 
       <p class="orc-mobile-note">
-        The embedded month view is hidden on smaller screens to keep this page readable. Use
+        The full calendar view is hidden on smaller screens to keep this page readable. Open the
         <a href="https://calendar.google.com/calendar/u/0/embed?src=openresearchcalendar@gmail.com&amp;ctz=Europe/London" target="_blank" rel="noopener">Google Calendar</a>
         if you still want the full month view.
       </p>
