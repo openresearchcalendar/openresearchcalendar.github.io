@@ -1,5 +1,4 @@
 ---
-title: Open Research Calendar
 show-avatar: false
 nav-short: true
 full-width: true
@@ -10,9 +9,6 @@ full-width: true
 
   <div class="orc-calendar-layout">
     <section class="orc-panel orc-panel--calendar" id="calendar-view">
-      <div class="orc-panel__header">
-        <h2>Calendar view</h2>
-      </div>
 
       <div class="orc-calendar-frame">
         <iframe
@@ -55,24 +51,22 @@ full-width: true
     <div class="orc-action-cards">
       <article class="orc-action-card">
         <p class="orc-action-card__eyebrow">Google Calendar</p>
-        <h3>Sync to your Google Calendar</h3>
-        <p>
-          Use the button below to open the Google calendar and select <strong>Add to Google Calendar</strong> to sync the events to your own.
-        </p>
-        <a
-          class="orc-button orc-button--secondary"
-          href="https://calendar.google.com/calendar/u/0/embed?src=openresearchcalendar@gmail.com&amp;ctz=Europe/London"
-          target="_blank"
-          rel="noopener"
-        >Open Google calendar</a>
-      </article>
+        <h3>Open in Google Calendar</h3>
+        <div class="orc-action-card__options">
+          <section class="orc-action-card__option">
+            <h4>Sync the full calendar</h4>
+            <p>
+              Use <strong>Add to Google Calendar</strong> if you want the whole Open Research Calendar to stay synced in your own account.
+            </p>
+          </section>
 
-      <article class="orc-action-card">
-        <p class="orc-action-card__eyebrow">Single event</p>
-        <h3>Sync one event to your Google Calendar</h3>
-        <p>
-          Open an event in Google Calendar and select <strong>Copy to my calendar</strong> if you only want one item rather than the whole feed.
-        </p>
+          <section class="orc-action-card__option">
+            <h4>Sync one event</h4>
+            <p>
+              Open an event and select <strong>Copy to my calendar</strong> if you only want to add a single item rather than the full feed.
+            </p>
+          </section>
+        </div>
         <a
           class="orc-button orc-button--secondary"
           href="https://calendar.google.com/calendar/u/0/embed?src=openresearchcalendar@gmail.com&amp;ctz=Europe/London"

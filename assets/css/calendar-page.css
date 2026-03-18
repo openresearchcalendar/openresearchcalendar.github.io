@@ -309,6 +309,35 @@
   margin-bottom: 0;
 }
 
+.orc-action-card__options {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.orc-action-card__option {
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(117, 86, 51, 0.14);
+}
+
+.orc-action-card__option:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.orc-action-card__option h4,
+.orc-action-card__option p {
+  margin-bottom: 0;
+}
+
+.orc-action-card__option h4 {
+  font-size: 0.98rem;
+  color: var(--orc-text);
+}
+
+.orc-action-card__option p {
+  margin-top: 0.35rem;
+}
+
 .orc-action-card .orc-button {
   align-self: flex-start;
   margin-top: auto;
