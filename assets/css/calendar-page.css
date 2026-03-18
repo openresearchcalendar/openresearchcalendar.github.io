@@ -12,6 +12,8 @@
 }
 
 .orc-calendar-page {
+  box-sizing: border-box;
+  width: 100%;
   max-width: 1180px;
   margin: 0 auto;
   padding: 1rem 1rem 2.5rem;
@@ -27,6 +29,8 @@
 .orc-action-bar,
 .orc-panel,
 .orc-action-card {
+  box-sizing: border-box;
+  min-width: 0;
   border: 1px solid var(--orc-border);
   border-radius: 22px;
   background: var(--orc-surface);
@@ -143,26 +147,22 @@
   margin-bottom: 1.5rem;
 }
 
+.orc-panel--calendar,
+.orc-panel--upcoming,
+.orc-upcoming-list,
+.orc-upcoming-card {
+  min-width: 0;
+}
+
 .orc-panel {
   padding: 1.25rem;
 }
 
 .orc-panel__header {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem 1.5rem;
-  align-items: flex-start;
-  justify-content: space-between;
   margin-bottom: 1rem;
 }
 
 .orc-panel__header h2 {
-  margin-bottom: 0;
-}
-
-.orc-panel__intro {
-  flex: 1 1 260px;
-  max-width: 460px;
   margin-bottom: 0;
 }
 
@@ -208,12 +208,14 @@
 
 .orc-upcoming-list {
   display: grid;
+  width: 100%;
   gap: 0.9rem;
 }
 
 .orc-upcoming-card {
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 0.7rem;
   padding: 1rem;
   border: 1px solid var(--orc-border);
@@ -225,18 +227,21 @@
   margin-bottom: 0;
   font-size: 1.1rem;
   color: var(--orc-text);
+  overflow-wrap: anywhere;
 }
 
 .orc-upcoming-card__date {
   margin-bottom: 0;
   color: #1d5fa7;
   font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
 .orc-upcoming-card__meta,
 .orc-upcoming-card__summary {
   margin-bottom: 0;
   color: var(--orc-text-muted);
+  overflow-wrap: anywhere;
 }
 
 .orc-upcoming-card__chips {
@@ -255,6 +260,7 @@
   color: #5c4b3a;
   font-size: 0.82rem;
   font-weight: 600;
+  overflow-wrap: anywhere;
 }
 
 .orc-upcoming-card__link {
@@ -262,6 +268,7 @@
   color: var(--orc-accent-dark);
   font-weight: 700;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .orc-upcoming-card__link:hover,
@@ -368,9 +375,8 @@
 }
 
 @media (min-width: 1025px) {
-  .orc-calendar-layout {
-    grid-template-columns: minmax(0, 1.55fr) minmax(320px, 0.95fr);
-    align-items: start;
+  .orc-panel--upcoming {
+    display: none;
   }
 }
 

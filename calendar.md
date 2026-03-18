@@ -7,35 +7,11 @@ full-width: true
 <link rel="stylesheet" href="/assets/css/calendar-page.css">
 
 <div class="orc-calendar-page">
-  <section class="orc-action-bar" aria-label="Calendar shortcuts">
-    <div class="orc-action-bar__copy">
-      <p class="orc-action-bar__eyebrow">Responsive calendar view</p>
-      <p class="orc-action-bar__summary">
-        Use the embedded calendar on larger screens. On phones and tablets, this page shifts to an upcoming events list that is much easier to browse.
-      </p>
-    </div>
-    <div class="orc-action-bar__buttons">
-      <a
-        class="orc-button orc-button--primary"
-        href="https://calendar.google.com/calendar/u/0/embed?src=openresearchcalendar@gmail.com&amp;ctz=Europe/London"
-        target="_blank"
-        rel="noopener"
-      >Open in Google</a>
-      <a class="orc-button orc-button--secondary" href="/events-list">View events list</a>
-      <a class="orc-button orc-button--secondary" href="/add-event">Add an event</a>
-    </div>
-  </section>
 
   <div class="orc-calendar-layout">
     <section class="orc-panel orc-panel--calendar" id="calendar-view">
       <div class="orc-panel__header">
-        <div>
-          <p class="orc-panel__eyebrow">Desktop view</p>
-          <h2>Calendar view</h2>
-        </div>
-        <p class="orc-panel__intro">
-          The embedded month view is kept for larger screens. If you want the full Google Calendar interface, use the shortcut above.
-        </p>
+        <h2>Calendar view</h2>
       </div>
 
       <div class="orc-calendar-frame">
@@ -51,13 +27,7 @@ full-width: true
 
     <section class="orc-panel orc-panel--upcoming">
       <div class="orc-panel__header">
-        <div>
-          <p class="orc-panel__eyebrow">Mobile and tablet fallback</p>
-          <h2>Upcoming events</h2>
-        </div>
-        <p class="orc-panel__intro">
-          This list is always available and becomes the main browsing view on smaller screens.
-        </p>
+        <h2>Upcoming events</h2>
       </div>
 
       <p class="orc-mobile-note">
@@ -79,13 +49,7 @@ full-width: true
 
   <section class="orc-panel orc-panel--actions">
     <div class="orc-panel__header">
-      <div>
-        <p class="orc-panel__eyebrow">Add to your own calendar</p>
-        <h2>Choose how you want to subscribe</h2>
-      </div>
-      <p class="orc-panel__intro">
-        Keep the live shared calendar, save a single event, or import the full feed into another calendar app.
-      </p>
+      <h2>Choose how you want to subscribe</h2>
     </div>
 
     <div class="orc-action-cards">
@@ -96,7 +60,7 @@ full-width: true
           Open the live calendar in Google and select <strong>Add to Google Calendar</strong> to keep the shared calendar synced.
         </p>
         <a
-          class="orc-button orc-button--primary"
+          class="orc-button orc-button--secondary"
           href="https://calendar.google.com/calendar/u/0/embed?src=openresearchcalendar@gmail.com&amp;ctz=Europe/London"
           target="_blank"
           rel="noopener"
