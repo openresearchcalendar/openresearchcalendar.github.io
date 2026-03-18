@@ -55,21 +55,21 @@ full-width: true
     <div class="orc-action-cards">
       <article class="orc-action-card">
         <p class="orc-action-card__eyebrow">Google Calendar</p>
-        <h3>Add the live calendar</h3>
+        <h3>Sync to your Google Calendar</h3>
         <p>
-          Open the live calendar in Google and select <strong>Add to Google Calendar</strong> to keep the shared calendar synced.
+          Use the button below to open the Google calendar and select <strong>Add to Google Calendar</strong> to sync the events to your own.
         </p>
         <a
           class="orc-button orc-button--secondary"
           href="https://calendar.google.com/calendar/u/0/embed?src=openresearchcalendar@gmail.com&amp;ctz=Europe/London"
           target="_blank"
           rel="noopener"
-        >Open live calendar</a>
+        >Open Google calendar</a>
       </article>
 
       <article class="orc-action-card">
         <p class="orc-action-card__eyebrow">Single event</p>
-        <h3>Copy one event to your calendar</h3>
+        <h3>Sync one event to your Google Calendar</h3>
         <p>
           Open an event in Google Calendar and select <strong>Copy to my calendar</strong> if you only want one item rather than the whole feed.
         </p>
@@ -78,7 +78,7 @@ full-width: true
           href="https://calendar.google.com/calendar/u/0/embed?src=openresearchcalendar@gmail.com&amp;ctz=Europe/London"
           target="_blank"
           rel="noopener"
-        >Choose an event in Google</a>
+        >Open Google Calendar</a>
       </article>
 
       <article class="orc-action-card">
@@ -88,6 +88,20 @@ full-width: true
           Subscribe to every Open Research Calendar event from another calendar app. We recommend importing it into a separate calendar first.
         </p>
         <button type="button" class="orc-button orc-button--secondary" data-ical-trigger="true">Open iCal import</button>
+      </article>
+
+      <article class="orc-action-card">
+        <p class="orc-action-card__eyebrow">Email Newsletter</p>
+        <h3>Subscribe to the Monthly Newsletter</h3>
+        <p>
+          Get updates about upcoming events directly in your inbox.
+        </p>
+        <a
+          class="orc-button orc-button--secondary"
+          href="/email-subscribe"
+          target="_blank"
+          rel="noopener"
+        >Newsletter Subscribe</a>
       </article>
     </div>
   </section>
