@@ -32,7 +32,7 @@ The Open Research Calendar collects event data from users who submit events. Thi
 This data is used to create a public calendar of events related to open research. The data is stored securely using Google Services (links to their policy are above).
 
 ### Social Media 
-If you follow the Open Research Calendar on any of our social media accounts, you will have already agreed to their specific Privacy Policies. We do not have access to your personal data on these platforms. We only have access to the information you choose to share publicly, such as your name and user handle. We do not use this information for any purpose other than to communicate with you about Open Research Calendar events and updates.
+If you follow the Open Research Calendar on social media, your use of that platform is covered by the privacy policy and data handling policy for that social media site. The Open Research Calendar does not have access to your private personal data on these platforms. We can only see information you choose to share publicly, such as your name and user handle. We only use this information to communicate with you about Open Research Calendar events and updates.
 
 ### Data use specifically for distribution of Open Research Calendar merchandise:
 As part of the Open Research Calendar merchandise program, we collect the following information:
@@ -41,7 +41,16 @@ As part of the Open Research Calendar merchandise program, we collect the follow
 - Address (Street, City, Country, Postcode)
 
 This information is used to send merchandise to users who have requested it. The data is stored securely using Google Services and personal information is deleted after the merchandise has been posted.
+During merchandise sales and distribution, the details needed to send the item are passed to Royal Mail. Royal Mail processes this information under their own privacy notice (see links above).
 The City and Country information is retained to provide the data for our [Metrics Page](https://lookerstudio.google.com/reporting/619ac603-b4ae-4236-a0aa-ebedbf1680c1/page/HWJOC). These details are not connected to any personal information and are only used to provide aggregate data on the distribution of our merchandise.
+
+### Data use specifically for donations to the Open Research Calendar:
+Donations to the Open Research Calendar are processed through Open Collective. When you make a donation, Open Collective collects and processes the information needed to complete and record the donation. Their own privacy policy and data processing practices apply (see links above).
+
+The Open Research Calendar keeps a simplified record of donor data for metrics purposes. This record is stored securely using Google Services and includes:
+- Name
+- Message
+- Amount
 
 ### Data Retention
 We retain event data indefinitely to maintain a comprehensive record of all events submitted to the Open Research Calendar.
