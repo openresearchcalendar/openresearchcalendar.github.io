@@ -10,6 +10,11 @@ redirect_from: "/Open-Research-Calendar/"
   <script src="https://unpkg.com/@statuspage/status-widget/dist/index.js"></script>
 </head>
 
+<aside class="maintenance-notice" aria-label="Advance warning of maintenance">
+  <p><strong>Advance Warning:</strong> The Open Research Calendar will be offline (Oct 29, 09:00 - 21:00 UTC) while our forms are updated. This process requires the website to be unavailable.</p>
+  <p><a href="https://openresearchcalendar.statuspage.io/incidents/82vsstyzkdty">https://openresearchcalendar.statuspage.io/incidents/82vsstyzkdty</a></p>
+</aside>
+
 <div id="status-widget-container"></div>
 <p>System Status: <statuspage-widget src="https://openresearchcalendar.statuspage.io"></statuspage-widget></p>
 

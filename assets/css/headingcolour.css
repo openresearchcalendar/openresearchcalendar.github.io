@@ -2,6 +2,36 @@ h1, h2, h3, h4 {
     color: #ff7700;
   }
 
+.maintenance-notice {
+  background-color: #fff3cd;
+  border: 2px solid #b45309;
+  border-left-width: 8px;
+  border-radius: 8px;
+  color: #5c3300;
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+}
+
+.maintenance-notice p {
+  margin: 0 0 0.75rem;
+}
+
+.maintenance-notice p:last-child {
+  margin-bottom: 0;
+}
+
+.maintenance-notice a {
+  color: #5c3300;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+}
+
+.maintenance-notice a:hover,
+.maintenance-notice a:focus {
+  color: #000;
+}
+
 @media screen and (max-width: 768px) {
     #content-desktop {display: none;}
     #content-mobile {display: block;}
